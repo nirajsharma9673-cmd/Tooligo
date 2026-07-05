@@ -2,7 +2,7 @@
 
 > Free online calculators and utility tools built with HTML, CSS, and JavaScript.
 
-![Tooligo](images/logo1.png)
+![Tooligo](images/toolbox-logo.png)
 
 Tooligo is a lightweight, responsive collection of online calculators and utility tools designed to provide fast, accurate results without requiring sign-ups or downloads.
 
