@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooligo – Age Calculator</title>
+    <meta name="description" content="Calculate your exact age in years, months, and days instantly. Our free age calculator is accurate and works on all devices. No registration needed.">
+    <meta name="keywords" content="age calculator, calculate age, age in years months days, age finder">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://YOUR_NETLIFY_SITE.netlify.app/tools/age-calculator.html">
+    <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta property="og:description" content="Calculate your exact age in years, months, and days instantly. Our free age calculator is accurate and works on all devices. No registration needed.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YOUR_NETLIFY_SITE.netlify.app/tools/age-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta name="twitter:description" content="Calculate your exact age in years, months, and days instantly. Our free age calculator is accurate and works on all devices. No registration needed.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://YOUR_NETLIFY_SITE.netlify.app/tools/age-calculator.html",
+  "name": "Age Calculator - Calculate Your Age Instantly & Accurately",
+  "description": "Calculate your exact age in years, months, and days instantly. Our free age calculator is accurate and works on all devices. No registration needed."
+}
+    </script>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">Age Calculator</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tool Header -->
+        <section class="tool-header">
+            <div class="container">
+                <h1>Age Calculator</h1>
+                <p>Calculate your exact age in years, months, and days</p>
+            </div>
+        </section>
+
+        <!-- AdSense  -->
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <!-- Main Content -->
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <!-- Input Section -->
+                    <div class="tool-input-section">
+                        <h3>Enter Your Birth Date</h3>
+                        <div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                        <div class="form-group">
+                            <label for="birth-date">Date of Birth</label>
+                            <input type="date" id="birth-date" required>
+                        </div>
+
+                        <button class="btn-calculate" onclick="calculateAge()" aria-controls="result-section" aria-label="Calculate age">Calculate Age</button>
+                        <button class="btn-reset" onclick="resetAge()" aria-label="Clear age inputs">Clear</button>
+
+                        <!-- Result Section -->
+                       <div id="result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+    <h3>Your Age Results</h3>
+
+    <div class="age-highlight">
+        <span id="age-summary">
+            20 Years, 5 Months, 12 Days
+        </span>
+    </div>
+
+    <div class="result-grid">
+
+        <div class="result-card">
+            <h4>Total Months</h4>
+            <p id="total-months">0</p>
+        </div>
+
+        <div class="result-card">
+            <h4>Total Weeks</h4>
+            <p id="total-weeks">0</p>
+        </div>
+
+        <div class="result-card">
+            <h4>Total Days</h4>
+            <p id="total-days">0</p>
+        </div>
+
+        <div class="result-card">
+            <h4>Total Hours</h4>
+            <p id="total-hours">0</p>
+        </div>
+
+        <div class="result-card">
+            <h4>Day Born</h4>
+            <p id="birth-day">-</p>
+        </div>
+
+        <div class="result-card">
+            <h4>Zodiac Sign</h4>
+            <p id="zodiac-sign">-</p>
+        </div>
+
+        <div class="result-card">
+            <h4>Estimated Heartbeats</h4>
+            <p id="heartbeats">-</p>
+        </div>
+
+        <div class="result-card">
+            <h4>Next Birthday</h4>
+            <p id="next-birthday">-</p>
+        </div>
+
+    </div>
+</div>
+
+                    <!-- Info Section -->
+                    <div class="tool-info-section">
+                        <div class="tool-description">
+                            <h3>How to Use</h3>
+                            <ol>
+                                <li>Select your date of birth using the date picker</li>
+                                <li>Click the "Calculate Age" button</li>
+                                <li>Your age will be displayed in years, months, and days</li>
+                                <li>You'll also see your total days, hours, and minutes lived</li>
+                            </ol>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>About This Calculator</h3>
+                            <p>The Age Calculator is a simple and accurate tool that calculates your exact age based on your birth date. It provides your age in years, months, days, hours, and minutes.</p>
+                            <p>Perfect for finding your exact age for documents, applications, or just for fun!</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Features</h3>
+                            <ul>
+                                <li>Calculates age in years, months, and days</li>
+                                <li>Shows total days lived</li>
+                                <li>Shows total hours and minutes lived</li>
+                                <li>Works on all devices</li>
+                                <li>Completely free and no registration needed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdSense  -->
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>How accurate is the age calculator?</summary>
+                        <p>The age calculator is 100% accurate. It calculates your exact age based on your birth date and today's date using precise date calculations.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I calculate someone else's age?</summary>
+                        <p>Yes, you can calculate anyone's age by entering their date of birth. The calculator works for any date in the past.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Why might my age be off by one day?</summary>
+                        <p>Age varies slightly depending on the timezone and time of day. The calculator uses your local timezone for calculations.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I see my age in different formats?</summary>
+                        <p>Yes! The calculator shows your age in years/months/days format as well as total days, hours, and minutes lived.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is my birth date stored anywhere?</summary>
+                        <p>No, your birth date is never stored or transmitted. All calculations happen locally in your browser for complete privacy.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What's the earliest date I can enter?</summary>
+                        <p>You can enter any date from the past. The calculator handles dates from centuries ago without any issues.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdSense  -->
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms & Conditions</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+                        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="unit-converter.html">Unit Converter</a></li>
+                        <li><a href="currency-converter.html">Currency Converter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/age-calculator.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Age Calculator",
+        "description": "Calculate your exact age in years, months, and days",
+        "url": "https://YOUR_NETLIFY_SITE.netlify.app/tools/age-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How accurate is the age calculator?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The age calculator is 100% accurate. It calculates your exact age based on your birth date and today's date."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my birth date stored?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, your birth date is never stored. All calculations happen locally in your browser."
+                }
+            }
+        ]
+    }
+    </script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

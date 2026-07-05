@@ -1,0 +1,20 @@
+# TODO: replace YOUR_NETLIFY_SITE with your actual Netlify site name
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://YOUR_NETLIFY_SITE.netlify.app/sitemap.xml
+
+# Delay
+Crawl-delay: 1
+
+# Google Bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

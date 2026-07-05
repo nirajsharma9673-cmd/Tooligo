@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooligo – EMI Calculator</title>
+    <meta name="description" content="Calculate your exact monthly EMI (Equated Monthly Installment) for any loan. Free EMI calculator with amortization schedule. Fast and accurate results.">
+    <meta name="keywords" content="EMI calculator, loan calculator, monthly payment, equated monthly installment">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://YOUR_NETLIFY_SITE.netlify.app/tools/emi-calculator.html">
+    <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta property="og:description" content="Calculate your exact monthly EMI (Equated Monthly Installment) for any loan. Free EMI calculator with amortization schedule. Fast and accurate results.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YOUR_NETLIFY_SITE.netlify.app/tools/emi-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta name="twitter:description" content="Calculate your exact monthly EMI (Equated Monthly Installment) for any loan. Free EMI calculator with amortization schedule. Fast and accurate results.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://YOUR_NETLIFY_SITE.netlify.app/tools/emi-calculator.html",
+  "name": "EMI Calculator - Calculate Monthly Loan Payments Instantly",
+  "description": "Calculate your exact monthly EMI (Equated Monthly Installment) for any loan. Free EMI calculator with amortization schedule. Fast and accurate results."
+}
+    </script>
+
+
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">EMI Calculator</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tool Header -->
+        <section class="tool-header">
+            <div class="container">
+                <h1>EMI Calculator</h1>
+                <p>Calculate your monthly loan EMI instantly</p>
+            </div>
+        </section>
+
+        <!-- AdSense  -->
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <!-- Main Content -->
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <!-- Input Section -->
+                    <div class="tool-input-section">
+                        <h3>Enter Loan Details</h3>
+                        <div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                        <div class="form-group">
+                            <label for="loan-amount">Loan Amount (₹)</label>
+                               <input type="number" id="loan-amount" placeholder="Enter loan amount" aria-label="Loan amount" min="1000" step="1000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interest-rate">Annual Interest Rate (%)</label>
+                               <input type="number" id="interest-rate" placeholder="Enter interest rate" aria-label="Interest rate" min="0" max="50" step="0.01">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loan-tenure">Loan Tenure (Years)</label>
+                               <input type="number" id="loan-tenure" placeholder="Enter tenure" aria-label="Loan tenure" min="1" max="30" step="1">
+                        </div>
+
+                        <button class="btn-calculate" onclick="calculateEMI()" aria-controls="result-section" aria-label="Calculate EMI">Calculate EMI</button>
+                        <button class="btn-reset" onclick="resetEMI()" aria-label="Clear EMI inputs">Clear</button>
+
+                        <!-- Result Section -->
+                        <div id="result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+                            <h3>EMI Calculation Results</h3>
+                            <div class="result-item">
+                                <span class="result-label">Monthly EMI</span>
+                                <span class="result-value" id="emi-result">₹0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Total Amount to Pay</span>
+                                <span class="result-value" id="total-amount">₹0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Total Interest Payable</span>
+                                <span class="result-value" id="total-interest">₹0</span>
+                            </div>
+                            <details class="tool-faq amortization-detail" id="amortization-detail">
+                                <summary class="amortization-summary">Show Amortization Schedule (Year-by-Year)</summary>
+                                <div id="amortization-container" class="table-scroll">
+                                    <table id="amortization-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Year</th>
+                                                <th>Principal Paid</th>
+                                                <th>Interest Paid</th>
+                                                <th>Remaining Balance</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Info Section -->
+                    <div class="tool-info-section">
+                        <div class="tool-description">
+                            <h3>How to Use</h3>
+                            <ol>
+                                <li>Enter the loan amount in rupees</li>
+                                <li>Enter the annual interest rate</li>
+                                <li>Enter the loan tenure in years</li>
+                                <li>Click "Calculate EMI"</li>
+                                <li>View your monthly EMI and total interest</li>
+                            </ol>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>What is EMI?</h3>
+                            <p>EMI (Equated Monthly Installment) is a fixed amount you pay monthly to repay a loan. It includes both principal and interest portions.</p>
+                            <p>Our calculator uses the standard EMI formula to provide accurate results for home loans, car loans, personal loans, and more.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Features</h3>
+                            <ul>
+                                <li>Accurate EMI calculation</li>
+                                <li>Shows total interest payable</li>
+                                <li>Shows total amount to pay</li>
+                                <li>Works for all loan types</li>
+                                <li>Completely free</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdSense  -->
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>How is EMI calculated?</summary>
+                        <p>EMI is calculated using the formula: EMI = [P * r * (1 + r)^n] / [(1 + r)^n - 1], where P is principal, r is monthly interest rate, and n is number of months.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can this calculator be used for all loan types?</summary>
+                        <p>Yes, this EMI calculator works for home loans, car loans, personal loans, education loans, and any other fixed-rate loans.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What's the difference between EMI and total amount?</summary>
+                        <p>EMI is your monthly payment, while total amount is EMI multiplied by number of months. Total interest is the difference between total amount and principal.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is this calculator accurate?</summary>
+                        <p>Yes, our calculator uses the exact EMI formula used by banks and financial institutions for precise results.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I use this for variable interest rates?</summary>
+                        <p>This calculator is designed for fixed interest rates. For variable rates, use the rate you expect for average calculation.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Does this include processing fees?</summary>
+                        <p>No, this calculator shows basic EMI. Actual EMI might include processing fees and other charges as per your loan agreement.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdSense  -->
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms & Conditions</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="sip-calculator.html">SIP Calculator</a></li>
+                        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="age-calculator.html">Age Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/emi-calculator.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "EMI Calculator",
+        "description": "Calculate monthly EMI for loans instantly",
+        "url": "https://YOUR_NETLIFY_SITE.netlify.app/tools/emi-calculator.html",
+        "applicationCategory": "UtilityApplication"
+    }
+    </script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

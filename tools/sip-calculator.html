@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooligo – SIP Calculator</title>
+    <meta name="description" content="Calculate SIP (Systematic Investment Plan) returns with our free calculator. Get accurate investment projections for mutual funds and investments.">
+    <meta name="keywords" content="SIP calculator, investment calculator, mutual fund calculator, systematic investment plan">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://YOUR_NETLIFY_SITE.netlify.app/tools/sip-calculator.html">
+    <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta property="og:description" content="Calculate SIP (Systematic Investment Plan) returns with our free calculator. Get accurate investment projections for mutual funds and investments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YOUR_NETLIFY_SITE.netlify.app/tools/sip-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta name="twitter:description" content="Calculate SIP (Systematic Investment Plan) returns with our free calculator. Get accurate investment projections for mutual funds and investments.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://YOUR_NETLIFY_SITE.netlify.app/tools/sip-calculator.html",
+  "name": "SIP Calculator - Calculate Investment Returns Instantly",
+  "description": "Calculate SIP (Systematic Investment Plan) returns with our free calculator. Get accurate investment projections for mutual funds and investments."
+}
+    </script>
+
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">SIP Calculator</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="tool-header">
+            <div class="container">
+                <h1>SIP Calculator</h1>
+                <p>Calculate your SIP returns and investment growth</p>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <div class="tool-input-section">
+                        <h3>SIP Investment Details</h3>
+                        <div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                        <div class="form-group">
+                            <label for="monthly-amount">Monthly Investment (₹)</label>
+                                <input type="number" id="monthly-amount" placeholder="Enter monthly investment" aria-label="Monthly investment" min="100" step="100">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sip-rate">Expected Annual Return (%)</label>
+                                <input type="number" id="sip-rate" placeholder="Enter return rate" aria-label="Return rate" min="0" max="50" step="0.01">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sip-years">Investment Period (Years)</label>
+                                <input type="number" id="sip-years" placeholder="Enter years" aria-label="Years" min="1" max="50" step="1">
+                        </div>
+
+                        <div class="form-group form-checkbox-group">
+                            <input type="checkbox" id="step-up-enabled">
+                            <label for="step-up-enabled">Enable step-up SIP (annual increase)</label>
+                        </div>
+
+                        <div class="form-group hidden" id="step-up-settings">
+                            <label for="step-up-percent">Annual Increase (%)</label>
+                                <input type="number" id="step-up-percent" placeholder="e.g., 5" aria-label="Step up percent" min="0" max="100" step="0.01">
+                        </div>
+
+                        <button class="btn-calculate" onclick="calculateSIP()" aria-controls="result-section" aria-label="Calculate SIP">Calculate</button>
+                        <button class="btn-reset" onclick="resetSIP()" aria-label="Clear SIP inputs">Clear</button>
+
+                        <div id="result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+                            <h3>Your SIP Results</h3>
+                            <div class="result-item">
+                                <span class="result-label">Total Invested</span>
+                                <span class="result-value" id="total-invested">₹0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Investment Gains</span>
+                                <span class="result-value" id="investment-gain">₹0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Final Amount</span>
+                                <span class="result-value" id="final-amount">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-info-section">
+                        <div class="tool-description">
+                            <h3>About SIP</h3>
+                            <p>SIP (Systematic Investment Plan) is an investment strategy where you invest a fixed amount regularly in mutual funds. This calculator helps you project your investment returns.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>How to Use</h3>
+                            <ol>
+                                <li>Enter your monthly investment amount</li>
+                                <li>Enter expected annual return percentage</li>
+                                <li>Enter your investment period in years</li>
+                                <li>Click Calculate to see results</li>
+                            </ol>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Benefits of SIP</h3>
+                            <ul>
+                                <li>Regular investment discipline</li>
+                                <li>Rupee cost averaging</li>
+                                <li>Power of compounding</li>
+                                <li>Flexibility in amount</li>
+                                <li>Long-term wealth creation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>What is a realistic expected return?</summary>
+                        <p>Expected returns vary by asset type. Equity mutual funds historically return 12-15%, balanced funds 8-10%, and debt funds 6-8% annually.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I change my SIP amount?</summary>
+                        <p>Yes, most SIP plans allow you to increase or decrease your investment amount. Check with your investment provider.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is this calculator accurate?</summary>
+                        <p>Yes, we use the standard SIP formula. Actual results may vary based on market conditions and actual returns.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What happens if markets fall?</summary>
+                        <p>SIP helps in rupee cost averaging. You buy more units when prices are low and fewer when prices are high.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Should I stop SIP during market downturns?</summary>
+                        <p>No, continuing SIP during downturns can help you buy more units at lower prices, potentially increasing long-term returns.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms & Conditions</a></li>
+                        <li><a href="../disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+                        <li><a href="gst-calculator.html">GST Calculator</a></li>
+                        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/sip-calculator.js"></script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

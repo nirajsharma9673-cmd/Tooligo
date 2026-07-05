@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooligo – Discount Calculator</title>
+    <meta name="description" content="Calculate discounts and final prices instantly. Find sale price after discount with our free discount calculator.">
+    <meta name="keywords" content="discount calculator, sale price calculator, percentage off">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://YOUR_NETLIFY_SITE.netlify.app/tools/discount-calculator.html">
+    <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta property="og:description" content="Calculate discounts and final prices instantly. Find sale price after discount with our free discount calculator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YOUR_NETLIFY_SITE.netlify.app/tools/discount-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta name="twitter:description" content="Calculate discounts and final prices instantly. Find sale price after discount with our free discount calculator.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://YOUR_NETLIFY_SITE.netlify.app/tools/discount-calculator.html",
+  "name": "Discount Calculator - Calculate Discounts & Sale Price",
+  "description": "Calculate discounts and final prices instantly. Find sale price after discount with our free discount calculator."
+}
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">Discount Calculator</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="tool-header">
+            <div class="container">
+                <h1>Discount Calculator</h1>
+                <p>Calculate discounts and sale prices instantly</p>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <div class="tool-input-section">
+                        <h3>Discount Calculation</h3>
+                        <div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                        <div class="form-group">
+                            <label for="original-price">Original Price (₹)</label>
+                               <input type="number" id="original-price" placeholder="Enter original price" aria-label="Original price" min="0" step="0.01">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="discount-percent">Discount Percentage (%)</label>
+                               <input type="number" id="discount-percent" placeholder="Enter discount %" aria-label="Discount percent" min="0" max="100" step="0.01">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="discount-percent-2">Additional Discount (%) (optional)</label>
+                               <input type="number" id="discount-percent-2" placeholder="Enter second discount %" aria-label="Second discount percent" min="0" max="100" step="0.01">
+                        </div>
+
+                        <button class="btn-calculate" onclick="calculateDiscount()" aria-controls="result-section" aria-label="Calculate discount">Calculate</button>
+                        <button class="btn-reset" onclick="resetDiscount()" aria-label="Clear discount inputs">Clear</button>
+
+                        <div id="result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+                            <h3>Discount Details</h3>
+                            <div class="result-item">
+                                <span class="result-label">Discount Amount</span>
+                                <span class="result-value" id="discount-amount">₹0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Combined Discount %</span>
+                                <span class="result-value" id="combined-discount-percent">0%</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Combined Discount Amount</span>
+                                <span class="result-value" id="combined-discount-amount">₹0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Final Price</span>
+                                <span class="result-value" id="final-price">₹0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">You Save</span>
+                                <span class="result-value" id="you-save">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-info-section">
+                        <div class="tool-description">
+                            <h3>How to Use</h3>
+                            <ol>
+                                <li>Enter the original price</li>
+                                <li>Enter the discount percentage</li>
+                                <li>Click Calculate</li>
+                                <li>See discount amount and final price</li>
+                            </ol>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Perfect For</h3>
+                            <ul>
+                                <li>Shopping and finding best deals</li>
+                                <li>Sales and promotional calculations</li>
+                                <li>Comparing prices</li>
+                                <li>Budgeting and savings</li>
+                            </ul>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Formula</h3>
+                            <p><strong>Discount Amount:</strong> (Original Price × Discount %) / 100</p>
+                            <p><strong>Final Price:</strong> Original Price - Discount Amount</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>How do I calculate discount amount?</summary>
+                        <p>Formula: (Original Price × Discount %) / 100. For example, 20% off ₹100 = (100 × 20) / 100 = ₹20 discount.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I calculate multiple discounts?</summary>
+                        <p>This calculator works for single discounts. For multiple discounts, apply them one after another.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Does this include GST?</summary>
+                        <p>No, this calculator shows discount on the price. GST may be applicable separately depending on your location and item type.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is this accurate for all items?</summary>
+                        <p>Yes, the discount calculation formula is universal and works for all types of items and prices.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="gst-calculator.html">GST Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/discount-calculator.js"></script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

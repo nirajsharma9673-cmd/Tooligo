@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooligo – Date Difference Calculator</title>
+    <meta name="description" content="Calculate the number of days between two dates instantly. Find day difference, weeks, months, and years between dates with our free calculator.">
+    <meta name="keywords" content="date calculator, date difference, days between dates">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://YOUR_NETLIFY_SITE.netlify.app/tools/date-difference-calculator.html">
+    <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta property="og:description" content="Calculate the number of days between two dates instantly. Find day difference, weeks, months, and years between dates with our free calculator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YOUR_NETLIFY_SITE.netlify.app/tools/date-difference-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta name="twitter:description" content="Calculate the number of days between two dates instantly. Find day difference, weeks, months, and years between dates with our free calculator.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://YOUR_NETLIFY_SITE.netlify.app/tools/date-difference-calculator.html",
+  "name": "Date Difference Calculator - Calculate Days Between Dates",
+  "description": "Calculate the number of days between two dates instantly. Find day difference, weeks, months, and years between dates with our free calculator."
+}
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">Date Difference Calculator</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="tool-header">
+            <div class="container">
+                <h1>Date Difference Calculator</h1>
+                <p>Calculate days between two dates instantly</p>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <div class="tool-input-section">
+                        <h3>Calculate Date Difference</h3>
+                        <div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                        <div class="form-group">
+                            <label for="start-date">Start Date</label>
+                            <input type="date" id="start-date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="end-date">End Date</label>
+                            <input type="date" id="end-date" required>
+                        </div>
+
+                        <button class="btn-calculate" onclick="calculateDateDifference()" aria-controls="result-section" aria-label="Calculate date difference">Calculate</button>
+                        <button class="btn-reset" onclick="resetDateDifference()" aria-label="Clear date inputs">Clear</button>
+
+                        <div id="result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+                            <h3>Date Difference</h3>
+                            <div class="result-item">
+                                <span class="result-label">Total Days</span>
+                                <span class="result-value" id="total-days">0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Weeks</span>
+                                <span class="result-value" id="weeks">0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Months (Approx)</span>
+                                <span class="result-value" id="months">0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Years (Approx)</span>
+                                <span class="result-value" id="years">0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Exact Difference</span>
+                                <span class="result-value" id="exact-difference">0 years, 0 months, 0 days</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Business Days (Mon–Fri)</span>
+                                <span class="result-value" id="business-days">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-info-section">
+                        <div class="tool-description">
+                            <h3>About This Calculator</h3>
+                            <p>This date difference calculator helps you find the number of days between two dates. It also shows the difference in weeks, months, and years.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>How to Use</h3>
+                            <ol>
+                                <li>Select the start date</li>
+                                <li>Select the end date</li>
+                                <li>Click Calculate</li>
+                                <li>View the difference in days, weeks, months, and years</li>
+                            </ol>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Uses</h3>
+                            <ul>
+                                <li>Calculate time between events</li>
+                                <li>Plan project timelines</li>
+                                <li>Track time for billing</li>
+                                <li>Calculate duration of events</li>
+                                <li>Age calculation alternatives</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>How is the difference calculated?</summary>
+                        <p>The calculator finds the exact number of days between two dates and then converts that to weeks, months, and years.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Are the months and years exact?</summary>
+                        <p>Months and years are approximations (1 month = 30.44 days, 1 year = 365.25 days) for quick reference. Days are exact.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Does this calculator account for leap years?</summary>
+                        <p>Yes, the day calculation accurately accounts for leap years in the date range you select.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I use this for historical dates?</summary>
+                        <p>Yes, you can use this calculator for any dates, including historical dates from the past.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What if start date is after end date?</summary>
+                        <p>The calculator can handle both cases. If the end date is before the start date, it will show a negative value or you can swap the dates.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="age-calculator.html">Age Calculator</a></li>
+                        <li><a href="scientific-calculator.html">Scientific Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/date-difference-calculator.js"></script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

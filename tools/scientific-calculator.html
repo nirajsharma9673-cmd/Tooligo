@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooligo – Scientific Calculator</title>
+    <meta name="description" content="Full-featured scientific calculator with trigonometric, logarithmic, and exponential functions. Perfect for advanced math calculations.">
+    <meta name="keywords" content="scientific calculator, math calculator, advanced calculator">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://YOUR_NETLIFY_SITE.netlify.app/tools/scientific-calculator.html">
+    <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta property="og:description" content="Full-featured scientific calculator with trigonometric, logarithmic, and exponential functions. Perfect for advanced math calculations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YOUR_NETLIFY_SITE.netlify.app/tools/scientific-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta name="twitter:description" content="Full-featured scientific calculator with trigonometric, logarithmic, and exponential functions. Perfect for advanced math calculations.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://YOUR_NETLIFY_SITE.netlify.app/tools/scientific-calculator.html",
+  "name": "Scientific Calculator - Advanced Math Calculations",
+  "description": "Full-featured scientific calculator with trigonometric, logarithmic, and exponential functions. Perfect for advanced math calculations."
+}
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">Scientific Calculator</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="tool-header">
+            <div class="container">
+                <h1>Scientific Calculator</h1>
+                <p>Advanced mathematical calculations made easy</p>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <section class="tool-section">
+            <div class="container">
+                <div class="calculator">
+                    <div class="form-inline-group">
+                        <label for="angle-mode">Angle</label>
+                        <select id="angle-mode" aria-label="Angle mode">
+                            <option value="deg">DEG</option>
+                            <option value="rad">RAD</option>
+                        </select>
+                    </div>
+                    <div class="display" id="display" role="status" aria-live="polite" aria-atomic="true">0</div>
+                    <div class="buttons-grid">
+                        <button class="btn-calc btn-clear" onclick="clearDisplay()" aria-label="All clear">AC</button>
+                        <button class="btn-calc btn-operator" onclick="appendOperator('√')" aria-label="Square root">√</button>
+                        <button class="btn-calc btn-operator" onclick="appendOperator('^')" aria-label="Power">x^y</button>
+
+                        <button class="btn-calc" onclick="appendNumber('7')" aria-label="7">7</button>
+                        <button class="btn-calc" onclick="appendNumber('8')" aria-label="8">8</button>
+                        <button class="btn-calc" onclick="appendNumber('9')" aria-label="9">9</button>
+                        <button class="btn-calc btn-operator" onclick="appendOperator('/')" aria-label="Divide">/</button>
+
+                        <button class="btn-calc" onclick="appendNumber('4')" aria-label="4">4</button>
+                        <button class="btn-calc" onclick="appendNumber('5')" aria-label="5">5</button>
+                        <button class="btn-calc" onclick="appendNumber('6')" aria-label="6">6</button>
+                        <button class="btn-calc btn-operator" onclick="appendOperator('*')" aria-label="Multiply">×</button>
+
+                        <button class="btn-calc" onclick="appendNumber('1')" aria-label="1">1</button>
+                        <button class="btn-calc" onclick="appendNumber('2')" aria-label="2">2</button>
+                        <button class="btn-calc" onclick="appendNumber('3')" aria-label="3">3</button>
+                        <button class="btn-calc btn-operator" onclick="appendOperator('-')" aria-label="Subtract">−</button>
+
+                        <button class="btn-calc" onclick="appendNumber('0')" aria-label="0">0</button>
+                        <button class="btn-calc" onclick="appendNumber('.')" aria-label="Decimal point">.</button>
+                        <button class="btn-calc btn-operator" onclick="appendOperator('+')" aria-label="Add">+</button>
+                        <button class="btn-calc btn-operator" onclick="toggleSign()" aria-label="Toggle sign">±</button>
+
+                        <button class="btn-calc btn-operator" onclick="appendOperator('%')" aria-label="Percent">%</button>
+                        <button class="btn-calc btn-operator" onclick="appendOperator('log')" aria-label="Log base 10">log</button>
+                        <button class="btn-calc btn-operator" onclick="appendOperator('ln')" aria-label="Natural log">ln</button>
+                        <button class="btn-calc" onclick="backspace()" aria-label="Backspace">←</button>
+
+                        <button class="btn-calc btn-operator" onclick="appendOperator('sin')" aria-label="Sine">sin</button>
+                        <button class="btn-calc btn-operator" onclick="appendOperator('cos')" aria-label="Cosine">cos</button>
+                        <button class="btn-calc btn-operator" onclick="appendOperator('tan')" aria-label="Tangent">tan</button>
+                        <button class="btn-calc" onclick="appendOperator('!')" aria-label="Factorial">n!</button>
+
+                        <button class="btn-equals" onclick="calculate()" aria-label="Equals">=</button>
+                    </div>
+                </div>
+
+                <div class="advanced-section">
+                    <div class="advanced-calc">
+                        <h4>Factorial</h4>
+                        <div class="form-group">
+                            <input type="number" id="factorial-input" placeholder="Enter number" aria-label="Factorial number" min="0" step="1">
+                        </div>
+                        <button class="btn-calculate" onclick="calculateFactorial()" aria-label="Calculate factorial">Calculate</button>
+                        <div id="factorial-result"></div>
+                    </div>
+
+                    <div class="advanced-calc">
+                        <h4>Combinations & Permutations</h4>
+                        <div class="form-group">
+                            <label for="n-value">N:</label>
+                            <input type="number" id="n-value" placeholder="Total items" aria-label="Total items" min="0" step="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="r-value">R:</label>
+                            <input type="number" id="r-value" placeholder="Selected items" aria-label="Selected items" min="0" step="1">
+                        </div>
+                        <button class="btn-calculate" onclick="calculateCombPerm('C')" aria-label="Calculate combinations">nCr</button>
+                        <button class="btn-calculate" onclick="calculateCombPerm('P')" aria-label="Calculate permutations">nPr</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Scientific Calculator Features</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>What trigonometric functions are supported?</summary>
+                        <p>Sine (sin), Cosine (cos), and Tangent (tan) functions are supported. Always use angles in degrees.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How do I use the square root function?</summary>
+                        <p>Click √, then enter the number and press =. For example: √ 16 = 4.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What does x^y do?</summary>
+                        <p>It raises x to the power of y. For example: 2 x^y 3 = 8 (2³).</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How do I calculate logarithms?</summary>
+                        <p>Use 'log' for base-10 logarithm or 'ln' for natural logarithm (base e).</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I calculate factorial?</summary>
+                        <p>Yes, use the n! button or the dedicated Factorial calculator below for larger numbers.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="unit-converter.html">Unit Converter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/scientific-calculator.js"></script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

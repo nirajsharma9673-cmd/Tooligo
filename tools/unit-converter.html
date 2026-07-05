@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooligo – Unit Converter</title>
+    <meta name="description" content="Convert between units of length, weight, volume, and temperature instantly. Free online unit converter for all your conversion needs.">
+    <meta name="keywords" content="unit converter, length converter, weight converter, temperature converter">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://YOUR_NETLIFY_SITE.netlify.app/tools/unit-converter.html">
+    <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta property="og:description" content="Convert between units of length, weight, volume, and temperature instantly. Free online unit converter for all your conversion needs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YOUR_NETLIFY_SITE.netlify.app/tools/unit-converter.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta name="twitter:description" content="Convert between units of length, weight, volume, and temperature instantly. Free online unit converter for all your conversion needs.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://YOUR_NETLIFY_SITE.netlify.app/tools/unit-converter.html",
+  "name": "Unit Converter - Convert Length, Weight, Volume & Temperature",
+  "description": "Convert between units of length, weight, volume, and temperature instantly. Free online unit converter for all your conversion needs."
+}
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">Unit Converter</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="tool-header">
+            <div class="container">
+                <h1>Unit Converter</h1>
+                <p>Convert between different units of measurement</p>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <div class="tool-input-section">
+                        <h3>Unit Conversion</h3>
+                        <div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                        <div class="form-group">
+                            <label for="conversion-type">Conversion Type</label>
+                            <select id="conversion-type" onchange="changeConversionType()">
+                                <option value="length">Length</option>
+                                <option value="weight">Weight</option>
+                                <option value="volume">Volume</option>
+                                <option value="area">Area</option>
+                                <option value="speed">Speed</option>
+                                <option value="temperature">Temperature</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="from-value">From Value</label>
+                                <input type="number" id="from-value" placeholder="Enter value" aria-label="Value" step="any">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="from-unit">From Unit</label>
+                            <select id="from-unit">
+                                <option value="m">Meter (m)</option>
+                                <option value="cm">Centimeter (cm)</option>
+                                <option value="mm">Millimeter (mm)</option>
+                                <option value="km">Kilometer (km)</option>
+                                <option value="inch">Inch</option>
+                                <option value="foot">Foot</option>
+                                <option value="yard">Yard</option>
+                                <option value="mile">Mile</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="to-unit">To Unit</label>
+                            <select id="to-unit">
+                                <option value="m">Meter (m)</option>
+                                <option value="cm">Centimeter (cm)</option>
+                                <option value="mm">Millimeter (mm)</option>
+                                <option value="km">Kilometer (km)</option>
+                                <option value="inch">Inch</option>
+                                <option value="foot">Foot</option>
+                                <option value="yard">Yard</option>
+                                <option value="mile">Mile</option>
+                            </select>
+                        </div>
+
+                        <button class="btn-calculate" onclick="convertUnits()" aria-controls="result-section" aria-label="Convert units">Convert</button>
+                        <button class="btn-reset" onclick="resetConverter()" aria-label="Clear converter inputs">Clear</button>
+
+                        <div id="result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+                            <h3>Conversion Result</h3>
+                            <div class="result-item">
+                                <span class="result-label" id="result-label-from">Value</span>
+                                <span class="result-value" id="result-from">0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label" id="result-label-to">Equals</span>
+                                <span class="result-value" id="result-to">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-info-section">
+                        <div class="tool-description">
+                            <h3>Supported Conversions</h3>
+                            <ul>
+                                <li><strong>Length:</strong> Meter, Centimeter, Millimeter, Kilometer, Inch, Foot, Yard, Mile</li>
+                                <li><strong>Weight:</strong> Gram, Kilogram, Milligram, Pound, Ounce</li>
+                                <li><strong>Volume:</strong> Liter, Milliliter, Gallon, Cup, Fluid Ounce</li>
+                                <li><strong>Area:</strong> Square Meter, Square Kilometer, Square Centimeter, Hectare, Acre, Square Foot</li>
+                                <li><strong>Speed:</strong> Meter/second, Kilometer/hour, Mile/hour, Knot</li>
+                                <li><strong>Temperature:</strong> Celsius, Fahrenheit, Kelvin</li>
+                            </ul>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>How to Use</h3>
+                            <ol>
+                                <li>Select conversion type (Length, Weight, Volume, Temperature)</li>
+                                <li>Enter the value to convert</li>
+                                <li>Select from and to units</li>
+                                <li>Click Convert</li>
+                                <li>Get instant result</li>
+                            </ol>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Features</h3>
+                            <ul>
+                                <li>Multiple conversion types</li>
+                                <li>Support for metric and imperial units</li>
+                                <li>Real-time conversion</li>
+                                <li>Accurate calculations</li>
+                                <li>Easy to use interface</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Is this converter accurate?</summary>
+                        <p>Yes, our converter uses standard conversion factors and provides accurate results.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I convert between any units?</summary>
+                        <p>This converter supports common length, weight, volume, and temperature conversions. Both metric and imperial units are supported.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How is temperature conversion different?</summary>
+                        <p>Temperature conversion requires formulas rather than simple multiplication. Celsius to Fahrenheit: (C × 9/5) + 32.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Which units are supported for each conversion type?</summary>
+                        <p>Length: meter, cm, mm, km, inch, foot, yard, mile. Weight: g, kg, mg, lb, oz. Volume: L, ml, gallon, cup, oz. Temperature: C, F, K.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="currency-converter.html">Currency Converter</a></li>
+                        <li><a href="age-calculator.html">Age Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/unit-converter.js"></script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

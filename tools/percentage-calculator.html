@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooligo – Percentage Calculator</title>
+    <meta name="description" content="Calculate percentages, percentage increase, percentage decrease, and percentage of total instantly with our free calculator.">
+    <meta name="keywords" content="percentage calculator, percent calculator, calculate percentage">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://YOUR_NETLIFY_SITE.netlify.app/tools/percentage-calculator.html">
+    <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta property="og:description" content="Calculate percentages, percentage increase, percentage decrease, and percentage of total instantly with our free calculator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YOUR_NETLIFY_SITE.netlify.app/tools/percentage-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta name="twitter:description" content="Calculate percentages, percentage increase, percentage decrease, and percentage of total instantly with our free calculator.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://YOUR_NETLIFY_SITE.netlify.app/tools/percentage-calculator.html",
+  "name": "Percentage Calculator - Calculate Percentages Instantly",
+  "description": "Calculate percentages, percentage increase, percentage decrease, and percentage of total instantly with our free calculator."
+}
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">Percentage Calculator</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="tool-header">
+            <div class="container">
+                <h1>Percentage Calculator</h1>
+                <p>Calculate percentages and percentage changes</p>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <div class="tool-input-section">
+                        <h3>Percentage Calculation</h3>
+                        <div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                        <div class="form-group">
+                            <label for="calc-type">Select Calculation Type</label>
+                            <select id="calc-type" onchange="changeCalculationType()">
+                                <option value="percent-of">What is X% of Y?</option>
+                                <option value="percent-change">Percentage Increase/Decrease</option>
+                                <option value="percent-value">What percent is X of Y?</option>
+                            </select>
+                        </div>
+
+                        <div id="type-percent-of">
+                            <div class="form-group">
+                                <label for="percentage">Percentage (%)</label>
+                                <input type="number" id="percentage" placeholder="Enter percentage" aria-label="Percentage" step="0.01">
+                            </div>
+                            <div class="form-group">
+                                <label for="total-value">Total Value</label>
+                                <input type="number" id="total-value" placeholder="Enter total value" aria-label="Total value" step="0.01">
+                            </div>
+                        </div>
+
+                        <div id="type-percent-change" class="hidden">
+                            <div class="form-group">
+                                <label for="original-value">Original Value</label>
+                                <input type="number" id="original-value" placeholder="Enter original value" aria-label="Original value" step="0.01">
+                            </div>
+                            <div class="form-group">
+                                <label for="new-value">New Value</label>
+                                <input type="number" id="new-value" placeholder="Enter new value" aria-label="New value" step="0.01">
+                            </div>
+                        </div>
+
+                        <div id="type-percent-value" class="hidden">
+                            <div class="form-group">
+                                <label for="part-value">Part Value</label>
+                                <input type="number" id="part-value" placeholder="Enter part value" aria-label="Part value" step="0.01">
+                            </div>
+                            <div class="form-group">
+                                <label for="whole-value">Whole Value</label>
+                                <input type="number" id="whole-value" placeholder="Enter whole value" aria-label="Whole value" step="0.01">
+                            </div>
+                        </div>
+
+                        <button class="btn-calculate" onclick="calculatePercentage()" aria-controls="result-section" aria-label="Calculate percentage">Calculate</button>
+                        <button class="btn-reset" onclick="resetPercentage()" aria-label="Clear percentage inputs">Clear</button>
+
+                        <div id="result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+                            <h3>Result</h3>
+                            <div class="result-item">
+                                <span class="result-label">Answer</span>
+                                <span class="result-value" id="percentage-result">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-info-section">
+                        <div class="tool-description">
+                            <h3>About This Calculator</h3>
+                            <p>This percentage calculator helps you calculate percentages in three different ways: find percentage of a number, calculate percentage change, and find what percent one number is of another.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>How to Use</h3>
+                            <ol>
+                                <li>Select the calculation type</li>
+                                <li>Enter the required values</li>
+                                <li>Click Calculate</li>
+                                <li>Get instant results</li>
+                            </ol>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Formulas Used</h3>
+                            <ul>
+                                <li><strong>X% of Y:</strong> (X × Y) / 100</li>
+                                <li><strong>% Change:</strong> ((New - Old) / Old) × 100</li>
+                                <li><strong>X is what % of Y:</strong> (X / Y) × 100</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>How do I calculate a percentage of a number?</summary>
+                        <p>Use the formula: (Percentage × Number) / 100. For example, 20% of 100 = (20 × 100) / 100 = 20.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What's the formula for percentage increase?</summary>
+                        <p>Formula: ((New Value - Original Value) / Original Value) × 100. For example, if value increased from 100 to 120, increase = ((120-100)/100) × 100 = 20%.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I use this for discounts?</summary>
+                        <p>Yes! If an item is 30% off, select "What is X% of Y?" and calculate 30% of the original price to find discount amount.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="discount-calculator.html">Discount Calculator</a></li>
+                        <li><a href="gst-calculator.html">GST Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/percentage-calculator.js"></script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>

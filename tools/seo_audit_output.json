@@ -1,0 +1,306 @@
+[
+  {
+    "file": "about.html",
+    "title": "About Tooligo - Free Online Calculators & Tools",
+    "meta_description": "Learn about Tooligo, your source for free online calculators and utility tools. Accurate, fast, and completely free for everyone.",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/about.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "About Tooligo"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": false,
+    "internal_links_count": 19,
+    "broken_internal_links": []
+  },
+  {
+    "file": "contact.html",
+    "title": "Contact Tooligo - Get in Touch",
+    "meta_description": "Contact Tooligo for questions, suggestions, or feedback. We",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/contact.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "Contact Tooligo"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": false,
+    "internal_links_count": 13,
+    "broken_internal_links": []
+  },
+  {
+    "file": "disclaimer.html",
+    "title": "Disclaimer - Tooligo",
+    "meta_description": "Tooligo Disclaimer - Important information about using our calculators and tools",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/disclaimer.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "Disclaimer"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": false,
+    "internal_links_count": 12,
+    "broken_internal_links": []
+  },
+  {
+    "file": "index.html",
+    "title": "Free Online Tools & Calculators - Instant Results",
+    "meta_description": "Access 10+ free online calculators and tools for instant results. Age calculator, EMI, SIP, GST, percentage, discount, unit converter, currency converter, date difference, and scientific calculator.",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/index.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "Powerful OnlineTools Instant Results"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": false,
+    "internal_links_count": 32,
+    "broken_internal_links": []
+  },
+  {
+    "file": "privacy-policy.html",
+    "title": "Privacy Policy - Tooligo",
+    "meta_description": "Tooligo Privacy Policy - Learn how we protect your data and privacy",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/privacy-policy.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "Privacy Policy"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": false,
+    "internal_links_count": 12,
+    "broken_internal_links": []
+  },
+  {
+    "file": "terms.html",
+    "title": "Terms & Conditions - Tooligo",
+    "meta_description": "Tooligo Terms & Conditions - Read our terms of service",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/terms.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "Terms & Conditions"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": false,
+    "internal_links_count": 12,
+    "broken_internal_links": []
+  },
+  {
+    "file": "tools\\age-calculator.html",
+    "title": "Age Calculator - Calculate Your Age Instantly & Accurately",
+    "meta_description": "Calculate your exact age in years, months, and days instantly. Our free age calculator is accurate and works on all devices. No registration needed.",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/tools/age-calculator.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "Age Calculator"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": true,
+    "internal_links_count": 16,
+    "broken_internal_links": []
+  },
+  {
+    "file": "tools\\currency-converter.html",
+    "title": "Currency Converter - Convert World Currencies Instantly",
+    "meta_description": "Convert between major world currencies instantly. Free currency converter with live exchange rates. USD, EUR, GBP, JPY, INR and more.",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/tools/currency-converter.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "Currency Converter"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": true,
+    "internal_links_count": 12,
+    "broken_internal_links": []
+  },
+  {
+    "file": "tools\\date-difference-calculator.html",
+    "title": "Date Difference Calculator - Calculate Days Between Dates",
+    "meta_description": "Calculate the number of days between two dates instantly. Find day difference, weeks, months, and years between dates with our free calculator.",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/tools/date-difference-calculator.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "Date Difference Calculator"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": true,
+    "internal_links_count": 12,
+    "broken_internal_links": []
+  },
+  {
+    "file": "tools\\discount-calculator.html",
+    "title": "Discount Calculator - Calculate Discounts & Sale Price",
+    "meta_description": "Calculate discounts and final prices instantly. Find sale price after discount with our free discount calculator.",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/tools/discount-calculator.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "Discount Calculator"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": true,
+    "internal_links_count": 12,
+    "broken_internal_links": []
+  },
+  {
+    "file": "tools\\emi-calculator.html",
+    "title": "EMI Calculator - Calculate Monthly Loan Payments Instantly",
+    "meta_description": "Calculate your exact monthly EMI (Equated Monthly Installment) for any loan. Free EMI calculator with amortization schedule. Fast and accurate results.",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/tools/emi-calculator.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "EMI Calculator"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": true,
+    "internal_links_count": 15,
+    "broken_internal_links": []
+  },
+  {
+    "file": "tools\\gst-calculator.html",
+    "title": "GST Calculator - Calculate Tax Amount Instantly",
+    "meta_description": "Calculate GST (Goods and Services Tax) with our free calculator. Find tax amount, final price, and reverse GST calculations instantly.",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/tools/gst-calculator.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "GST Calculator"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": true,
+    "internal_links_count": 12,
+    "broken_internal_links": []
+  },
+  {
+    "file": "tools\\percentage-calculator.html",
+    "title": "Percentage Calculator - Calculate Percentages Instantly",
+    "meta_description": "Calculate percentages, percentage increase, percentage decrease, and percentage of total instantly with our free calculator.",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/tools/percentage-calculator.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "Percentage Calculator"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": true,
+    "internal_links_count": 12,
+    "broken_internal_links": []
+  },
+  {
+    "file": "tools\\scientific-calculator.html",
+    "title": "Scientific Calculator - Advanced Math Calculations",
+    "meta_description": "Full-featured scientific calculator with trigonometric, logarithmic, and exponential functions. Perfect for advanced math calculations.",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/tools/scientific-calculator.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "Scientific Calculator"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": true,
+    "internal_links_count": 12,
+    "broken_internal_links": []
+  },
+  {
+    "file": "tools\\sip-calculator.html",
+    "title": "SIP Calculator - Calculate Investment Returns Instantly",
+    "meta_description": "Calculate SIP (Systematic Investment Plan) returns with our free calculator. Get accurate investment projections for mutual funds and investments.",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/tools/sip-calculator.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "SIP Calculator"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": true,
+    "internal_links_count": 15,
+    "broken_internal_links": []
+  },
+  {
+    "file": "tools\\unit-converter.html",
+    "title": "Unit Converter - Convert Length, Weight, Volume & Temperature",
+    "meta_description": "Convert between units of length, weight, volume, and temperature instantly. Free online unit converter for all your conversion needs.",
+    "canonical": "https://YOUR_NETLIFY_SITE.netlify.app/tools/unit-converter.html",
+    "has_og": true,
+    "has_twitter": true,
+    "has_jsonld": true,
+    "has_viewport": true,
+    "h1_count": 1,
+    "h1_texts": [
+      "Unit Converter"
+    ],
+    "images_total": 0,
+    "images_missing_alt": 0,
+    "breadcrumb": true,
+    "internal_links_count": 12,
+    "broken_internal_links": []
+  }
+]

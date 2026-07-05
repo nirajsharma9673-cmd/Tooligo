@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooligo – Currency Converter</title>
+    <meta name="description" content="Convert between major world currencies instantly. Free currency converter with live exchange rates. USD, EUR, GBP, JPY, INR and more.">
+    <meta name="keywords" content="currency converter, exchange rate, money converter">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://YOUR_NETLIFY_SITE.netlify.app/tools/currency-converter.html">
+    <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta property="og:description" content="Convert between major world currencies instantly. Free currency converter with live exchange rates. USD, EUR, GBP, JPY, INR and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YOUR_NETLIFY_SITE.netlify.app/tools/currency-converter.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta name="twitter:description" content="Convert between major world currencies instantly. Free currency converter with live exchange rates. USD, EUR, GBP, JPY, INR and more.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://YOUR_NETLIFY_SITE.netlify.app/tools/currency-converter.html",
+  "name": "Currency Converter - Convert World Currencies Instantly",
+  "description": "Convert between major world currencies instantly. Free currency converter with live exchange rates. USD, EUR, GBP, JPY, INR and more."
+}
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">Currency Converter</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="tool-header">
+            <div class="container">
+                <h1>Currency Converter</h1>
+                <p>Convert between world currencies instantly</p>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <div class="tool-input-section">
+                        <h3>Currency Conversion</h3>
+                        <div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                        <div class="form-group">
+                            <label for="amount">Amount</label>
+                            <input type="number" id="amount" placeholder="Enter amount" aria-label="Amount" step="0.01" min="0">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="from-currency">From Currency</label>
+                            <select id="from-currency">
+                                <option value="INR">Indian Rupee (INR)</option>
+                                <option value="USD">US Dollar (USD)</option>
+                                <option value="EUR">Euro (EUR)</option>
+                                <option value="GBP">British Pound (GBP)</option>
+                                <option value="JPY">Japanese Yen (JPY)</option>
+                                <option value="AUD">Australian Dollar (AUD)</option>
+                                <option value="CAD">Canadian Dollar (CAD)</option>
+                                <option value="SGD">Singapore Dollar (SGD)</option>
+                                <option value="HKD">Hong Kong Dollar (HKD)</option>
+                                <option value="MYR">Malaysian Ringgit (MYR)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="to-currency">To Currency</label>
+                            <select id="to-currency">
+                                <option value="USD">US Dollar (USD)</option>
+                                <option value="INR" selected>Indian Rupee (INR)</option>
+                                <option value="EUR">Euro (EUR)</option>
+                                <option value="GBP">British Pound (GBP)</option>
+                                <option value="JPY">Japanese Yen (JPY)</option>
+                                <option value="AUD">Australian Dollar (AUD)</option>
+                                <option value="CAD">Canadian Dollar (CAD)</option>
+                                <option value="SGD">Singapore Dollar (SGD)</option>
+                                <option value="HKD">Hong Kong Dollar (HKD)</option>
+                                <option value="MYR">Malaysian Ringgit (MYR)</option>
+                            </select>
+                        </div>
+
+                        <button class="btn-calculate" onclick="convertCurrency()" aria-controls="result-section" aria-label="Convert currency">Convert</button>
+                        <button class="btn-reset" onclick="resetCurrency()" aria-label="Clear currency inputs">Clear</button>
+
+                        <div id="result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+                            <h3>Conversion Result</h3>
+                            <div class="result-item">
+                                <span class="result-label" id="from-label">Amount</span>
+                                <span class="result-value" id="from-result">0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label" id="to-label">Equals</span>
+                                <span class="result-value" id="to-result">0</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Exchange Rate</span>
+                                <span class="result-value" id="exchange-rate">0</span>
+                            </div>
+                            <div id="rates-info" class="tool-usage tool-info-note"></div>
+                        </div>
+                    </div>
+
+                    <div class="tool-info-section">
+                        <div class="tool-description">
+                            <h3>About This Converter</h3>
+                            <p>This currency converter provides exchange rates for major world currencies. Use it for travel, business, or personal finance.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Supported Currencies</h3>
+                            <ul>
+                                <li>Indian Rupee (INR)</li>
+                                <li>US Dollar (USD)</li>
+                                <li>Euro (EUR)</li>
+                                <li>British Pound (GBP)</li>
+                                <li>Japanese Yen (JPY)</li>
+                                <li>Australian Dollar (AUD)</li>
+                                <li>Canadian Dollar (CAD)</li>
+                                <li>Singapore Dollar (SGD)</li>
+                                <li>Hong Kong Dollar (HKD)</li>
+                                <li>Malaysian Ringgit (MYR)</li>
+                            </ul>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>How to Use</h3>
+                            <ol>
+                                <li>Enter the amount to convert</li>
+                                <li>Select from currency</li>
+                                <li>Select to currency</li>
+                                <li>Click Convert</li>
+                                <li>View converted amount and rate</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Are exchange rates real-time?</summary>
+                        <p>This calculator uses standard reference rates. For real-time rates, check with your bank or financial institution.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I add more currencies?</summary>
+                        <p>This converter supports major world currencies. If you need a specific currency, please contact us.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How accurate is this converter?</summary>
+                        <p>We use standard exchange rates, but actual rates may vary based on current market conditions and your financial institution.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is this useful for international travel?</summary>
+                        <p>Yes! This converter helps you understand exchange rates. However, banks may charge additional fees and use different rates.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Which currencies have the best exchange rates?</summary>
+                        <p>Exchange rates fluctuate constantly. We recommend checking with your bank for the best rates when making international transfers.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-container">
+            <!-- AdSense  -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="unit-converter.html">Unit Converter</a></li>
+                        <li><a href="discount-calculator.html">Discount Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/currency-converter.js"></script>
+    <script src="../js/theme.js"></script>
+</body>
+</html>
