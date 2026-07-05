@@ -1,119 +1,19 @@
-# TODO: replace YOUR_NETLIFY_SITE with your actual Netlify site name
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Home Page -->
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/index.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <!-- Main Pages -->
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/about.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/contact.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Legal Pages -->
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/privacy-policy.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/terms.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/disclaimer.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <!-- Tools -->
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/tools/age-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/tools/emi-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/tools/sip-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/tools/gst-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/tools/percentage-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/tools/discount-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/tools/unit-converter.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/tools/currency-converter.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/tools/date-difference-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://YOUR_NETLIFY_SITE.netlify.app/tools/scientific-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
+  <url><loc>https://tooligo-tools.netlify.app/</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/about.html</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/contact.html</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/privacy-policy.html</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/terms.html</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/disclaimer.html</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/tools/age-calculator.html</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/tools/emi-calculator.html</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/tools/sip-calculator.html</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/tools/gst-calculator.html</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/tools/percentage-calculator.html</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/tools/discount-calculator.html</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/tools/unit-converter.html</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/tools/currency-converter.html</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/tools/date-difference-calculator.html</loc></url>
+  <url><loc>https://tooligo-tools.netlify.app/tools/scientific-calculator.html</loc></url>
 </urlset>

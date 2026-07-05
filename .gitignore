@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Python virtual environment
 .venv/
 
@@ -12,3 +13,19 @@ Thumbs.db
 
 # macOS
 .DS_Store
+=======
+# Python virtual environment
+.venv/
+
+# VS Code workspace settings
+.vscode/
+
+# Python cache
+__pycache__/
+
+# Windows
+Thumbs.db
+
+# macOS
+.DS_Store
+>>>>>>> 033a4f7 (improve mobile UI)

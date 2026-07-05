@@ -6,6 +6,9 @@ const ThemeManager = {
     init() {
         this.restoreTheme();
         this.setupToggle();
+        this.initMobileNav();
+        this.initToolSearch();
+        this.handleScroll();
     },
 
     restoreTheme() {
@@ -40,6 +43,230 @@ const ThemeManager = {
         if (toggleBtn) {
             toggleBtn.addEventListener('click', () => this.toggleTheme());
         }
+    },
+
+    initMobileNav() {
+        const header = document.querySelector('.header');
+        const headerContent = document.querySelector('.header-content');
+        const nav = document.querySelector('.nav');
+        const themeToggle = document.querySelector('.theme-toggle');
+
+        if (!header || !headerContent || !nav || document.querySelector('.nav-toggle')) return;
+
+        const headerActions = document.createElement('div');
+        headerActions.className = 'header-actions';
+
+        const toggleBtn = document.createElement('button');
+        toggleBtn.className = 'nav-toggle';
+        toggleBtn.setAttribute('aria-label', 'Open navigation');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.innerHTML = '<span></span><span></span><span></span>';
+
+        headerActions.appendChild(toggleBtn);
+
+        if (themeToggle) {
+            headerActions.appendChild(themeToggle);
+        }
+
+        if (headerContent.contains(themeToggle)) {
+            headerContent.insertBefore(headerActions, themeToggle.nextSibling);
+        } else {
+            headerContent.appendChild(headerActions);
+        }
+
+        const overlay = document.createElement('div');
+        overlay.className = 'mobile-nav-overlay';
+        document.body.appendChild(overlay);
+
+        const panel = document.createElement('nav');
+        panel.className = 'mobile-nav-panel';
+        panel.setAttribute('aria-label', 'Mobile navigation');
+
+        const list = document.createElement('ul');
+        list.className = 'mobile-nav-list';
+
+        const sourceLinks = nav.querySelectorAll('.nav-link');
+        sourceLinks.forEach(link => {
+            const listItem = document.createElement('li');
+            listItem.className = 'mobile-nav-link';
+            const linkClone = link.cloneNode(true);
+            linkClone.classList.add('mobile-nav-link-anchor');
+            listItem.appendChild(linkClone);
+            list.appendChild(listItem);
+        });
+
+        panel.appendChild(list);
+        document.body.appendChild(panel);
+
+        toggleBtn.addEventListener('click', () => this.toggleMobileNav(toggleBtn, overlay, panel));
+        overlay.addEventListener('click', () => this.closeMobileNav(toggleBtn, overlay, panel));
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                this.closeMobileNav(toggleBtn, overlay, panel);
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                this.closeMobileNav(toggleBtn, overlay, panel);
+            }
+        });
+    },
+
+    toggleMobileNav(toggleBtn, overlay, panel) {
+        const isOpen = panel.classList.contains('is-open');
+        panel.classList.toggle('is-open', !isOpen);
+        overlay.classList.toggle('is-visible', !isOpen);
+        toggleBtn.setAttribute('aria-expanded', String(!isOpen));
+        document.body.style.overflow = !isOpen ? 'hidden' : '';
+    },
+
+    closeMobileNav(toggleBtn, overlay, panel) {
+        panel.classList.remove('is-open');
+        overlay.classList.remove('is-visible');
+        toggleBtn?.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    },
+
+    handleScroll() {
+        const header = document.querySelector('.header');
+        if (!header) return;
+
+        const onScroll = () => {
+            header.classList.toggle('is-scrolled', window.scrollY > 16);
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    },
+
+    initToolSearch() {
+        const searchInput = document.getElementById('toolSearch') || document.querySelector('.search-input');
+        const toolsGrid = document.querySelector('.tools-grid');
+        const emptyState = document.querySelector('.tools-empty-state');
+        const meta = document.querySelector('.search-meta');
+
+        if (!searchInput || !toolsGrid) return;
+
+        const cards = Array.from(toolsGrid.querySelectorAll('.tool-card'));
+
+        // Store original text for safe highlighting
+        cards.forEach(card => {
+            const titleEl = card.querySelector('h3');
+            const descEl = card.querySelector('p');
+            if (titleEl && !titleEl.dataset.original) titleEl.dataset.original = titleEl.textContent.trim();
+            if (descEl && !descEl.dataset.original) descEl.dataset.original = descEl.textContent.trim();
+        });
+
+        const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+        const clearHighlights = (card) => {
+            const titleEl = card.querySelector('h3');
+            const descEl = card.querySelector('p');
+            if (titleEl && titleEl.dataset.original) titleEl.innerHTML = titleEl.dataset.original;
+            if (descEl && descEl.dataset.original) descEl.innerHTML = descEl.dataset.original;
+        };
+
+        const applyHighlights = (card, query) => {
+            if (!query) return clearHighlights(card);
+            const q = escapeRegExp(query);
+            const re = new RegExp(`(${q})`, 'ig');
+            const titleEl = card.querySelector('h3');
+            const descEl = card.querySelector('p');
+            if (titleEl && titleEl.dataset.original) {
+                titleEl.innerHTML = titleEl.dataset.original.replace(re, '<mark class="match-mark">$1</mark>');
+            }
+            if (descEl && descEl.dataset.original) {
+                descEl.innerHTML = descEl.dataset.original.replace(re, '<mark class="match-mark">$1</mark>');
+            }
+        };
+
+        const buildSearchText = (card) => {
+            const title = card.querySelector('h3')?.dataset?.original || card.querySelector('h3')?.textContent || '';
+            const description = card.querySelector('p')?.dataset?.original || card.querySelector('p')?.textContent || '';
+            // include data-keywords attribute if present
+            const kws = card.getAttribute('data-keywords') || '';
+            return `${title} ${description} ${kws}`.toLowerCase();
+        };
+
+        const searchEntries = cards.map((card) => ({
+            card,
+            searchText: buildSearchText(card)
+        }));
+
+        // Debounce utility
+        let debounceTimer = null;
+        const debounce = (fn, wait = 150) => {
+            return (...args) => {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => fn(...args), wait);
+            };
+        };
+
+        const updateVisibility = (rawQuery) => {
+            const query = (rawQuery || '').trim().toLowerCase();
+            let visibleCount = 0;
+
+            searchEntries.forEach(({ card, searchText }) => {
+                const matches = !query || searchText.includes(query);
+                card.classList.toggle('is-hidden', !matches);
+                if (matches) {
+                    visibleCount += 1;
+                    applyHighlights(card, query);
+                } else {
+                    clearHighlights(card);
+                }
+            });
+
+            if (emptyState) {
+                emptyState.hidden = visibleCount !== 0;
+            }
+
+            if (meta) {
+                const total = cards.length;
+                if (!query) {
+                    meta.textContent = '';
+                } else if (visibleCount === 0) {
+                    meta.textContent = 'No tools found.';
+                } else {
+                    meta.textContent = `Showing ${visibleCount} of ${total} tools`;
+                }
+            }
+        };
+
+        const debouncedUpdate = debounce((e) => updateVisibility(e.target.value), 120);
+
+        const clearBtn = document.querySelector('.search-clear');
+        const toggleClearVisibility = (val) => {
+            if (!clearBtn) return;
+            const show = val && val.trim().length > 0;
+            clearBtn.hidden = !show;
+        };
+
+        searchInput.addEventListener('input', (e) => {
+            toggleClearVisibility(e.target.value);
+            debouncedUpdate(e);
+        });
+        searchInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                searchInput.value = '';
+                updateVisibility('');
+            }
+        });
+
+        if (clearBtn) {
+            clearBtn.addEventListener('click', (ev) => {
+                ev.preventDefault();
+                searchInput.value = '';
+                toggleClearVisibility('');
+                updateVisibility('');
+                searchInput.focus();
+            });
+        }
+
+        // initialize
+        updateVisibility('');
     },
 
     toggleTheme() {

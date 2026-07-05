@@ -84,7 +84,7 @@ Run through these checks to verify everything is working:
 
 ### Test 1: Visual Inspection
 ```
-1. Open http://YOUR_NETLIFY_SITE.netlify.app/index.html (or your local path)
+1. Open https://tooligo-tools.netlify.app/index.html (or your local path)
 2. Verify default theme (should match system preference)
 3. Look for moon/sun icon in header
 4. Verify all colors look correct
