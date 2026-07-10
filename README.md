@@ -1,45 +1,174 @@
 # 🧰 Tooligo
 
-> Free online calculators and utility tools built with HTML, CSS, and JavaScript.
+<p align="center">
+  <img src="images/toolbox-logo.png" alt="Tooligo Logo" width="120">
+</p>
 
-![Tooligo](images/toolbox-logo.png)
+<p align="center">
+  <b>Free Online Calculators & Utility Tools</b><br>
+  Fast • Accurate • Responsive • Privacy Friendly
+</p>
 
-Tooligo is a lightweight, responsive collection of online calculators and utility tools designed to provide fast, accurate results without requiring sign-ups or downloads.
+<p align="center">
 
-## 🌐 Features
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Responsive](https://img.shields.io/badge/Responsive-Mobile%20Friendly-success?style=for-the-badge)
+![SEO](https://img.shields.io/badge/SEO-Optimized-brightgreen?style=for-the-badge)
+![Netlify](https://img.shields.io/badge/Hosted-Netlify-00C7B7?style=for-the-badge&logo=netlify)
 
-- 🎂 Age Calculator
-- 💰 EMI Calculator
-- 📈 SIP Calculator
-- 🧾 GST Calculator
-- 📊 Percentage Calculator
-- 🏷️ Discount Calculator
-- 🌍 Currency Converter
-- 📏 Unit Converter
-- 📅 Date Difference Calculator
-- 🧮 Scientific Calculator
+</p>
 
-## ✨ Highlights
+---
 
-- 🌙 Dark Mode with saved preference
-- 📱 Fully responsive design
-- ⚡ Fast and lightweight (no frameworks)
-- ♿ Accessible and keyboard-friendly
+## 🌐 Live Website
+
+**🔗 https://tooligo-tools.netlify.app**
+
+---
+
+# 🚀 About Tooligo
+
+Tooligo is a collection of modern online calculators and productivity tools built entirely with **HTML, CSS, and Vanilla JavaScript**.
+
+The goal of Tooligo is to provide accurate, fast, and easy-to-use tools that work directly inside the browser without requiring sign-up, installation, or downloads.
+
+Whether you're a student, professional, developer, or everyday user, Tooligo helps simplify common calculations and daily tasks with a clean and responsive interface.
+
+### Why Tooligo?
+
+- ⚡ Fast browser-based calculations
+- 📱 Mobile-first responsive design
+- 🌙 Dark Mode support
+- 🔒 Privacy-friendly (many tools work completely in-browser)
+- 🚀 Lightweight (No frameworks)
 - 🔍 SEO optimized
-- 🧭 Breadcrumb navigation
-- 📋 Clean and consistent UI
-- 🚀 Ready for Netlify deployment
+- ♿ Accessible UI
+- 💯 Free forever
 
-## 🛠️ Built With
+---
+
+# ✨ Features
+
+- ✅ 20+ Online Calculators
+- ✅ PDF Utility Tools
+- ✅ Responsive Design
+- ✅ Dark Mode
+- ✅ Google Analytics 4
+- ✅ Google Search Console Verified
+- ✅ XML Sitemap
+- ✅ robots.txt
+- ✅ SEO Optimized
+- ✅ Structured Data
+- ✅ FAQ Schema
+- ✅ Breadcrumb Navigation
+- ✅ Fast Loading
+- ✅ Keyboard Friendly
+- ✅ Accessible Forms
+- ✅ Browser-based Processing
+
+---
+
+# 📚 Available Tools
+
+## 💰 Finance Tools
+
+- EMI Calculator
+- SIP Calculator
+- GST Calculator
+- Income Tax Calculator
+- FD / RD Calculator
+- Loan Eligibility Calculator
+- Discount Calculator
+
+---
+
+## 🎓 Student Tools
+
+- Percentage Calculator
+- Percentage ↔ CGPA Converter
+- Attendance Calculator
+
+---
+
+## ❤️ Health Tools
+
+- BMI Calculator
+- Calorie Calculator
+- Water Intake Calculator
+
+---
+
+## 📄 PDF Tools
+
+- PDF to Image
+- Merge PDF
+- Split PDF
+
+---
+
+## 🛠 Utility Tools
+
+- Age Calculator
+- Scientific Calculator
+- Currency Converter
+- Unit Converter
+- Date Difference Calculator
+- Word Counter
+- Case Converter
+
+---
+
+# ⚡ Performance
+
+Tooligo is optimized for speed and user experience.
+
+| Metric | Score |
+|---------|------:|
+| Performance | 99–100 |
+| Accessibility | 98+ |
+| Best Practices | 100 |
+| SEO | 100 |
+
+---
+
+# 🔍 SEO Features
+
+Tooligo follows modern SEO best practices.
+
+- XML Sitemap
+- robots.txt
+- Canonical URLs
+- Meta Descriptions
+- Open Graph Tags
+- Twitter Cards
+- FAQ Schema
+- Breadcrumb Schema
+- Structured Data
+- Mobile Friendly
+- Fast Page Speed
+- Semantic HTML
+
+---
+
+# 🛠 Tech Stack
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
+- Vanilla JavaScript
+- PDF.js
+- JSZip
+- Google Analytics 4
+- Google Search Console
+- Netlify
 
-## 📂 Project Structure
+---
 
-```text
-Tooligo/
+# 📂 Project Structure
+
+```
+Tooligo
 │
 ├── css/
 ├── images/
@@ -55,52 +184,127 @@ Tooligo/
 │
 ├── sitemap.xml
 ├── robots.txt
-└── site.webmanifest
+├── site.webmanifest
+│
+└── README.md
 ```
 
-## 🚀 Getting Started
+---
 
-Clone the repository:
+# 🚀 Getting Started
+
+## Clone the Repository
 
 ```bash
 git clone https://github.com/nirajsharma9673-cmd/Tooligo.git
 ```
 
-Open the project folder and launch `index.html` using a local server such as **Live Server** in Visual Studio Code.
+Open the project folder.
 
-## 🌍 Live Demo
+Run using:
 
-Coming soon (Netlify deployment).
+- VS Code Live Server
+- Python HTTP Server
+- Any local web server
 
-## 📸 Screenshots
+Example:
 
-Screenshots will be added after the first public release.
+```bash
+python -m http.server
+```
 
-## 📋 Roadmap
-
-- [x] Responsive layout
-- [x] Dark mode
-- [x] Calculator tools
-- [x] SEO improvements
-- [x] Accessibility improvements
-- [x] Netlify deployment
-- [x] Google Search Console
-- [x] Google Analytics
-- [ ] Custom domain
-- [ ] Additional utility tools
-
-## 🤝 Contributing
-
-Contributions, suggestions, and bug reports are welcome. Feel free to open an issue or submit a pull request.
-
-## 📧 Contact
-
-Email: **nirajsharma9673@gmail.com**
-
-## 📄 License
-
-This project is currently not licensed.
+or simply launch with **Live Server** in Visual Studio Code.
 
 ---
 
-Made with ❤️ using HTML, CSS and JavaScript.
+# 📸 Screenshots
+
+Coming soon.
+
+Future screenshots will include:
+
+- Home Page
+- Calculator Pages
+- Mobile View
+- Dark Mode
+- PDF Tools
+
+---
+
+# 📋 Roadmap
+
+## Completed
+
+- ✅ Responsive Design
+- ✅ Dark Mode
+- ✅ Google Search Console
+- ✅ Google Analytics 4
+- ✅ PDF Tools
+- ✅ Rich SEO Content
+- ✅ Structured Data
+- ✅ Accessibility Improvements
+
+## Planned
+
+- 🔄 50+ Calculators
+- 🔄 PWA Support
+- 🔄 Custom Domain
+- 🔄 Blog Section
+- 🔄 AdSense Approval
+- 🔄 More Productivity Tools
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+If you'd like to improve Tooligo:
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Submit a Pull Request
+
+Bug reports and feature suggestions are also appreciated.
+
+---
+
+# 📧 Contact
+
+**Developer:** Niraj Sharma
+
+📩 Email:
+nirajsharma9673@gmail.com
+
+🌐 Website:
+https://tooligo-tools.netlify.app
+
+💻 GitHub:
+https://github.com/nirajsharma9673-cmd
+
+---
+
+# 📄 License
+
+This project is currently licensed under the **MIT License**.
+
+---
+
+# ⭐ Support
+
+If you found Tooligo useful,
+
+⭐ Star this repository
+
+and share it with others.
+
+It helps the project grow and motivates future development.
+
+---
+
+<p align="center">
+
+Made with ❤️ by <b>Niraj Sharma</b>
+
+</p>
