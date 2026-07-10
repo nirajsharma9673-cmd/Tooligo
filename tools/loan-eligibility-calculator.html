@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+    <title>Tooligo – Loan Eligibility Calculator</title>
+    <meta name="description" content="Calculate your personal loan eligibility based on income, FOIR, existing EMIs, interest rate, and tenure. Free online loan eligibility calculator.">
+    <meta name="keywords" content="loan eligibility, FOIR, EMI, personal loan, loan calculator, home loan, affordability">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://tooligo-tools.netlify.app/tools/loan-eligibility-calculator.html">
+    <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta property="og:description" content="Calculate your personal loan eligibility based on income, FOIR, existing EMIs, interest rate, and tenure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tooligo-tools.netlify.app/tools/loan-eligibility-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta name="twitter:url" content="https://tooligo-tools.netlify.app/tools/loan-eligibility-calculator.html">
+    <meta name="twitter:description" content="Calculate your personal loan eligibility based on income, FOIR, existing EMIs, interest rate, and tenure.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://tooligo-tools.netlify.app/tools/loan-eligibility-calculator.html",
+  "name": "Loan Eligibility Calculator",
+  "description": "Calculate your personal loan eligibility based on income, FOIR, existing EMIs, interest rate, and tenure."
+}
+    </script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tooligo-tools.netlify.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://tooligo-tools.netlify.app/#tools"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Loan Eligibility Calculator",
+            "item": "https://tooligo-tools.netlify.app/tools/loan-eligibility-calculator.html"
+        }
+    ]
+}
+</script>
+    <link rel="stylesheet" href="../css/style.css">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTYD9GBDH9');
+</script>
+<style>
+.info-icon { display:inline-flex; align-items:center; justify-content:center; width:18px; height:18px; border-radius:50%; background:var(--primary); color:#fff; font-size:12px; font-weight:700; cursor:pointer; margin-left:0.35rem; vertical-align:middle; }
+.tooltip-container { position:relative; display:inline-block; }
+.tooltip-text { visibility:hidden; width:260px; background:var(--bg-primary); color:var(--text-primary); border:1px solid var(--border-color); border-radius:8px; padding:0.65rem; position:absolute; z-index:10; bottom:130%; left:50%; transform:translateX(-50%); font-size:0.8rem; line-height:1.4; box-shadow:0 4px 12px rgba(0,0,0,0.12); }
+.tooltip-container:hover .tooltip-text { visibility:visible; }
+.result-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.75rem; margin:1rem 0; }
+@media (max-width:600px) { .result-grid { grid-template-columns:1fr; } }
+.result-card { background:var(--bg-primary); border:1px solid var(--border-color); border-radius:8px; padding:1rem; text-align:center; }
+.result-card .label { font-size:0.85rem; color:var(--text-secondary); }
+.result-card .value { font-size:1.15rem; font-weight:700; color:var(--primary); margin-top:0.25rem; }
+.warning-message { background:#fff3cd; border:1px solid #ffc107; color:#856404; border-radius:8px; padding:0.75rem 1rem; margin:0.75rem 0; font-size:0.9rem; display:none; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main" id="main-content" data-keywords="loan eligibility FOIR calculator finance">
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">Loan Eligibility Calculator</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="tool-header">
+            <div class="container">
+                <h1>Loan Eligibility Calculator</h1>
+                <p>Find out how much loan you can afford based on your income and existing obligations</p>
+            </div>
+        </section>
+
+
+
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <div class="tool-input-section">
+                        <h3>Enter Your Details</h3>
+                        <div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                        <div class="form-group">
+                            <label for="monthly-income">Monthly Income (Rs)</label>
+                            <input type="number" id="monthly-income" placeholder="e.g. 50000" aria-label="Monthly income" min="0" step="any">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="foir">FOIR (%) <span class="tooltip-container"><span class="info-icon">?</span><span class="tooltip-text">Fixed Obligation to Income Ratio &mdash; the maximum percentage of your income that lenders allow toward EMIs. Typically 50% for salaried, 40% for self-employed.</span></span></label>
+                            <input type="number" id="foir" placeholder="e.g. 50" aria-label="FOIR percentage" min="1" max="100" step="0.1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="existing-emi">Existing EMIs (Rs)</label>
+                            <input type="number" id="existing-emi" placeholder="e.g. 5000" aria-label="Existing monthly EMIs" min="0" step="any">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loan-rate">Interest Rate (%)</label>
+                            <input type="number" id="loan-rate" placeholder="e.g. 10.5" aria-label="Loan interest rate" min="0.1" max="30" step="0.1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loan-tenure">Loan Tenure (Years)</label>
+                            <input type="number" id="loan-tenure" placeholder="e.g. 5" aria-label="Loan tenure in years" min="0.5" step="0.5">
+                        </div>
+
+                        <button class="btn-calculate" onclick="calculateEligibility()" aria-label="Calculate loan eligibility">Calculate</button>
+                        <button class="btn-reset" onclick="resetEligibility()" aria-label="Clear inputs">Clear</button>
+
+                        <div class="warning-message" id="no-eligibility-warning" role="alert">
+                            <strong>No Eligibility:</strong> Your existing EMIs already consume your entire FOIR capacity. Consider reducing existing debt or increasing your tenure.
+                        </div>
+
+                        <div id="result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+                            <h3>Loan Eligibility Summary</h3>
+                            <div class="result-grid">
+                                <div class="result-card">
+                                    <div class="label">Eligible Loan Amount</div>
+                                    <div class="value" id="eligible-loan">Rs 0</div>
+                                </div>
+                                <div class="result-card">
+                                    <div class="label">Affordable EMI</div>
+                                    <div class="value" id="affordable-emi">Rs 0</div>
+                                </div>
+                                <div class="result-card">
+                                    <div class="label">Total Interest Payable</div>
+                                    <div class="value" id="total-interest">Rs 0</div>
+                                </div>
+                            </div>
+                            <p style="font-size:0.85rem;color:var(--text-secondary);text-align:center;">
+                                Monthly Income: <span id="income-display">Rs 0</span> |
+                                FOIR: <span id="foir-display">0%</span> |
+                                Existing EMIs: <span id="emi-display">Rs 0</span> |
+                                Rate: <span id="rate-display">0%</span> |
+                                Tenure: <span id="tenure-display">0 years</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tool-info-section">
+                        <div class="tool-description">
+                            <h3>How It Works</h3>
+                            <p>This calculator uses the <strong>FOIR (Fixed Obligation to Income Ratio)</strong> method &mdash; the most common approach Indian banks use to determine personal loan eligibility. Here&rsquo;s the logic:</p>
+                            <ol>
+                                <li><strong>Affordable EMI:</strong> (Monthly Income &times; FOIR / 100) &minus; Existing EMIs. This is the maximum EMI you can comfortably pay.</li>
+                                <li><strong>Reverse EMI Formula:</strong> Given an affordable EMI, the formula calculates the maximum loan principal: <strong>P = EMI &times; [(1+r)<sup>n</sup> &minus; 1] / [r &times; (1+r)<sup>n</sup>]</strong>, where r = monthly interest rate (annual rate / 12 / 100) and n = tenure in months.</li>
+                                <li><strong>No Eligibility:</strong> If your existing EMIs already equal or exceed your FOIR-based capacity, the calculator shows a &ldquo;No Eligibility&rdquo; warning.</li>
+                            </ol>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Worked Example</h3>
+                            <p>Monthly Income: Rs 60,000 &bull; FOIR: 50% &bull; Existing EMIs: Rs 5,000 &bull; Rate: 10.5% &bull; Tenure: 5 years (60 months)</p>
+                            <p><strong>Step 1:</strong> Affordable EMI = (60,000 &times; 50%) &minus; 5,000 = 30,000 &minus; 5,000 = <strong>Rs 25,000</strong>.</p>
+                            <p><strong>Step 2:</strong> Monthly rate r = 10.5 / 12 / 100 = 0.00875. n = 60. P = 25,000 &times; (1.00875<sup>60</sup> &minus; 1) / (0.00875 &times; 1.00875<sup>60</sup>) = <strong>Rs 11,63,523</strong> (approx).</p>
+                            <p><strong>Step 3:</strong> Total payment = 25,000 &times; 60 = Rs 15,00,000. Total interest = 15,00,000 &minus; 11,63,523 = <strong>Rs 3,36,477</strong>.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>What is FOIR?</h3>
+                            <p>FOIR (Fixed Obligation to Income Ratio) is a metric lenders use to assess your repayment capacity. It represents the percentage of your monthly income that can be allocated toward loan EMIs. While the FOIR limit varies by lender and loan type:</p>
+                            <ul>
+                                <li><strong>Salaried individuals:</strong> Typically 50&ndash;55% FOIR</li>
+                                <li><strong>Self-employed:</strong> Typically 40&ndash;50% FOIR</li>
+                                <li><strong>Home loans:</strong> Some lenders allow up to 60% FOIR</li>
+                            </ul>
+                            <p>A lower FOIR means more conservative lending, but it also ensures you don&rsquo;t overburden yourself with debt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section class="related-tools-section">
+    <div class="container">
+        <h2>Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="emi-calculator.html" class="related-tool-card">
+                <h4>EMI Calculator</h4>
+                <p>Plan your loan with accurate monthly payments</p>
+            </a>
+            <a href="income-tax-calculator.html" class="related-tool-card">
+                <h4>Income Tax Calculator</h4>
+                <p>Estimate your income tax liability</p>
+            </a>
+            <a href="sip-calculator.html" class="related-tool-card">
+                <h4>SIP Calculator</h4>
+                <p>Estimate returns on your mutual fund SIP</p>
+            </a>
+            <a href="fd-rd-calculator.html" class="related-tool-card">
+                <h4>FD/RD Calculator</h4>
+                <p>Calculate maturity for fixed and recurring deposits</p>
+            </a>
+            <a href="percentage-calculator.html" class="related-tool-card">
+                <h4>Percentage Calculator</h4>
+                <p>Quick percentage calculations for everyday use</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>What is FOIR and how is it used?</summary>
+                        <p>FOIR stands for Fixed Obligation to Income Ratio. It is the maximum percentage of your monthly income that banks allow toward loan EMIs. For example, if your income is Rs 50,000 and the bank uses a 50% FOIR, your total EMIs (including existing ones) cannot exceed Rs 25,000 per month. This ensures you have enough income left for living expenses after paying EMIs.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What if my existing EMIs are zero?</summary>
+                        <p>That&rsquo;s great! Your affordable EMI will be at its maximum &mdash; simply (Monthly Income &times; FOIR). Having no existing obligations makes you eligible for a higher loan amount. Use this calculator to see exactly how much you qualify for with different interest rates and tenures.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How can I improve my loan eligibility?</summary>
+                        <p>You can improve eligibility by: (1) increasing your income, (2) reducing or closing existing loans, (3) choosing a longer tenure (reduces EMI but increases total interest), (4) improving your credit score (a higher score may get you better FOIR), or (5) adding a co-applicant with income.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Does this include home loan eligibility?</summary>
+                        <p>Yes, this calculator can estimate home loan eligibility as well &mdash; simply adjust the interest rate and tenure to match current home loan rates (typically 8.5&ndash;10.5% p.a.) and long tenures (15&ndash;30 years). Keep in mind that home loan FOIR may be higher (up to 60%) for some banks and may vary based on the applicant&rsquo;s age.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Will I get the exact amount shown here?</summary>
+                        <p>This calculator provides a strong estimate based on the FOIR method used by most Indian banks. However, the final loan amount depends on several other factors including your credit score (CIBIL), employment stability, bank-specific policies, and verification of documents. The result should be used as a planning tool, not a guarantee.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="gst-calculator.html">GST Calculator</a></li>
+                        <li><a href="attendance-calculator.html">Attendance Calculator</a></li>
+                        <li><a href="fd-rd-calculator.html">FD &amp; RD Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align:center;padding-bottom:1rem;">
+                <a href="https://www.buymeacoffee.com/YOUR_USERNAME" target="_blank" rel="noopener" class="donate-link">Support Tooligo</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/loan-eligibility-calculator.js"></script>
+    <script src="../js/theme.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Loan Eligibility Calculator",
+        "description": "Calculate your personal loan eligibility based on income, FOIR, existing EMIs, interest rate, and tenure.",
+        "url": "https://tooligo-tools.netlify.app/tools/loan-eligibility-calculator.html",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is FOIR and how is it used?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FOIR stands for Fixed Obligation to Income Ratio. It is the maximum percentage of monthly income that banks allow toward loan EMIs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What if my existing EMIs are zero?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Your affordable EMI will be at its maximum. Having no existing obligations makes you eligible for a higher loan amount."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I improve my loan eligibility?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Increase your income, reduce existing loans, choose a longer tenure, improve your credit score, or add a co-applicant."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this include home loan eligibility?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, this calculator can estimate home loan eligibility by adjusting the interest rate and tenure to match current home loan rates."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Will I get the exact amount shown here?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "This calculator provides a strong estimate based on FOIR method. Final loan amount depends on credit score, employment stability, and bank policies."
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+</html>

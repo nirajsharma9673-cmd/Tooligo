@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+    <title>Tooligo – Merge PDF Files Online Free | Combine PDFs</title>
+    <meta name="description" content="Merge multiple PDF files into one document for free. Reorder pages before merging. Your files stay private — processed entirely in your browser.">
+    <meta name="keywords" content="merge pdf, combine pdf, join pdf, free pdf merger, online pdf tool">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://tooligo-tools.netlify.app/tools/merge-pdf.html">
+    <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta property="og:description" content="Merge multiple PDF files into one document for free. Reorder pages before merging.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tooligo-tools.netlify.app/tools/merge-pdf.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta name="twitter:url" content="https://tooligo-tools.netlify.app/tools/merge-pdf.html">
+    <meta name="twitter:description" content="Merge multiple PDF files into one document for free. Reorder pages before merging.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://tooligo-tools.netlify.app/tools/merge-pdf.html",
+  "name": "Merge PDF Files Online Free",
+  "description": "Merge multiple PDF files into one document for free. Reorder pages before merging."
+}
+    </script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tooligo-tools.netlify.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://tooligo-tools.netlify.app/#tools"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Merge PDF",
+            "item": "https://tooligo-tools.netlify.app/tools/merge-pdf.html"
+        }
+    ]
+}
+</script>
+    <link rel="stylesheet" href="../css/style.css">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTYD9GBDH9');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<style>
+.drop-zone { border: 2px dashed var(--border-color); border-radius: 12px; padding: 2.5rem 1.5rem; text-align: center; cursor: pointer; transition: var(--transition); background: var(--bg-secondary); margin-bottom: 1rem; }
+.drop-zone:hover, .drop-zone.dragover { border-color: var(--primary); background: var(--bg-primary); }
+.drop-zone-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.drop-zone-text { font-size: 1rem; color: var(--text-secondary); }
+.drop-zone-text strong { color: var(--primary); }
+.file-list { margin: 1rem 0; }
+.file-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 0.75rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 0.4rem; }
+.file-item-index { font-weight: 700; color: var(--primary); min-width: 1.8rem; }
+.file-item-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.file-item-size { color: var(--text-secondary); font-size: 0.8rem; }
+.file-item-actions { display: flex; gap: 0.25rem; }
+.btn-small { padding: 0.25rem 0.5rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--bg-secondary); cursor: pointer; font-size: 0.85rem; color: var(--text-primary); line-height: 1; }
+.btn-small:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+.btn-remove { color: var(--error-color); }
+.btn-remove:hover { background: var(--error-color); border-color: var(--error-color); color: #fff; }
+.progress-area { display: none; padding: 1rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; margin: 1rem 0; text-align: center; color: var(--text-secondary); font-weight: 600; }
+.privacy-notice { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 8px; margin: 1rem 0; font-size: 0.9rem; color: #2e7d32; }
+.size-warning { display: none; padding: 0.75rem; background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; margin: 0.75rem 0; font-size: 0.85rem; color: #856404; }
+.file-status { font-size: 0.9rem; color: var(--text-secondary); margin: 0.5rem 0; }
+.btn-group { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main" id="main-content" data-keywords="merge pdf combine join document">
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">Merge PDF</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="tool-header">
+            <div class="container">
+                <h1>Merge PDF Files</h1>
+                <p>Combine multiple PDFs into one document — free, private, and entirely in your browser</p>
+            </div>
+        </section>
+
+
+
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <div class="tool-input-section">
+                        <h3>Select PDFs to Merge</h3>
+                        <div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                        <div class="privacy-notice">
+                            <span style="font-size:1.2rem;">&#x1F512;</span>
+                            <span>Your files are processed entirely in your browser and are never uploaded to any server.</span>
+                        </div>
+
+                        <div class="drop-zone" id="drop-zone" onclick="document.getElementById('file-input').click()">
+                            <div class="drop-zone-icon">&#x1F4C4;</div>
+                            <div class="drop-zone-text">Drag &amp; drop PDF files here or <strong>browse</strong></div>
+                        </div>
+
+                        <input type="file" id="file-input" accept="application/pdf" multiple style="display:none" onchange="handleFileSelect(this.files); checkFileSize(this.files[this.files.length-1])">
+
+                        <div class="size-warning" id="size-warning">
+                            Large files (over 20MB) may take longer to process or could cause your browser to become unresponsive on lower-end devices.
+                        </div>
+
+                        <div class="file-status" id="file-status">No files selected</div>
+                        <div class="file-list" id="file-list"></div>
+
+                        <div class="btn-group">
+                            <button class="btn-calculate" id="merge-btn" onclick="startMerge()" disabled>Merge PDFs</button>
+                            <button class="btn-reset" onclick="clearFiles()">Clear All</button>
+                        </div>
+
+                        <div class="progress-area" id="progress-area"></div>
+
+                        <div id="result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+                            <h3>Merge Complete</h3>
+                            <p id="result-message"></p>
+                        </div>
+                    </div>
+
+                    <div class="tool-info-section">
+                        <div class="tool-description">
+                            <h3>How It Works</h3>
+                            <p>This tool lets you combine multiple PDF files into a single document. You can reorder the files before merging using the up/down arrows next to each file. The pages from each PDF are copied in order into a new combined PDF with no quality loss.</p>
+                            <p><strong>Use case:</strong> You have three separate chapters of a report as individual PDFs and want to combine them into one document for easy sharing. Or you have scanned pages as separate PDFs and need them all in one file.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Usage Example</h3>
+                            <p>Upload your PDFs using the drop zone above. Rearrange them into your preferred order using the arrow buttons. Click "Merge PDFs" and your combined document will download automatically as <strong>merged.pdf</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        
+<section class="related-tools-section">
+    <div class="container">
+        <h2>Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="split-pdf.html" class="related-tool-card">
+                <h4>Split PDF</h4>
+                <p>Extract pages from a PDF document</p>
+            </a>            <a href="pdf-to-image.html" class="related-tool-card">
+                <h4>PDF to Image</h4>
+                <p>Convert PDF pages to image files</p>
+            </a>            <a href="word-counter.html" class="related-tool-card">
+                <h4>Word Counter</h4>
+                <p>Count words, characters, and paragraphs</p>
+            </a>            <a href="case-converter.html" class="related-tool-card">
+                <h4>Case Converter</h4>
+                <p>Convert text between different cases</p>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Are my files uploaded to a server?</summary>
+                        <p>No. All processing happens entirely in your browser using client-side JavaScript. Your PDF files are never sent to any server. Once you close the page, all data is gone. This is a genuine privacy feature — you can even use this tool offline after the page loads.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is there a file size limit?</summary>
+                        <p>There is no hard limit, but very large PDFs (over 20MB each) may take longer to process or could strain browser memory on lower-end devices. We recommend merging files under 50MB total for the best experience.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What if my PDF is password-protected?</summary>
+                        <p>This tool cannot process password-protected or encrypted PDFs. Please unlock the PDF first using its password, then upload the unprotected version.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Will the formatting stay intact?</summary>
+                        <p>Yes. The merge process copies every page exactly as it appears in the original PDFs &mdash; fonts, images, layout, and formatting are all preserved with no loss in quality.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How many files can I merge at once?</summary>
+                        <p>You can select and merge as many PDF files as you need. A minimum of 2 files is required. For performance, we recommend merging up to 10 files at a time for larger documents.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="merge-pdf.html">Merge PDF</a></li>
+                        <li><a href="split-pdf.html">Split PDF</a></li>
+                        <li><a href="pdf-to-image.html">PDF to Image</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align:center;padding-bottom:1rem;">
+                <a href="https://www.buymeacoffee.com/YOUR_USERNAME" target="_blank" rel="noopener" class="donate-link">Support Tooligo</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/merge-pdf.js"></script>
+    <script src="../js/theme.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Merge PDF Files",
+        "description": "Merge multiple PDF files into one document for free with page reordering.",
+        "url": "https://tooligo-tools.netlify.app/tools/merge-pdf.html",
+        "applicationCategory": "UtilityApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Are my files uploaded to a server?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. All processing happens entirely in your browser using client-side JavaScript. Your PDF files are never sent to any server."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is there a file size limit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "There is no hard limit, but very large PDFs over 20MB may take longer to process or could strain browser memory on lower-end devices."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What if my PDF is password-protected?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "This tool cannot process password-protected or encrypted PDFs. Please unlock the PDF first using its password."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Will the formatting stay intact?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The merge process copies every page exactly as it appears in the original PDFs with no loss in quality."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var dropZone = document.getElementById('drop-zone');
+        var fileInput = document.getElementById('file-input');
+
+        dropZone.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', function() {
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', function(e) {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            if (e.dataTransfer.files.length > 0) {
+                fileInput.files = e.dataTransfer.files;
+                handleFileSelect(e.dataTransfer.files);
+                var files = e.dataTransfer.files;
+                for (var i = 0; i < files.length; i++) {
+                    checkFileSize(files[i]);
+                }
+            }
+        });
+    });
+    </script>
+</body>
+</html>

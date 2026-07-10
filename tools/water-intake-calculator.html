@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+    <title>Tooligo – Daily Water Intake Calculator</title>
+    <meta name="description" content="Calculate your recommended daily water intake based on weight, exercise duration, and climate. Free hydration calculator in litres and glasses.">
+    <meta name="keywords" content="water intake, hydration, daily water, how much water to drink, calculator, litres, glasses, health">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://tooligo-tools.netlify.app/tools/water-intake-calculator.html">
+    <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta property="og:description" content="Calculate your recommended daily water intake based on weight, exercise duration, and climate.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tooligo-tools.netlify.app/tools/water-intake-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta name="twitter:url" content="https://tooligo-tools.netlify.app/tools/water-intake-calculator.html">
+    <meta name="twitter:description" content="Calculate your recommended daily water intake based on weight, exercise duration, and climate.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://tooligo-tools.netlify.app/tools/water-intake-calculator.html",
+  "name": "Daily Water Intake Calculator",
+  "description": "Calculate your recommended daily water intake based on weight, exercise duration, and climate."
+}
+    </script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tooligo-tools.netlify.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://tooligo-tools.netlify.app/#tools"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Water Intake Calculator",
+            "item": "https://tooligo-tools.netlify.app/tools/water-intake-calculator.html"
+        }
+    ]
+}
+</script>
+    <link rel="stylesheet" href="../css/style.css">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTYD9GBDH9');
+</script>
+<style>
+.result-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin:1rem 0; }
+@media (max-width:600px) { .result-grid { grid-template-columns:1fr; } }
+.result-card { background:var(--bg-primary); border:1px solid var(--border-color); border-radius:8px; padding:1rem; text-align:center; }
+.result-card .label { font-size:0.85rem; color:var(--text-secondary); }
+.result-card .value { font-size:1.15rem; font-weight:700; color:var(--primary); margin-top:0.25rem; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main" id="main-content" data-keywords="water intake hydration daily water calculator health">
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">Water Intake Calculator</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="tool-header">
+            <div class="container">
+                <h1>Daily Water Intake Calculator</h1>
+                <p>Discover how much water you should drink every day based on your body and lifestyle</p>
+            </div>
+        </section>
+
+
+
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <div class="tool-input-section">
+                        <h3>Enter Your Details</h3>
+                        <div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                        <div class="form-group">
+                            <label for="weight">Weight (kg)</label>
+                            <input type="number" id="weight" placeholder="e.g. 70" aria-label="Weight in kilograms" min="1" max="400" step="0.1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exercise">Daily Exercise Duration (minutes)</label>
+                            <input type="number" id="exercise" placeholder="e.g. 30" aria-label="Daily exercise in minutes" min="0" step="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="climate">Climate</label>
+                            <select id="climate" aria-label="Climate type">
+                                <option value="normal">Normal / Moderate</option>
+                                <option value="hot">Hot / Humid</option>
+                            </select>
+                        </div>
+
+                        <button class="btn-calculate" onclick="calculateWaterIntake()" aria-label="Calculate water intake">Calculate</button>
+                        <button class="btn-reset" onclick="resetWaterIntake()" aria-label="Clear inputs">Clear</button>
+
+                        <div id="result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+                            <h3>Your Daily Water Intake Goal</h3>
+                            <div class="result-grid">
+                                <div class="result-card">
+                                    <div class="label">Total Water</div>
+                                    <div class="value" id="total-litres">0.0 L</div>
+                                </div>
+                                <div class="result-card">
+                                    <div class="label">In Glasses (250ml)</div>
+                                    <div class="value" id="total-glasses">0 glasses</div>
+                                </div>
+                            </div>
+                            <p style="font-size:0.85rem;color:var(--text-secondary);text-align:center;">
+                                Weight: <span id="weight-display">0 kg</span> |
+                                Exercise: <span id="exercise-display">0 min/day</span> |
+                                Climate: <span id="climate-display">Normal</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tool-info-section">
+                        <div class="tool-description">
+                            <h3>How It Works</h3>
+                            <p>This calculator uses established guidelines from medical and fitness authorities to estimate your optimal daily water intake. The calculation follows three simple steps:</p>
+                            <ol>
+                                <li><strong>Base Intake (from body weight):</strong> Weight (kg) &times; 0.033 = base water in litres. This is a widely used rule of thumb based on the principle that your body needs about 33 ml of water per kg of body weight.</li>
+                                <li><strong>Exercise Adjustment:</strong> (Exercise minutes / 30) &times; 0.4 litres. For every 30 minutes of physical activity, add approximately 400 ml (about 1.5 glasses) to replace fluids lost through sweat.</li>
+                                <li><strong>Climate Adjustment:</strong> If you live in a hot/humid climate, total intake is increased by 15% to account for increased sweating and fluid loss.</li>
+                            </ol>
+                            <p><strong>Total = (Base + Exercise) &times; Climate Factor</strong>. The result is shown in litres and standard 250 ml glasses for easy tracking.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Worked Example</h3>
+                            <p><strong>Weight:</strong> 70 kg &bull; <strong>Exercise:</strong> 45 min/day &bull; <strong>Climate:</strong> Hot/Humid</p>
+                            <p><strong>Step 1:</strong> Base = 70 &times; 0.033 = 2.31 L</p>
+                            <p><strong>Step 2:</strong> Exercise = (45 / 30) &times; 0.4 = 0.60 L</p>
+                            <p><strong>Step 3:</strong> Subtotal = 2.31 + 0.60 = 2.91 L. Climate factor = 1.15 (multiplier for hot climate).</p>
+                            <p><strong>Total:</strong> 2.91 &times; 1.15 = <strong>3.35 L</strong> = approximately <strong>13 glasses</strong> of water per day.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Why Hydration Matters</h3>
+                            <p>Proper hydration is essential for virtually every bodily function, including temperature regulation, joint lubrication, nutrient transport, and organ function. Even mild dehydration (1&ndash;2% of body weight) can impair cognitive performance, mood, and physical endurance. Chronic dehydration has been linked to kidney stones, urinary tract infections, and constipation. Individual needs vary, so use this calculator as a starting point and adjust based on your thirst, activity level, and how you feel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        
+<section class="related-tools-section">
+    <div class="container">
+        <h2>Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="bmi-calculator.html" class="related-tool-card">
+                <h4>BMI Calculator</h4>
+                <p>Calculate your Body Mass Index instantly</p>
+            </a>            <a href="calorie-calculator.html" class="related-tool-card">
+                <h4>Calorie Calculator</h4>
+                <p>Determine your daily calorie needs</p>
+            </a>            <a href="age-calculator.html" class="related-tool-card">
+                <h4>Age Calculator</h4>
+                <p>Calculate exact age in years, months and days</p>
+            </a>            <a href="percentage-calculator.html" class="related-tool-card">
+                <h4>Percentage Calculator</h4>
+                <p>Quick percentage calculations for everyday use</p>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Is the 8-glasses-a-day rule accurate?</summary>
+                        <p>The &ldquo;8&times;8&rdquo; rule (eight 8-oz glasses, about 1.9L) is a common recommendation but it&rsquo;s a general guideline, not a scientific standard. Actual water needs vary significantly based on body weight, physical activity, climate, and individual metabolism. This calculator provides a more personalized estimate than the one-size-fits-all 8-glass rule.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Does this include water from food and other beverages?</summary>
+                        <p>The calculator estimates total water intake from all sources combined. As a general guide, about 20&ndash;30% of your daily water typically comes from food (fruits, vegetables, soups, etc.) and other beverages like tea, coffee, and milk. You can adjust your drinking water target down by roughly 20% if you consume a diet rich in water-containing foods.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I drink too much water?</summary>
+                        <p>Yes. Overhydration (water intoxication or hyponatremia) occurs when you drink so much water that your body&rsquo;s sodium levels become dangerously diluted. This is rare for most people and typically only occurs with extreme consumption (multiple litres in a short period, often during endurance sports). For the amounts recommended by this calculator, overhydration is not a concern for healthy individuals.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Should I drink more if I&rsquo;m pregnant or breastfeeding?</summary>
+                        <p>Yes. Pregnant women generally need about 2.3&ndash;3.1 litres per day, and breastfeeding mothers need about 3.1&ndash;3.8 litres per day &mdash; higher than the standard recommendation for non-pregnant adults. Use this calculator as a baseline and consult your healthcare provider for personalized advice during pregnancy and lactation.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="gst-calculator.html">GST Calculator</a></li>
+                        <li><a href="attendance-calculator.html">Attendance Calculator</a></li>
+                        <li><a href="fd-rd-calculator.html">FD &amp; RD Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align:center;padding-bottom:1rem;">
+                <a href="https://www.buymeacoffee.com/YOUR_USERNAME" target="_blank" rel="noopener" class="donate-link">Support Tooligo</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/water-intake-calculator.js"></script>
+    <script src="../js/theme.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Daily Water Intake Calculator",
+        "description": "Calculate your recommended daily water intake based on weight, exercise duration, and climate.",
+        "url": "https://tooligo-tools.netlify.app/tools/water-intake-calculator.html",
+        "applicationCategory": "HealthApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is the 8-glasses-a-day rule accurate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The 8x8 rule is a general guideline, not a scientific standard. Actual water needs vary based on body weight, physical activity, climate, and metabolism."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this include water from food and other beverages?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "About 20-30% of daily water typically comes from food and other beverages. Adjust your drinking water target down by roughly 20% if your diet is rich in water-containing foods."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I drink too much water?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Overhydration is rare for most people and typically only occurs with extreme consumption. For the amounts recommended by this calculator, overhydration is not a concern."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I drink more if I am pregnant or breastfeeding?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Pregnant women need about 2.3 to 3.1 litres per day, and breastfeeding mothers need about 3.1 to 3.8 litres per day."
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+</html>

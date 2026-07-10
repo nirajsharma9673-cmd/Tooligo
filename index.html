@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>Tooligo – Free Online Tools & Calculators</title>
-    <meta name="description" content="Access 10+ free online calculators and tools for instant results. Age calculator, EMI, SIP, GST, percentage, discount, unit converter, currency converter, date difference, and scientific calculator.">
+    <meta name="description" content="Access 23+ free online calculators and tools for instant results. Age, EMI, SIP, GST, percentage, discount, unit converter, currency converter, date difference, scientific calculator, attendance, CGPA, BMI, calorie, word counter, case converter, income tax, FD/RD, loan eligibility, water intake, merge PDF, split PDF, and PDF to image.">
     <meta name="keywords" content="online calculator, free tools, age calculator, EMI calculator, unit converter, currency converter, percentage calculator">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -13,33 +14,43 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="canonical" href="https://tooligo-tools.netlify.app/">
     <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
-    <meta property="og:description" content="Tooligo – Free Online Tools & Calculators. Access 10+ free online calculators for instant, accurate results.">
+    <meta property="og:description" content="Tooligo – Free Online Tools & Calculators. Access 20+ free online calculators for instant, accurate results.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tooligo-tools.netlify.app/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
     <meta name="twitter:url" content="https://tooligo-tools.netlify.app/">
-    <meta name="twitter:description" content="Tooligo – Free Online Tools & Calculators. Access 10+ free online calculators for instant, accurate results.">
+    <meta name="twitter:description" content="Tooligo – Free Online Tools & Calculators. Access 20+ free online calculators for instant, accurate results.">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "url": "https://tooligo-tools.netlify.app/",
   "name": "Free Online Tools & Calculators - Instant Results",
-  "description": "Access 10+ free online calculators and tools for instant results. Age calculator, EMI, SIP, GST, percentage, discount, unit converter, currency converter, date difference, and scientific calculator."
+  "description": "Access 23+ free online calculators and tools for instant results. Age, EMI, SIP, GST, percentage, discount, unit converter, currency converter, date difference, scientific calculator, attendance, CGPA, BMI, calorie, word counter, case converter, income tax, FD/RD, loan eligibility, water intake, merge PDF, split PDF, and PDF to image."
 }
     </script>
 
 
 <link rel="stylesheet" href="css/style.css">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTYD9GBDH9');
+</script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <div class="logo-icon">
-                        <img src="images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                        <img src="images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
                     </div>
                     <div class="logo-text-group">
                         <div class="logo-text">Tooligo</div>
@@ -48,7 +59,7 @@
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
                         <li><a href="about.html" class="nav-link">About</a></li>
                         <li><a href="contact.html" class="nav-link">Contact</a></li>
                     </ul>
@@ -70,7 +81,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" id="main-content">
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-bg-shapes">
@@ -113,7 +124,7 @@
                         Powerful Online<br><span class="gradient-text">Tools</span>
                         <br>Instant Results
                     </h1>
-                    <p class="hero-subtitle">Access 10+ premium calculators designed for accuracy and simplicity. No signup. No ads. Completely free.</p>
+                    <p class="hero-subtitle">Access 10+ premium calculators designed for accuracy and simplicity. No signup. No downloads. Completely free forever.</p>
                     <div class="hero-cta">
                         <a href="#tools" class="btn btn-primary">
                             <span>Explore All Tools</span>
@@ -148,10 +159,7 @@
             </div>
         </section>
 
-        <!-- AdSense  -->
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
+
 
         <!-- Tools Grid Section -->
         <section class="tools-section" id="tools">
@@ -159,29 +167,39 @@
                 <h2>Our Tools & Calculators</h2>
                 <p class="section-subtitle">Choose the calculator you need and get instant results</p>
 
+                <div class="tools-search-bar">
+                    <div class="search-box">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 12L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <input type="text" id="toolSearch" class="search-input" placeholder="Search tools... (EMI, Age, GST, Currency, PDF...)" aria-label="Search tools">
+                        <button class="search-clear" aria-label="Clear search" hidden>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="search-meta" aria-live="polite" aria-atomic="true"></div>
+                </div>
+
                 <div class="tools-grid">
                     <a href="tools/age-calculator.html" class="tool-card" data-keywords="age years months days birthday">
                         <div class="tool-card-badge">Popular</div>
                         <div class="tool-card-icon age-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="ageGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#00A699;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect x="6" y="6" width="36" height="36" rx="10" fill="url(#ageGrad)" opacity="0.1"/>
-                                <rect x="10" y="10" width="28" height="28" rx="4" stroke="url(#ageGrad)" stroke-width="2.5" fill="none"/>
-                                <line x1="10" y1="18" x2="38" y2="18" stroke="url(#ageGrad)" stroke-width="2.5" stroke-linecap="round"/>
-                                <circle cx="16" cy="32" r="1.5" fill="url(#ageGrad)"/>
-                                <circle cx="24" cy="32" r="1.5" fill="url(#ageGrad)"/>
-                                <circle cx="32" cy="32" r="1.5" fill="url(#ageGrad)"/>
-                                <path d="M24 14V24L29 29" stroke="url(#ageGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <rect x="10" y="10" width="28" height="28" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                <line x1="10" y1="18" x2="38" y2="18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <circle cx="16" cy="32" r="1.5" fill="currentColor"/>
+                                <circle cx="24" cy="32" r="1.5" fill="currentColor"/>
+                                <circle cx="32" cy="32" r="1.5" fill="currentColor"/>
+                                <path d="M24 14V24L29 29" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
                         <h3>Age Calculator</h3>
                         <p>Calculate your age in years, months, and days</p>
-                        <div class="tool-usage">50K+ Uses</div>
+                        <div class="tool-usage">Free & Instant</div>
                         <span class="tool-arrow">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -193,15 +211,9 @@
                         <div class="tool-card-badge">Popular</div>
                         <div class="tool-card-icon emi-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="emiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#0EA5A4;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect x="6" y="6" width="36" height="36" rx="10" fill="url(#emiGrad)" opacity="0.1"/>
-                                <path d="M10 14C10 12.9 10.9 12 12 12H36C37.1 12 38 12.9 38 14V34C38 35.1 37.1 36 36 36H12C10.9 36 10 35.1 10 34V14Z" stroke="url(#emiGrad)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
-                                <line x1="10" y1="20" x2="38" y2="20" stroke="url(#emiGrad)" stroke-width="2.5"/>
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <path d="M10 14C10 12.9 10.9 12 12 12H36C37.1 12 38 12.9 38 14V34C38 35.1 37.1 36 36 36H12C10.9 36 10 35.1 10 34V14Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                                <line x1="10" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="2.5"/>
                                 <path d="M24 8V12" stroke="url(#emiGrad)" stroke-width="2.5" stroke-linecap="round"/>
                                 <path d="M14 26H22" stroke="url(#emiGrad)" stroke-width="2.5" stroke-linecap="round"/>
                                 <path d="M26 26H34" stroke="url(#emiGrad)" stroke-width="2.5" stroke-linecap="round"/>
@@ -209,7 +221,7 @@
                         </div>
                         <h3>EMI Calculator</h3>
                         <p>Calculate monthly EMI for loans instantly</p>
-                        <div class="tool-usage">35K+ Uses</div>
+                        <div class="tool-usage">Free & Instant</div>
                         <span class="tool-arrow">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -221,23 +233,17 @@
                         <div class="tool-card-badge">Popular</div>
                         <div class="tool-card-icon sip-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="sipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect x="6" y="6" width="36" height="36" rx="10" fill="url(#sipGrad)" opacity="0.1"/>
-                                <rect x="10" y="10" width="28" height="28" rx="4" stroke="url(#sipGrad)" stroke-width="2" fill="none"/>
-                                <path d="M12 32L18 22L24 28L36 10" stroke="url(#sipGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <circle cx="18" cy="22" r="2.5" fill="url(#sipGrad)"/>
-                                <circle cx="24" cy="28" r="2.5" fill="url(#sipGrad)"/>
-                                <circle cx="36" cy="10" r="2.5" fill="url(#sipGrad)"/>
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <rect x="10" y="10" width="28" height="28" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M12 32L18 22L24 28L36 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="18" cy="22" r="2.5" fill="currentColor"/>
+                                <circle cx="24" cy="28" r="2.5" fill="currentColor"/>
+                                <circle cx="36" cy="10" r="2.5" fill="currentColor"/>
                             </svg>
                         </div>
                         <h3>SIP Calculator</h3>
                         <p>Calculate investment plan returns and maturity</p>
-                        <div class="tool-usage">28K+ Uses</div>
+                        <div class="tool-usage">Free & Instant</div>
                         <span class="tool-arrow">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -248,23 +254,17 @@
                     <a href="tools/gst-calculator.html" class="tool-card" data-keywords="gst tax vat invoice">
                         <div class="tool-card-icon gst-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="gstGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect x="6" y="6" width="36" height="36" rx="10" fill="url(#gstGrad)" opacity="0.1"/>
-                                <path d="M12 12H36C37.1 12 38 12.9 38 14V34C38 35.1 37.1 36 36 36H12C10.9 36 12 35.1 12 34V14C12 12.9 10.9 12 12 12Z" stroke="url(#gstGrad)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
-                                <path d="M12 20H36" stroke="url(#gstGrad)" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="18" cy="28" r="1.5" fill="url(#gstGrad)"/>
-                                <circle cx="24" cy="28" r="1.5" fill="url(#gstGrad)"/>
-                                <circle cx="30" cy="28" r="1.5" fill="url(#gstGrad)"/>
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <path d="M12 12H36C37.1 12 38 12.9 38 14V34C38 35.1 37.1 36 36 36H12C10.9 36 12 35.1 12 34V14C12 12.9 10.9 12 12 12Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                                <path d="M12 20H36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="18" cy="28" r="1.5" fill="currentColor"/>
+                                <circle cx="24" cy="28" r="1.5" fill="currentColor"/>
+                                <circle cx="30" cy="28" r="1.5" fill="currentColor"/>
                             </svg>
                         </div>
                         <h3>GST Calculator</h3>
                         <p>Calculate GST and tax amounts instantly</p>
-                        <div class="tool-usage">18K+ Uses</div>
+                        <div class="tool-usage">Free & Instant</div>
                         <span class="tool-arrow">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -275,21 +275,15 @@
                     <a href="tools/percentage-calculator.html" class="tool-card" data-keywords="percentage percent increase decrease">
                         <div class="tool-card-icon percentage-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="percentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#A855F7;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect x="6" y="6" width="36" height="36" rx="10" fill="url(#percentGrad)" opacity="0.1"/>
-                                <circle cx="16" cy="14" r="4" stroke="url(#percentGrad)" stroke-width="2.5" fill="none"/>
-                                <circle cx="32" cy="34" r="4" stroke="url(#percentGrad)" stroke-width="2.5" fill="none"/>
-                                <path d="M24 12L28 36" stroke="url(#percentGrad)" stroke-width="2.5" stroke-linecap="round"/>
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <circle cx="16" cy="14" r="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                <circle cx="32" cy="34" r="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                <path d="M24 12L28 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
                             </svg>
                         </div>
                         <h3>Percentage Calculator</h3>
                         <p>Calculate percentages, increases, decreases</p>
-                        <div class="tool-usage">22K+ Uses</div>
+                        <div class="tool-usage">Free & Instant</div>
                         <span class="tool-arrow">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -300,22 +294,16 @@
                     <a href="tools/discount-calculator.html" class="tool-card" data-keywords="discount sale price offer">
                         <div class="tool-card-icon discount-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="discountGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#EC4899;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect x="6" y="6" width="36" height="36" rx="10" fill="url(#discountGrad)" opacity="0.1"/>
-                                <path d="M12 16C12 14.9 12.9 14 14 14H34C35.1 14 36 14.9 36 16V32C36 33.1 35.1 34 34 34H14C12.9 34 12 33.1 12 32V16Z" stroke="url(#discountGrad)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
-                                <path d="M18 19C17.4 19 17 19.4 17 20C17 20.6 17.4 21 18 21C18.6 21 19 20.6 19 20C19 19.4 18.6 19 18 19Z" fill="url(#discountGrad)"/>
-                                <path d="M30 27C29.4 27 29 27.4 29 28C29 28.6 29.4 29 30 29C30.6 29 31 28.6 31 28C31 27.4 30.6 27 30 27Z" fill="url(#discountGrad)"/>
-                                <path d="M20 26L26 20" stroke="url(#discountGrad)" stroke-width="2" stroke-linecap="round"/>
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <path d="M12 16C12 14.9 12.9 14 14 14H34C35.1 14 36 14.9 36 16V32C36 33.1 35.1 34 34 34H14C12.9 34 12 33.1 12 32V16Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                                <path d="M18 19C17.4 19 17 19.4 17 20C17 20.6 17.4 21 18 21C18.6 21 19 20.6 19 20C19 19.4 18.6 19 18 19Z" fill="currentColor"/>
+                                <path d="M30 27C29.4 27 29 27.4 29 28C29 28.6 29.4 29 30 29C30.6 29 31 28.6 31 28C31 27.4 30.6 27 30 27Z" fill="currentColor"/>
+                                <path d="M20 26L26 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </div>
                         <h3>Discount Calculator</h3>
                         <p>Calculate discounts and final prices</p>
-                        <div class="tool-usage">16K+ Uses</div>
+                        <div class="tool-usage">Free & Instant</div>
                         <span class="tool-arrow">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -326,23 +314,17 @@
                     <a href="tools/unit-converter.html" class="tool-card" data-keywords="unit convert measurement length mass temperature">
                         <div class="tool-card-icon unit-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="unitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect x="6" y="6" width="36" height="36" rx="10" fill="url(#unitGrad)" opacity="0.1"/>
-                                <line x1="8" y1="24" x2="40" y2="24" stroke="url(#unitGrad)" stroke-width="2.5" stroke-linecap="round"/>
-                                <path d="M12 20L8 24L12 28" stroke="url(#unitGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M36 20L40 24L36 28" stroke="url(#unitGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <line x1="14" y1="12" x2="14" y2="36" stroke="url(#unitGrad)" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.5"/>
-                                <line x1="34" y1="12" x2="34" y2="36" stroke="url(#unitGrad)" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.5"/>
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <line x1="8" y1="24" x2="40" y2="24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M12 20L8 24L12 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M36 20L40 24L36 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="14" y1="12" x2="14" y2="36" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.5"/>
+                                <line x1="34" y1="12" x2="34" y2="36" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.5"/>
                             </svg>
                         </div>
                         <h3>Unit Converter</h3>
                         <p>Convert between different units of measurement</p>
-                        <div class="tool-usage">12K+ Uses</div>
+                        <div class="tool-usage">Free & Instant</div>
                         <span class="tool-arrow">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -353,21 +335,15 @@
                     <a href="tools/currency-converter.html" class="tool-card" data-keywords="currency exchange rate convert forex">
                         <div class="tool-card-icon currency-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="currencyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect x="6" y="6" width="36" height="36" rx="10" fill="url(#currencyGrad)" opacity="0.1"/>
-                                <circle cx="24" cy="24" r="14" stroke="url(#currencyGrad)" stroke-width="2" fill="none"/>
-                                <path d="M24 14V34" stroke="url(#currencyGrad)" stroke-width="2.5" stroke-linecap="round"/>
-                                <path d="M18 18H30C31.1 18 32 18.9 32 20V28C32 29.1 31.1 30 30 30H18C16.9 30 16 29.1 16 28V20C16 18.9 16.9 18 18 18Z" stroke="url(#currencyGrad)" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M24 14V34" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M18 18H30C31.1 18 32 18.9 32 20V28C32 29.1 31.1 30 30 30H18C16.9 30 16 29.1 16 28V20C16 18.9 16.9 18 18 18Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
                             </svg>
                         </div>
                         <h3>Currency Converter</h3>
                         <p>Convert between world currencies instantly</p>
-                        <div class="tool-usage">24K+ Uses</div>
+                        <div class="tool-usage">Free & Instant</div>
                         <span class="tool-arrow">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -378,24 +354,18 @@
                     <a href="tools/date-difference-calculator.html" class="tool-card" data-keywords="date difference days calendar countdown">
                         <div class="tool-card-icon date-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="dateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#F97316;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect x="6" y="6" width="36" height="36" rx="10" fill="url(#dateGrad)" opacity="0.1"/>
-                                <rect x="10" y="12" width="13" height="14" rx="2" stroke="url(#dateGrad)" stroke-width="2" fill="none" stroke-linejoin="round"/>
-                                <rect x="25" y="12" width="13" height="14" rx="2" stroke="url(#dateGrad)" stroke-width="2" fill="none" stroke-linejoin="round"/>
-                                <line x1="13" y1="10" x2="13" y2="6" stroke="url(#dateGrad)" stroke-width="2" stroke-linecap="round"/>
-                                <line x1="35" y1="10" x2="35" y2="6" stroke="url(#dateGrad)" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M16 34L32 34" stroke="url(#dateGrad)" stroke-width="2.5" stroke-linecap="round"/>
-                                <path d="M18 36L30 36" stroke="url(#dateGrad)" stroke-width="2.5" stroke-linecap="round"/>
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <rect x="10" y="12" width="13" height="14" rx="2" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                                <rect x="25" y="12" width="13" height="14" rx="2" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                                <line x1="13" y1="10" x2="13" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="35" y1="10" x2="35" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M16 34L32 34" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M18 36L30 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
                             </svg>
                         </div>
                         <h3>Date Difference</h3>
                         <p>Calculate days between two dates</p>
-                        <div class="tool-usage">14K+ Uses</div>
+                        <div class="tool-usage">Free & Instant</div>
                         <span class="tool-arrow">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -406,28 +376,286 @@
                     <a href="tools/scientific-calculator.html" class="tool-card" data-keywords="scientific math function calculator trig log exp">
                         <div class="tool-card-icon scientific-icon">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="sciGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#00A699;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <rect x="6" y="6" width="36" height="36" rx="10" fill="url(#sciGrad)" opacity="0.1"/>
-                                <rect x="10" y="10" width="28" height="28" rx="4" stroke="url(#sciGrad)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
-                                <circle cx="15" cy="15" r="1.5" fill="url(#sciGrad)"/>
-                                <circle cx="24" cy="15" r="1.5" fill="url(#sciGrad)"/>
-                                <circle cx="33" cy="15" r="1.5" fill="url(#sciGrad)"/>
-                                <circle cx="15" cy="24" r="1.5" fill="url(#sciGrad)"/>
-                                <circle cx="24" cy="24" r="1.5" fill="url(#sciGrad)"/>
-                                <circle cx="33" cy="24" r="1.5" fill="url(#sciGrad)"/>
-                                <circle cx="15" cy="33" r="1.5" fill="url(#sciGrad)"/>
-                                <circle cx="24" cy="33" r="1.5" fill="url(#sciGrad)"/>
-                                <circle cx="33" cy="33" r="1.5" fill="url(#sciGrad)"/>
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <rect x="10" y="10" width="28" height="28" rx="4" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                                <circle cx="15" cy="15" r="1.5" fill="currentColor"/>
+                                <circle cx="24" cy="15" r="1.5" fill="currentColor"/>
+                                <circle cx="33" cy="15" r="1.5" fill="currentColor"/>
+                                <circle cx="15" cy="24" r="1.5" fill="currentColor"/>
+                                <circle cx="24" cy="24" r="1.5" fill="currentColor"/>
+                                <circle cx="33" cy="24" r="1.5" fill="currentColor"/>
+                                <circle cx="15" cy="33" r="1.5" fill="currentColor"/>
+                                <circle cx="24" cy="33" r="1.5" fill="currentColor"/>
+                                <circle cx="33" cy="33" r="1.5" fill="currentColor"/>
                             </svg>
                         </div>
                         <h3>Scientific Calculator</h3>
                         <p>Perform advanced mathematical calculations</p>
-                        <div class="tool-usage">8K+ Uses</div>
+                        <div class="tool-usage">Free & Instant</div>
+                        <span class="tool-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="tools/attendance-calculator.html" class="tool-card" data-keywords="attendance percentage bunk classes college">
+                        <div class="tool-card-icon age-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <rect x="10" y="10" width="28" height="28" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                <path d="M10 18H38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M14 14V14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M34 14V14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M24 18V28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M20 28H28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <circle cx="24" cy="34" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M24 30V34L26 36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Attendance Calculator</h3>
+                        <p>Check minimum attendance requirements for college</p>
+                        <div class="tool-usage">Free & Instant</div>
+                        <span class="tool-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="tools/percentage-cgpa-converter.html" class="tool-card" data-keywords="cgpa percentage convert grade gpa cbse">
+                        <div class="tool-card-icon discount-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <path d="M14 12C12.9 12 12 12.9 12 14V22C12 23.1 12.9 24 14 24H34C35.1 24 36 23.1 36 22V14C36 12.9 35.1 12 34 12H14Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                                <path d="M12 18H36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M20 28C18.9 28 18 28.9 18 30V36C18 37.1 18.9 38 20 38H28C29.1 38 30 37.1 30 36V30C30 28.9 29.1 28 28 28H20Z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                                <path d="M24 30V34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>CGPA Converter</h3>
+                        <p>Convert percentage to CGPA and vice versa</p>
+                        <div class="tool-usage">Free & Instant</div>
+                        <span class="tool-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="tools/bmi-calculator.html" class="tool-card" data-keywords="bmi weight height body mass index">
+                        <div class="tool-card-icon age-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="8" y="10" width="32" height="28" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                <line x1="8" y1="18" x2="40" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="24" cy="26" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M24 24V28L26 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="4" y1="10" x2="14" y2="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="34" y1="10" x2="44" y2="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>BMI Calculator</h3>
+                        <p>Check your Body Mass Index and weight category</p>
+                        <div class="tool-usage">Free & Instant</div>
+                        <span class="tool-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="tools/calorie-calculator.html" class="tool-card" data-keywords="calorie bmr tdee maintenance diet">
+                        <div class="tool-card-icon emi-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <circle cx="24" cy="20" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                <path d="M24 14V20L28 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 36C18 33 20 32 24 32C28 32 30 33 32 36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="12" y1="36" x2="36" y2="36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Calorie Calculator</h3>
+                        <p>Estimate BMR and daily calorie needs</p>
+                        <div class="tool-usage">Free & Instant</div>
+                        <span class="tool-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="tools/word-counter.html" class="tool-card" data-keywords="word character count text length reading time">
+                        <div class="tool-card-icon unit-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <line x1="12" y1="16" x2="36" y2="16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="12" y1="24" x2="36" y2="24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <line x1="12" y1="32" x2="28" y2="32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <circle cx="34" cy="32" r="5" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M32 32L36 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M34 30L34 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Word Counter</h3>
+                        <p>Count words, characters, sentences &amp; more</p>
+                        <div class="tool-usage">Free & Instant</div>
+                        <span class="tool-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="tools/case-converter.html" class="tool-card" data-keywords="uppercase lowercase title sentence case convert text">
+                        <div class="tool-card-icon sip-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <rect x="10" y="10" width="28" height="28" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <text x="24" y="30" text-anchor="middle" fill="currentColor" font-size="18" font-weight="700" font-family="monospace">Aa</text>
+                            </svg>
+                        </div>
+                        <h3>Case Converter</h3>
+                        <p>Convert text between uppercase, lowercase &amp; more</p>
+                        <div class="tool-usage">Free & Instant</div>
+                        <span class="tool-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="tools/income-tax-calculator.html" class="tool-card" data-keywords="income tax calculator old new regime india">
+                        <div class="tool-card-icon sip-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <rect x="10" y="14" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                <line x1="14" y1="22" x2="34" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="14" y1="28" x2="26" y2="28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="14" y1="34" x2="20" y2="34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <polyline points="30,28 34,28 34,34 30,34" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Income Tax Calculator</h3>
+                        <p>Compare old vs new tax regime liability</p>
+                        <div class="tool-usage">Free & Instant</div>
+                        <span class="tool-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="tools/fd-rd-calculator.html" class="tool-card" data-keywords="fd rd fixed recurring deposit maturity interest">
+                        <div class="tool-card-icon discount-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                <path d="M24 12V24L32 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 34C18 33 20 32 24 32C28 32 30 33 32 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>FD & RD Calculator</h3>
+                        <p>Calculate FD &amp; RD maturity amounts</p>
+                        <div class="tool-usage">Free & Instant</div>
+                        <span class="tool-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="tools/loan-eligibility-calculator.html" class="tool-card" data-keywords="loan eligibility emi eligible amount">
+                        <div class="tool-card-icon emi-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <rect x="12" y="10" width="24" height="28" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                <line x1="12" y1="18" x2="36" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="24" cy="26" r="5" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M24 24V28L27 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Loan Eligibility Calculator</h3>
+                        <p>Estimate your maximum loan eligibility</p>
+                        <div class="tool-usage">Free & Instant</div>
+                        <span class="tool-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="tools/water-intake-calculator.html" class="tool-card" data-keywords="water intake daily hydration calculator">
+                        <div class="tool-card-icon unit-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <path d="M24 12C22 17 18 20 18 26C18 29.3 20.7 32 24 32C27.3 32 30 29.3 30 26C30 20 26 17 24 12Z" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                <line x1="24" y1="22" x2="24" y2="26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="22" y1="24" x2="26" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Water Intake Calculator</h3>
+                        <p>Calculate daily water intake needs</p>
+                        <div class="tool-usage">Free & Instant</div>
+                        <span class="tool-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="tools/merge-pdf.html" class="tool-card" data-keywords="merge pdf combine join documents">
+                        <div class="tool-card-icon age-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <rect x="10" y="8" width="12" height="32" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <rect x="26" y="8" width="12" height="32" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <line x1="18" y1="24" x2="30" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <polyline points="26,20 30,24 26,28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Merge PDF</h3>
+                        <p>Combine multiple PDFs into one document</p>
+                        <div class="tool-usage">Free & Private</div>
+                        <span class="tool-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="tools/split-pdf.html" class="tool-card" data-keywords="split pdf extract pages separate document">
+                        <div class="tool-card-icon date-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <rect x="12" y="10" width="24" height="28" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                <line x1="12" y1="18" x2="36" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M20 26L28 26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M24 22L24 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Split PDF</h3>
+                        <p>Extract specific pages or split all pages</p>
+                        <div class="tool-usage">Free & Private</div>
+                        <span class="tool-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="tools/pdf-to-image.html" class="tool-card" data-keywords="pdf to image jpg png converter render">
+                        <div class="tool-card-icon gst-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="6" y="6" width="36" height="36" rx="10" fill="currentColor" opacity="0.06"/>
+                                <rect x="10" y="14" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                                <circle cx="24" cy="24" r="5" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <circle cx="24" cy="24" r="2" fill="currentColor"/>
+                                <path d="M34 18L39 24L34 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>PDF to Image</h3>
+                        <p>Convert PDF pages to JPG or PNG images</p>
+                        <div class="tool-usage">Free & Private</div>
                         <span class="tool-arrow">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -443,35 +671,15 @@
             </div>
         </section>
 
-        <!-- AdSense  -->
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
 
-        <!-- Search Tools Section -->
-        <section class="search-section">
+
+        <!-- Popular Tools Section -->
+        <section class="popular-section">
             <div class="container">
-                <h2>Find the Right Tool in Seconds</h2>
-                <p class="section-subtitle">Explore our collection of powerful calculators</p>
-
-                <div class="search-container">
-                    <div class="search-box">
-                        <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 12L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        <input type="text" id="toolSearch" class="search-input" placeholder="Search tools... (EMI, Age, GST, Currency...)" aria-label="Search tools">
-                        <button class="search-clear" aria-label="Clear search" hidden>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="search-meta" aria-live="polite" aria-atomic="true"></div>
-                </div>
+                <h2>Popular Tools</h2>
+                <p class="section-subtitle">Quick access to our most used calculators</p>
 
                 <div class="quick-suggestions">
-                    <h3>Popular Tools</h3>
                     <div class="suggestions-grid">
                         <a href="tools/age-calculator.html" class="suggestion-card">
                             <div class="suggestion-icon">
@@ -512,10 +720,7 @@
             </div>
         </section>
 
-        <!-- AdSense  -->
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
+
 
         <!-- FAQ Section -->
         <section class="faq-section">
@@ -593,8 +798,24 @@
                         <li><a href="tools/currency-converter.html">Currency Converter</a></li>
                         <li><a href="tools/date-difference-calculator.html">Date Difference</a></li>
                         <li><a href="tools/scientific-calculator.html">Scientific Calculator</a></li>
+                        <li><a href="tools/attendance-calculator.html">Attendance Calculator</a></li>
+                        <li><a href="tools/percentage-cgpa-converter.html">CGPA Converter</a></li>
+                        <li><a href="tools/bmi-calculator.html">BMI Calculator</a></li>
+                        <li><a href="tools/calorie-calculator.html">Calorie Calculator</a></li>
+                        <li><a href="tools/word-counter.html">Word Counter</a></li>
+                        <li><a href="tools/case-converter.html">Case Converter</a></li>
+                        <li><a href="tools/income-tax-calculator.html">Income Tax Calculator</a></li>
+                        <li><a href="tools/fd-rd-calculator.html">FD &amp; RD Calculator</a></li>
+                        <li><a href="tools/loan-eligibility-calculator.html">Loan Eligibility Calculator</a></li>
+                        <li><a href="tools/water-intake-calculator.html">Water Intake Calculator</a></li>
+                        <li><a href="tools/merge-pdf.html">Merge PDF</a></li>
+                        <li><a href="tools/split-pdf.html">Split PDF</a></li>
+                        <li><a href="tools/pdf-to-image.html">PDF to Image</a></li>
                     </ul>
                 </div>
+            </div>
+            <div style="text-align:center;padding-bottom:1rem;">
+                <a href="https://www.buymeacoffee.com/YOUR_USERNAME" target="_blank" rel="noopener" class="donate-link">☕ Support Tooligo</a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Tooligo. All rights reserved. Free online calculators for everyone.</p>
@@ -607,7 +828,7 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Tooligo - Free Online Calculators",
-        "description": "Collection of 10+ free online calculators and tools for instant results",
+        "description": "Collection of 23+ free online calculators and tools for instant results",
         "url": "https://tooligo-tools.netlify.app",
         "applicationCategory": "UtilityApplication",
         "offers": {

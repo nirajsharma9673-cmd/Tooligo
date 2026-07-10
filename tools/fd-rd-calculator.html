@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+    <title>Tooligo – FD & RD Maturity Calculator</title>
+    <meta name="description" content="Calculate Fixed Deposit and Recurring Deposit maturity amounts with compound interest. Free, instant calculator for Indian bank deposits.">
+    <meta name="keywords" content="fd calculator, rd calculator, fixed deposit, recurring deposit, maturity calculator, compound interest, indian bank deposit">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://tooligo-tools.netlify.app/tools/fd-rd-calculator.html">
+    <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta property="og:description" content="Calculate Fixed Deposit and Recurring Deposit maturity amounts with compound interest. Free, instant calculator for Indian bank deposits.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tooligo-tools.netlify.app/tools/fd-rd-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta name="twitter:url" content="https://tooligo-tools.netlify.app/tools/fd-rd-calculator.html">
+    <meta name="twitter:description" content="Calculate Fixed Deposit and Recurring Deposit maturity amounts with compound interest. Free, instant calculator for Indian bank deposits.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://tooligo-tools.netlify.app/tools/fd-rd-calculator.html",
+  "name": "FD & RD Maturity Calculator",
+  "description": "Calculate Fixed Deposit and Recurring Deposit maturity amounts with compound interest."
+}
+    </script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tooligo-tools.netlify.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://tooligo-tools.netlify.app/#tools"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "FD & RD Calculator",
+            "item": "https://tooligo-tools.netlify.app/tools/fd-rd-calculator.html"
+        }
+    ]
+}
+</script>
+    <link rel="stylesheet" href="../css/style.css">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTYD9GBDH9');
+</script>
+<style>
+.mode-tabs { display:flex; gap:0; margin-bottom:1.5rem; border-radius:8px; overflow:hidden; border:1px solid var(--border-color); }
+.mode-tab { flex:1; padding:0.75rem; text-align:center; cursor:pointer; background:var(--bg-secondary); border:none; font-weight:600; color:var(--text-secondary); transition:var(--transition); }
+.mode-tab.active { background:var(--primary); color:#fff; }
+.mode-tab:not(.active):hover { background:var(--bg-primary); }
+.hidden { display:none !important; }
+.result-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.75rem; margin:1rem 0; }
+@media (max-width:600px) { .result-grid { grid-template-columns:1fr; } }
+.result-card { background:var(--bg-primary); border:1px solid var(--border-color); border-radius:8px; padding:1rem; text-align:center; }
+.result-card .label { font-size:0.85rem; color:var(--text-secondary); }
+.result-card .value { font-size:1.15rem; font-weight:700; color:var(--primary); margin-top:0.25rem; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main" id="main-content" data-keywords="fd rd fixed recurring deposit maturity interest">
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">FD & RD Calculator</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="tool-header">
+            <div class="container">
+                <h1>FD & RD Maturity Calculator</h1>
+                <p>Calculate maturity amounts for Fixed Deposits and Recurring Deposits</p>
+            </div>
+        </section>
+
+
+
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <div class="tool-input-section">
+                        <h3>Choose Deposit Type</h3>
+                        <div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                        <div class="mode-tabs" role="tablist">
+                            <button class="mode-tab active" data-mode="fd" onclick="switchMode('fd')" role="tab" aria-selected="true">Fixed Deposit</button>
+                            <button class="mode-tab" data-mode="rd" onclick="switchMode('rd')" role="tab" aria-selected="false">Recurring Deposit</button>
+                        </div>
+
+                        <div id="fd-inputs">
+                            <div class="form-group">
+                                <label for="fd-principal">Principal Amount (Rs)</label>
+                                <input type="number" id="fd-principal" placeholder="e.g. 100000" aria-label="FD principal amount" min="0" step="any">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fd-rate">Annual Interest Rate (%)</label>
+                                <input type="number" id="fd-rate" placeholder="e.g. 7.5" aria-label="FD interest rate" min="0.1" max="15" step="0.1">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fd-tenure">Tenure (Years)</label>
+                                <input type="number" id="fd-tenure" placeholder="e.g. 3" aria-label="FD tenure in years" min="0.01" step="0.01">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fd-frequency">Compounding Frequency</label>
+                                <select id="fd-frequency" aria-label="Compounding frequency">
+                                    <option value="quarterly">Quarterly</option>
+                                    <option value="monthly">Monthly</option>
+                                    <option value="halfyearly">Half-Yearly</option>
+                                    <option value="annually">Annually</option>
+                                </select>
+                            </div>
+
+                            <button class="btn-calculate" onclick="calculateFD()" aria-label="Calculate FD maturity">Calculate</button>
+                            <button class="btn-reset" onclick="resetFD()" aria-label="Clear FD inputs">Clear</button>
+
+                            <div id="fd-result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+                                <h3>FD Maturity Summary</h3>
+                                <div class="result-grid">
+                                    <div class="result-card">
+                                        <div class="label">Maturity Amount</div>
+                                        <div class="value" id="fd-maturity">Rs 0</div>
+                                    </div>
+                                    <div class="result-card">
+                                        <div class="label">Principal</div>
+                                        <div class="value" id="fd-principal-display">Rs 0</div>
+                                    </div>
+                                    <div class="result-card">
+                                        <div class="label">Total Interest</div>
+                                        <div class="value" id="fd-interest-display">Rs 0</div>
+                                    </div>
+                                </div>
+                                <p style="font-size:0.85rem;color:var(--text-secondary);text-align:center;">
+                                    Rate: <span id="fd-rate-display">0%</span> |
+                                    Tenure: <span id="fd-tenure-display">0 years</span> |
+                                    Compounding: <span id="fd-freq-display">Quarterly</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="rd-inputs" class="hidden">
+                            <div class="form-group">
+                                <label for="rd-monthly">Monthly Deposit Amount (Rs)</label>
+                                <input type="number" id="rd-monthly" placeholder="e.g. 5000" aria-label="RD monthly deposit" min="0" step="any">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="rd-rate">Annual Interest Rate (%)</label>
+                                <input type="number" id="rd-rate" placeholder="e.g. 7.5" aria-label="RD interest rate" min="0.1" max="15" step="0.1">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="rd-tenure-months">Tenure (Months)</label>
+                                <input type="number" id="rd-tenure-months" placeholder="e.g. 60" aria-label="RD tenure in months" min="3" step="1">
+                            </div>
+
+                            <button class="btn-calculate" onclick="calculateRD()" aria-label="Calculate RD maturity">Calculate</button>
+                            <button class="btn-reset" onclick="resetRD()" aria-label="Clear RD inputs">Clear</button>
+
+                            <div id="rd-result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+                                <h3>RD Maturity Summary</h3>
+                                <div class="result-grid">
+                                    <div class="result-card">
+                                        <div class="label">Maturity Amount</div>
+                                        <div class="value" id="rd-maturity">Rs 0</div>
+                                    </div>
+                                    <div class="result-card">
+                                        <div class="label">Total Deposited</div>
+                                        <div class="value" id="rd-deposited-display">Rs 0</div>
+                                    </div>
+                                    <div class="result-card">
+                                        <div class="label">Total Interest</div>
+                                        <div class="value" id="rd-interest-display">Rs 0</div>
+                                    </div>
+                                </div>
+                                <p style="font-size:0.85rem;color:var(--text-secondary);text-align:center;">
+                                    Monthly Deposit: <span id="rd-monthly-display">Rs 0</span> |
+                                    Rate: <span id="rd-rate-display">0%</span> |
+                                    Tenure: <span id="rd-tenure-display">0 months</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-info-section">
+                        <div class="tool-description">
+                            <h3>How It Works &mdash; Fixed Deposit</h3>
+                            <p>In a Fixed Deposit, you invest a lump sum for a fixed period at a predetermined interest rate. The interest is compounded at regular intervals (quarterly, monthly, etc.). The formula used is:</p>
+                            <p><strong>A = P &times; (1 + r/n)<sup>n&times;t</sup></strong></p>
+                            <p>Where P = principal, r = annual rate (as decimal), n = number of compounding periods per year, t = tenure in years. More frequent compounding yields slightly higher returns.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>How It Works &mdash; Recurring Deposit</h3>
+                            <p>In a Recurring Deposit, you invest a fixed amount every month for a set period. Since each monthly deposit earns interest for a different length of time, the standard RD formula (used by Indian banks with quarterly compounding) is more complex:</p>
+                            <p><strong>M = R &times; [ ((1+i)<sup>n</sup> &minus; 1) / (1 &minus; (1+i)<sup>&minus;1/3</sup>) ]</strong></p>
+                            <p>Where R = monthly deposit, i = (annual rate / 400), n = number of quarters (tenure in months / 3). This formula accounts for the fact that each deposit is made at a different point in time and earns interest for a different duration.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Worked Example</h3>
+                            <p><strong>FD Example:</strong> Rs 1,00,000 at 7.5% p.a. for 3 years, compounded quarterly. A = 1,00,000 &times; (1 + 0.075/4)<sup>4&times;3</sup> = 1,00,000 &times; 1.2502 = <strong>Rs 1,25,025</strong>. Interest earned: Rs 25,025.</p>
+                            <p><strong>RD Example:</strong> Rs 5,000/month at 7.5% p.a. for 5 years (60 months). Quarterly rate = 7.5/400 = 0.01875. Number of quarters = 60/3 = 20. M = 5,000 &times; [(1.01875<sup>20</sup> &minus; 1) / (1 &minus; 1.01875<sup>&minus;1/3</sup>)] = <strong>Rs 3,66,333</strong> (approx). Total deposited: Rs 3,00,000. Interest earned: Rs 66,333.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        
+<section class="related-tools-section">
+    <div class="container">
+        <h2>Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="sip-calculator.html" class="related-tool-card">
+                <h4>SIP Calculator</h4>
+                <p>Estimate returns on your mutual fund SIP</p>
+            </a>            <a href="emi-calculator.html" class="related-tool-card">
+                <h4>EMI Calculator</h4>
+                <p>Plan your loan with accurate monthly payments</p>
+            </a>            <a href="loan-eligibility-calculator.html" class="related-tool-card">
+                <h4>Loan Eligibility Calculator</h4>
+                <p>Check your home loan eligibility</p>
+            </a>            <a href="income-tax-calculator.html" class="related-tool-card">
+                <h4>Income Tax Calculator</h4>
+                <p>Estimate your income tax liability</p>
+            </a>            <a href="percentage-calculator.html" class="related-tool-card">
+                <h4>Percentage Calculator</h4>
+                <p>Quick percentage calculations for everyday use</p>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Why does the RD formula look different from the FD formula?</summary>
+                        <p>The FD formula calculates compound interest on a single lump sum deposited at the start. In an RD, each monthly deposit is made at a different time, so each earns interest for a different number of months. The RD formula aggregates all these into a single calculation &mdash; it&rsquo;s mathematically equivalent to calculating the future value of each monthly deposit separately and summing them, but much more compact.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Does compounding frequency matter?</summary>
+                        <p>Yes. More frequent compounding (e.g., monthly vs. annually) results in slightly higher returns because interest is calculated on a growing principal more often. For a Rs 1,00,000 FD at 7.5% for 3 years: quarterly compounding gives Rs 1,25,025, while annual compounding gives Rs 1,24,230 &mdash; a difference of about Rs 795. Indian banks generally compound FD interest quarterly for most tenures.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is this exact to what my bank will pay?</summary>
+                        <p>This calculator provides a very close estimate based on the standard formulas used by Indian banks. However, individual banks may apply slightly different rounding rules, offer special rates for senior citizens or specific tenures, or use minor variations in the RD formula. Always confirm the exact maturity amount with your bank before making investment decisions.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is FD interest taxable?</summary>
+                        <p>Yes. Interest earned on FDs and RDs is treated as &ldquo;Income from Other Sources&rdquo; and is taxable as per your applicable income tax slab. Banks deduct TDS (Tax Deducted at Source) at 10% if the total interest exceeds Rs 40,000 in a financial year (Rs 50,000 for senior citizens). You can also check your overall tax liability using our <a href="income-tax-calculator.html">Income Tax Calculator</a>.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What are typical FD and RD tenures in India?</summary>
+                        <p>FDs typically range from 7 days to 10 years, with most common tenures being 1 year, 3 years, and 5 years. RDs typically run for 6 months to 10 years, with 5 years being a common choice. Senior citizens often get 0.25% to 0.75% higher interest rates on FDs. Minimum deposit amounts vary by bank &mdash; RD minimums are often as low as Rs 100&ndash;Rs 1,000 per month.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="gst-calculator.html">GST Calculator</a></li>
+                        <li><a href="attendance-calculator.html">Attendance Calculator</a></li>
+                        <li><a href="fd-rd-calculator.html">FD &amp; RD Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align:center;padding-bottom:1rem;">
+                <a href="https://www.buymeacoffee.com/YOUR_USERNAME" target="_blank" rel="noopener" class="donate-link">Support Tooligo</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/fd-rd-calculator.js"></script>
+    <script src="../js/theme.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "FD & RD Maturity Calculator",
+        "description": "Calculate Fixed Deposit and Recurring Deposit maturity amounts with compound interest. Free, instant calculator for Indian bank deposits.",
+        "url": "https://tooligo-tools.netlify.app/tools/fd-rd-calculator.html",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Why does the RD formula look different from the FD formula?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The FD formula calculates compound interest on a single lump sum. In an RD each monthly deposit earns interest for a different length of time, requiring a more complex formula."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does compounding frequency matter?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. More frequent compounding results in slightly higher returns because interest is calculated on a growing principal more often."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this exact to what my bank will pay?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "This calculator provides a close estimate based on standard formulas used by Indian banks. Individual banks may apply slightly different rounding rules or offer special rates."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is FD interest taxable?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Interest earned on FDs and RDs is taxable as per your applicable income tax slab. Banks deduct TDS at 10% if total interest exceeds Rs 40,000 per year."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are typical FD and RD tenures in India?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FDs typically range from 7 days to 10 years. RDs typically run for 6 months to 10 years, with 5 years being a common choice."
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+</html>

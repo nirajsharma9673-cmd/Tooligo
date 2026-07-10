@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>
+Tooligo – Calorie & BMR Calculator</title>
+<meta name="description" content="Calculate your BMR and daily calorie needs (TDEE) using the Mifflin-St Jeor formula. Free, instant, works for weight loss, gain, or maintenance goals.">
+<meta name="keywords" content="calorie calculator, bmr calculator, tdee calculator, mifflin st jeor, daily calorie needs">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="canonical" href="https://tooligo-tools.netlify.app/tools/calorie-calculator.html">
+<meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+<meta property="og:description" content="Calculate your BMR and daily calorie needs (TDEE) using the Mifflin-St Jeor formula. Free, instant.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tooligo-tools.netlify.app/tools/calorie-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+<meta name="twitter:url" content="https://tooligo-tools.netlify.app/tools/calorie-calculator.html">
+<meta name="twitter:description" content="Calculate your BMR and daily calorie needs (TDEE) using the Mifflin-St Jeor formula.">
+<script type="application/ld+json">
+{  "@context": "https://schema.org",  "@type": "WebPage",  "url": "https://tooligo-tools.netlify.app/tools/calorie-calculator.html",  "name": "Calorie & BMR Calculator - Mifflin-St Jeor Formula",  "description": "Calculate your BMR and daily calorie needs (TDEE) using the Mifflin-St Jeor formula."}    </script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tooligo-tools.netlify.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://tooligo-tools.netlify.app/#tools"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Calorie Calculator",
+            "item": "https://tooligo-tools.netlify.app/tools/calorie-calculator.html"
+        }
+    ]
+}
+</script>
+<link rel="stylesheet" href="../css/style.css">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-VTYD9GBDH9');</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="header">
+<div class="container">
+<div class="header-content">
+<div class="logo">
+<div class="logo-icon">
+<img src="../images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
+</div>
+<div class="logo-text-group">
+<div class="logo-text">
+Tooligo</div>
+<p class="logo-subtitle">
+Free Online Tools</p>
+</div>
+</div>
+<nav class="nav">
+<ul class="nav-list">
+<li>
+<a href="../index.html" class="nav-link active" aria-current="page">
+Home</a>
+</li>
+<li>
+<a href="../about.html" class="nav-link">
+About</a>
+</li>
+<li>
+<a href="../contact.html" class="nav-link">
+Contact</a>
+</li>
+</ul>
+</nav>
+<button class="theme-toggle" aria-label="Toggle dark mode">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="4" fill="currentColor"/>
+<line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+</button>
+</div>
+</div>
+</header>
+<main class="main" id="main-content" data-keywords="calorie bmr tdee maintenance diet">
+<div class="breadcrumb">
+<div class="container">
+<ul class="breadcrumb-list">
+<li class="breadcrumb-item">
+<a href="../index.html" class="breadcrumb-link">
+Home</a>
+</li>
+<li class="breadcrumb-item">
+<a href="../index.html#tools" class="breadcrumb-link">
+Tools</a>
+</li>
+<li class="breadcrumb-item">
+Calorie &amp; BMR Calculator</li>
+</ul>
+</div>
+</div>
+<section class="tool-header">
+<div class="container">
+<h1>
+Calorie &amp; BMR Calculator</h1>
+<p>
+Estimate your BMR and daily calorie needs using the Mifflin-St Jeor formula</p>
+</div>
+</section>
+
+<section class="tool-section">
+<div class="container">
+<div class="tool-container">
+<div class="tool-input-section">
+<h3>
+Calculate Your Calorie Needs</h3>
+<div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true">
+</div>
+<div class="form-group">
+<label for="sex">
+Sex</label>
+<select id="sex" aria-label="Select sex">
+<option value="">
+Select sex</option>
+<option value="male">
+Male</option>
+<option value="female">
+Female</option>
+</select>
+</div>
+<div class="form-group">
+<label for="age">
+Age (years)</label>
+<input type="number" id="age" placeholder="e.g. 30" aria-label="Age in years" min="1" max="120" step="1">
+</div>
+<div class="form-group">
+<label for="weight">
+Weight (kg)</label>
+<input type="number" id="weight" placeholder="e.g. 75" aria-label="Weight in kg" min="20" max="300" step="0.1">
+</div>
+<div class="form-group">
+<label for="height">
+Height (cm)</label>
+<input type="number" id="height" placeholder="e.g. 178" aria-label="Height in cm" min="50" max="250" step="0.1">
+</div>
+<div class="form-group">
+<label for="activity">
+Activity Level</label>
+<select id="activity" aria-label="Select activity level">
+<option value="1.2">
+Sedentary (little or no exercise)</option>
+<option value="1.375">
+Lightly active (1-3 days/week)</option>
+<option value="1.55" selected>
+Moderately active (3-5 days/week)</option>
+<option value="1.725">
+Very active (6-7 days/week)</option>
+<option value="1.9">
+Extremely active (hard exercise + physical job)</option>
+</select>
+</div>
+<button class="btn-calculate" onclick="calculateCalories()" aria-controls="result-section" aria-label="Calculate calorie needs">
+Calculate</button>
+<button class="btn-reset" onclick="resetCalories()" aria-label="Clear inputs">
+Clear</button>
+<div id="result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+<h3>
+Your Results</h3>
+<div class="result-grid">
+<div class="result-card" style="text-align:center;">
+<div style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.25rem;">
+BMR (at rest)</div>
+<div style="font-size:1.5rem;font-weight:700;color:var(--primary);" id="bmr-result">
+0</div>
+<div style="font-size:0.8rem;color:var(--text-secondary);">
+calories/day</div>
+</div>
+<div class="result-card" style="text-align:center;">
+<div style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.25rem;">
+TDEE (maintain weight)</div>
+<div style="font-size:1.5rem;font-weight:700;color:var(--primary);" id="tdee-result">
+0</div>
+<div style="font-size:0.8rem;color:var(--text-secondary);">
+calories/day</div>
+</div>
+<div class="result-card" style="text-align:center;">
+<div style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.25rem;">
+Gradual weight loss</div>
+<div style="font-size:1.5rem;font-weight:700;color:var(--success-color);" id="tdee-loss">
+0</div>
+<div style="font-size:0.8rem;color:var(--text-secondary);">
+calories/day (~0.5kg/week)</div>
+</div>
+<div class="result-card" style="text-align:center;">
+<div style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.25rem;">
+Gradual weight gain</div>
+<div style="font-size:1.5rem;font-weight:700;color:var(--accent);" id="tdee-gain">
+0</div>
+<div style="font-size:0.8rem;color:var(--text-secondary);">
+calories/day (~0.5kg/week)</div>
+</div>
+</div>
+<p style="margin-top:1rem;font-size:0.85rem;color:var(--text-secondary);border-top:1px solid var(--border-color);padding-top:0.75rem;">
+These are population-based estimates, not personalized recommendations. Individual calorie needs vary based on genetics, body composition, and other factors. Consult a qualified healthcare professional for specific dietary or medical guidance.</p>
+</div>
+</div>
+<div class="tool-info-section">
+<div class="tool-description">
+<h3>
+How It Works</h3>
+<p>
+Your Basal Metabolic Rate (BMR) is the number of calories your body burns at complete rest. Your Total Daily Energy Expenditure (TDEE) is BMR multiplied by an activity factor that accounts for exercise and movement. This calculator uses the <strong>
+Mifflin-St Jeor formula</strong>
+, which is considered more accurate than older equations (like Harris-Benedict) by most modern nutrition guidelines.</p>
+<p>
+<strong>
+Mifflin-St Jeor Formula:</strong>
+</p>
+<ul>
+<li>
+Male: BMR = 10w + 6.25h &minus; 5a + 5</li>
+<li>
+Female: BMR = 10w + 6.25h &minus; 5a &minus; 161</li>
+<li>
+TDEE = BMR &times; Activity Multiplier</li>
+</ul>
+<p>
+Where w = weight (kg), h = height (cm), a = age (years).</p>
+<p>
+<strong>
+Worked Example:</strong>
+ A 30-year-old male weighing 75 kg at 178 cm, moderately active:<br>
+                            BMR = 10(75) + 6.25(178) &minus; 5(30) + 5 = 750 + 1112.5 &minus; 150 + 5 = <strong>
+1,718 calories/day</strong>
+<br>
+                            TDEE = 1,718 &times; 1.55 = <strong>
+2,662 calories/day</strong>
+</p>
+</div>
+<div class="tool-description">
+<h3>
+How to Use</h3>
+<ol>
+<li>
+Select your sex</li>
+<li>
+Enter age, weight (kg), and height (cm)</li>
+<li>
+Select your activity level</li>
+<li>
+Click Calculate</li>
+<li>
+View BMR, TDEE, and reference figures for gradual weight change</li>
+</ol>
+</div>
+<div class="tool-description">
+<h3>
+Formula</h3>
+<p>
+<strong>
+Male BMR:</strong>
+ 10 &times; weight(kg) + 6.25 &times; height(cm) &minus; 5 &times; age(y) + 5</p>
+<p>
+<strong>
+Female BMR:</strong>
+ 10 &times; weight(kg) + 6.25 &times; height(cm) &minus; 5 &times; age(y) &minus; 161</p>
+<p>
+<strong>
+TDEE:</strong>
+ BMR &times; Activity Multiplier</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="related-tools-section">
+    <div class="container">
+        <h2>Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="bmi-calculator.html" class="related-tool-card">
+                <h4>BMI Calculator</h4>
+                <p>Calculate your Body Mass Index instantly</p>
+            </a>            <a href="water-intake-calculator.html" class="related-tool-card">
+                <h4>Water Intake Calculator</h4>
+                <p>Calculate your daily water intake</p>
+            </a>            <a href="age-calculator.html" class="related-tool-card">
+                <h4>Age Calculator</h4>
+                <p>Calculate exact age in years, months and days</p>
+            </a>            <a href="percentage-calculator.html" class="related-tool-card">
+                <h4>Percentage Calculator</h4>
+                <p>Quick percentage calculations for everyday use</p>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="faq-section">
+<div class="container">
+<h2>
+Frequently Asked Questions</h2>
+<div class="faq-list">
+<details class="faq-item">
+<summary>
+What is the difference between BMR and TDEE?</summary>
+<p>
+BMR (Basal Metabolic Rate) is the number of calories your body burns at complete rest to maintain basic functions like breathing, circulation, and cell production. TDEE (Total Daily Energy Expenditure) adds the calories burned through exercise and daily movement. TDEE is what you need to maintain your current weight; eat fewer calories for weight loss, or more for weight gain.</p>
+</details>
+<details class="faq-item">
+<summary>
+Why is sex a required input?</summary>
+<p>
+The Mifflin-St Jeor formula uses different constants for males and females because men and women typically have different body composition and metabolic rates. Men generally have more muscle mass and higher BMR, so the formula includes a +5 adjustment for males and a -161 adjustment for females to account for these differences.</p>
+</details>
+<details class="faq-item">
+<summary>
+How accurate is this calorie estimate?</summary>
+<p>
+The Mifflin-St Jeor formula is a population average equation and is accurate to within about 10-15% of measured BMR for most individuals. Actual calorie needs vary based on genetics, body composition, hormone levels, and other individual factors. These estimates are a helpful reference point but should not be treated as exact prescriptions.</p>
+</details>
+<details class="faq-item">
+<summary>
+How does activity level affect the multiplier?</summary>
+<p>
+Each activity level corresponds to a multiplier that estimates the additional calories burned through physical activity. A sedentary person (x1.2) burns only their BMR plus minimal movement, while an extremely active person (x1.9) may burn nearly double their BMR. Be honest about your activity level for the most useful estimate.</p>
+</details>
+<details class="faq-item">
+<summary>
+Is this medical advice?</summary>
+<p>
+No. This calculator provides general reference estimates based on a standard population formula. It is not a medical diagnosis, dietary prescription, or substitute for professional advice. For personalized nutrition or medical guidance, please consult a qualified healthcare provider.</p>
+</details>
+</div>
+</div>
+</section>
+
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<h4>
+Quick Links</h4>
+<ul>
+<li>
+<a href="../index.html">
+Home</a>
+</li>
+<li>
+<a href="../about.html">
+About Us</a>
+</li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>
+Legal</h4>
+<ul>
+<li>
+<a href="../privacy-policy.html">
+Privacy Policy</a>
+</li>
+<li>
+<a href="../terms.html">
+Terms & Conditions</a>
+</li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>
+More Tools</h4>
+<ul>
+<li>
+<a href="percentage-calculator.html">
+Percentage Calculator</a>
+</li>
+<li>
+<a href="gst-calculator.html">
+GST Calculator</a>
+</li>
+<li>
+<a href="attendance-calculator.html">
+Attendance Calculator</a>
+</li>
+<li>
+<a href="percentage-cgpa-converter.html">
+CGPA Converter</a>
+</li>
+<li>
+<a href="bmi-calculator.html">
+BMI Calculator</a>
+</li>
+<li>
+<a href="calorie-calculator.html">
+Calorie Calculator</a>
+</li>
+<li>
+<a href="word-counter.html">
+Word Counter</a>
+</li>
+<li>
+<a href="case-converter.html">
+Case Converter</a>
+</li>
+</ul>
+</div>
+</div>
+<div style="text-align:center;padding-bottom:1rem;">
+<a href="https://www.buymeacoffee.com/YOUR_USERNAME" target="_blank" rel="noopener" class="donate-link">
+☕ Support Tooligo</a>
+</div>
+<div class="footer-bottom">
+<p>
+&copy; 2024 Tooligo. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script src="../js/utils.js">
+</script>
+<script src="../js/calorie-calculator.js">
+</script>
+<script src="../js/theme.js">
+</script>
+<script type="application/ld+json">
+    {        "@context": "https://schema.org",        "@type": "WebApplication",        "name": "Calorie & BMR Calculator",        "description": "Calculate your BMR and daily calorie needs (TDEE) using the Mifflin-St Jeor formula.",        "url": "https://tooligo-tools.netlify.app/tools/calorie-calculator.html",        "applicationCategory": "UtilityApplication",        "offers": {            "@type": "Offer",            "price": "0"        }    }    </script>
+<script type="application/ld+json">
+    {        "@context": "https://schema.org",        "@type": "FAQPage",        "mainEntity": [            {                "@type": "Question",                "name": "What is the difference between BMR and TDEE?",                "acceptedAnswer": {                    "@type": "Answer",                    "text": "BMR is the calories burned at rest. TDEE adds exercise calories and is what you need to maintain weight."                }            },            {                "@type": "Question",                "name": "Why is sex a required input?",                "acceptedAnswer": {                    "@type": "Answer",                    "text": "The Mifflin-St Jeor formula uses different constants for males and females because metabolic rates differ by sex."                }            },            {                "@type": "Question",                "name": "How accurate is this calorie estimate?",                "acceptedAnswer": {                    "@type": "Answer",                    "text": "The Mifflin-St Jeor formula is accurate within about 10-15% for most individuals. Actual needs vary."                }            },            {                "@type": "Question",                "name": "How does activity level affect the multiplier?",                "acceptedAnswer": {                    "@type": "Answer",                    "text": "Each activity level multiplies BMR to estimate total daily burn. A sedentary person uses 1.2x, extremely active uses 1.9x."                }            },            {                "@type": "Question",                "name": "Is this medical advice?",                "acceptedAnswer": {                    "@type": "Answer",                    "text": "No. This calculator provides general reference estimates and is not a substitute for professional medical advice."                }            }        ]    }    </script>
+</body>
+</html>

@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-VTYD9GBDH9');
+</script>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
     <title>Tooligo – EMI Calculator</title>
     <meta name="description" content="Calculate your exact monthly EMI (Equated Monthly Installment) for any loan. Free EMI calculator with amortization schedule. Fast and accurate results.">
     <meta name="keywords" content="EMI calculator, loan calculator, monthly payment, equated monthly installment">
@@ -30,16 +39,44 @@
 }
     </script>
 
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tooligo-tools.netlify.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://tooligo-tools.netlify.app/#tools"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "EMI Calculator",
+            "item": "https://tooligo-tools.netlify.app/tools/emi-calculator.html"
+        }
+    ]
+}
+</script>
+
 
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <div class="logo-icon">
-                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                        <img src="../images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
                     </div>
                     <div class="logo-text-group">
                         <div class="logo-text">Tooligo</div>
@@ -48,7 +85,7 @@
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
                         <li><a href="../about.html" class="nav-link">About</a></li>
                         <li><a href="../contact.html" class="nav-link">Contact</a></li>
                     </ul>
@@ -70,7 +107,7 @@
         </div>
     </header>
 
-    <main class="main" data-keywords="emi loan monthly mortgage interest">
+    <main class="main" id="main-content" data-keywords="emi loan monthly mortgage interest">
         <!-- Breadcrumb -->
         <div class="breadcrumb">
             <div class="container">
@@ -89,13 +126,7 @@
                 <p>Calculate your monthly loan EMI instantly</p>
             </div>
         </section>
-
-        <!-- AdSense  -->
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
-
-        <!-- Main Content -->
+<!-- Main Content -->
         <section class="tool-section">
             <div class="container">
                 <div class="tool-container">
@@ -189,14 +220,60 @@
                 </div>
             </div>
         </section>
+<!-- FAQ Section -->
+        
+        <section class="tool-section">
+            <div class="container">
+                    <div class="tool-info-section" style="width:100%;">
+                        <div class="tool-description">
+                            <h3>How It Works</h3>
+                            <p>The EMI (Equated Monthly Installment) is calculated using the standard formula used by banks worldwide. Each EMI payment consists of both principal repayment and interest, structured so that the loan is fully paid off by the end of the tenure.</p>
+                            <p><strong>EMI = P x r x (1 + r)^n / [(1 + r)^n - 1]</strong></p>
+                            <p>Where P = Loan Amount, r = Monthly Interest Rate (annual rate / 12 / 100), n = Loan Tenure in Months. The calculator also generates a year-by-year amortization schedule showing how much principal and interest you pay each year.</p>
+                        </div>
 
-        <!-- AdSense  -->
-        <div class="ad-container">
-            <!-- AdSense  -->
+                        <div class="tool-description">
+                            <h3>Worked Example</h3>
+                            <p><strong>Scenario:</strong> A home loan of Rs 50,00,000 at 8% annual interest for 20 years.</p>
+                            <p><strong>Step 1:</strong> Monthly rate r = 8 / 12 / 100 = 0.00667. Number of months n = 20 x 12 = 240.</p>
+                            <p><strong>Step 2:</strong> EMI = 50,00,000 x 0.00667 x (1.00667)^240 / [(1.00667)^240 - 1] = <strong>Rs 41,822</strong> per month.</p>
+                            <p><strong>Step 3:</strong> Total amount payable = 41,822 x 240 = Rs 1,00,37,280. Total interest = 1,00,37,280 - 50,00,000 = <strong>Rs 50,37,280</strong>.</p>
+                            <p>Use the amortization schedule to see how much principal vs. interest you pay each year. In the early years, a larger portion goes toward interest; over time, more goes toward principal.</p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+<section class="related-tools-section">
+    <div class="container">
+        <h2>Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="sip-calculator.html" class="related-tool-card">
+                <h4>SIP Calculator</h4>
+                <p>Estimate returns on your mutual fund SIP</p>
+            </a>
+            <a href="loan-eligibility-calculator.html" class="related-tool-card">
+                <h4>Loan Eligibility Calculator</h4>
+                <p>Check your home loan eligibility</p>
+            </a>
+            <a href="fd-rd-calculator.html" class="related-tool-card">
+                <h4>FD/RD Calculator</h4>
+                <p>Calculate maturity for fixed and recurring deposits</p>
+            </a>
+            <a href="income-tax-calculator.html" class="related-tool-card">
+                <h4>Income Tax Calculator</h4>
+                <p>Estimate your income tax liability</p>
+            </a>
+            <a href="percentage-calculator.html" class="related-tool-card">
+                <h4>Percentage Calculator</h4>
+                <p>Quick percentage calculations for everyday use</p>
+            </a>
         </div>
+    </div>
+</section>
 
-        <!-- FAQ Section -->
-        <section class="faq-section">
+        
+<section class="faq-section">
             <div class="container">
                 <h2>Frequently Asked Questions</h2>
 
@@ -233,12 +310,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- AdSense  -->
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
-    </main>
+</main>
 
     <footer class="footer">
         <div class="container">
@@ -288,5 +360,61 @@
     }
     </script>
     <script src="../js/theme.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How is EMI calculated?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "EMI is calculated using the formula: EMI = [P * r * (1 + r)^n] / [(1 + r)^n - 1], where P is principal, r is monthly interest rate, and n is number of months."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can this calculator be used for all loan types?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, this EMI calculator works for home loans, car loans, personal loans, education loans, and any other fixed-rate loans."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the difference between EMI and total amount?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "EMI is your monthly payment, while total amount is EMI multiplied by number of months. Total interest is the difference between total amount and principal."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this calculator accurate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our calculator uses the exact EMI formula used by banks and financial institutions for precise results."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use this for variable interest rates?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "This calculator is designed for fixed interest rates. For variable rates, use the rate you expect for average calculation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this include processing fees?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, this calculator shows basic EMI. Actual EMI might include processing fees and other charges as per your loan agreement."
+                }
+            }
+        ]
+    }
+    </script>
 </body>
 </html>

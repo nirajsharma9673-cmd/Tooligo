@@ -317,3 +317,44 @@ function isInteger(value) {
 function roundTo(num, decimals) {
     return Number(Math.round(num + 'e' + decimals) + 'e-' + decimals);
 }
+
+// ----- PDF/File utility helpers -----
+
+function showProgress(msg) {
+    var el = document.getElementById('progress-area');
+    if (el) { el.textContent = msg; el.style.display = 'block'; }
+}
+
+function hideProgress() {
+    var el = document.getElementById('progress-area');
+    if (el) { el.style.display = 'none'; }
+}
+
+function checkFileSize(file) {
+    var el = document.getElementById('size-warning');
+    if (el && file && file.size > 20 * 1024 * 1024) { el.style.display = 'block'; }
+    else if (el) { el.style.display = 'none'; }
+}
+
+function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+}
+
+function downloadBlob(content, fileName, mimeType) {
+    var blob = content instanceof Blob ? content : new Blob([content], { type: mimeType });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = fileName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function() { URL.revokeObjectURL(url); }, 10000);
+}
+
+function showLoadingSpinner(el) {
+    if (!el) return;
+    el.innerHTML = '<div class="spinner" style="display:inline-block;width:20px;height:20px;border:3px solid var(--border-color);border-top-color:var(--primary);border-radius:50%;animation:spin 0.8s linear infinite;vertical-align:middle;margin-right:8px;"></div><span>Processing...</span>';
+}

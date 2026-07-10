@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-VTYD9GBDH9');
+</script>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
     <title>Tooligo – Currency Converter</title>
     <meta name="description" content="Convert between major world currencies instantly. Free currency converter with live exchange rates. USD, EUR, GBP, JPY, INR and more.">
     <meta name="keywords" content="currency converter, exchange rate, money converter">
@@ -29,15 +38,43 @@
   "description": "Convert between major world currencies instantly. Free currency converter with live exchange rates. USD, EUR, GBP, JPY, INR and more."
 }
     </script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tooligo-tools.netlify.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://tooligo-tools.netlify.app/#tools"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Currency Converter",
+            "item": "https://tooligo-tools.netlify.app/tools/currency-converter.html"
+        }
+    ]
+}
+</script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <div class="logo-icon">
-                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                        <img src="../images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
                     </div>
                     <div class="logo-text-group">
                         <div class="logo-text">Tooligo</div>
@@ -46,7 +83,7 @@
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
                         <li><a href="../about.html" class="nav-link">About</a></li>
                         <li><a href="../contact.html" class="nav-link">Contact</a></li>
                     </ul>
@@ -68,7 +105,7 @@
         </div>
     </header>
 
-    <main class="main" data-keywords="currency exchange rate convert forex">
+    <main class="main" id="main-content" data-keywords="currency exchange rate convert forex">
         <div class="breadcrumb">
             <div class="container">
                 <ul class="breadcrumb-list">
@@ -86,9 +123,7 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
+
 
         <section class="tool-section">
             <div class="container">
@@ -192,11 +227,54 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
 
-        <section class="faq-section">
+
+        <section class="tool-section">
+            <div class="container">
+                    <div class="tool-info-section" style="width:100%;">
+                        <div class="tool-description">
+                            <h3>How It Works</h3>
+                            <p>This currency converter uses a standard reference-based conversion system. Every currency is first converted to Indian Rupees (INR) using a stored exchange rate, then converted to the target currency. This ensures accurate conversions between any pair of supported currencies.</p>
+                            <p><strong>Conversion Formula:</strong> Amount in Target = (Amount in Source &times; Source Rate) &divide; Target Rate, where rates are relative to INR.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Worked Example</h3>
+                            <p><strong>Convert USD 100 to EUR:</strong> Using the reference rates (USD 1 = Rs 83.12, EUR 1 = Rs 90.45), the calculation is: (100 &times; 83.12) &divide; 90.45 = <strong>EUR 91.90</strong> (approximately). You can verify by switching the &ldquo;From&rdquo; and &ldquo;To&rdquo; currencies to check the reverse conversion.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Supported Currencies</h3>
+                            <p>This converter supports 10 major world currencies: INR (Indian Rupee), USD (US Dollar), EUR (Euro), GBP (British Pound), JPY (Japanese Yen), AUD (Australian Dollar), CAD (Canadian Dollar), SGD (Singapore Dollar), HKD (Hong Kong Dollar), and MYR (Malaysian Ringgit). Use the swap button to quickly reverse the conversion direction.</p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+
+
+        
+<section class="related-tools-section">
+    <div class="container">
+        <h2>Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="unit-converter.html" class="related-tool-card">
+                <h4>Unit Converter</h4>
+                <p>Convert between different units of measurement</p>
+            </a>            <a href="percentage-calculator.html" class="related-tool-card">
+                <h4>Percentage Calculator</h4>
+                <p>Quick percentage calculations for everyday use</p>
+            </a>            <a href="gst-calculator.html" class="related-tool-card">
+                <h4>GST Calculator</h4>
+                <p>Calculate GST inclusive and exclusive amounts</p>
+            </a>            <a href="discount-calculator.html" class="related-tool-card">
+                <h4>Discount Calculator</h4>
+                <p>Calculate discounts and final prices quickly</p>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="faq-section">
             <div class="container">
                 <h2>Frequently Asked Questions</h2>
 
@@ -229,9 +307,7 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
+
     </main>
 
     <footer class="footer">
@@ -268,5 +344,67 @@
     <script src="../js/utils.js"></script>
     <script src="../js/currency-converter.js"></script>
     <script src="../js/theme.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Currency Converter",
+        "description": "Convert between different world currencies instantly with live exchange rates.",
+        "url": "https://tooligo-tools.netlify.app/tools/currency-converter.html",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Are exchange rates real-time?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "This calculator uses standard reference rates. For real-time rates, check with your bank or financial institution."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I add more currencies?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "This converter supports major world currencies. If you need a specific currency, please contact us."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How accurate is this converter?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We use standard exchange rates, but actual rates may vary based on current market conditions and your financial institution."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this useful for international travel?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! This converter helps you understand exchange rates. However, banks may charge additional fees and use different rates."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which currencies have the best exchange rates?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Exchange rates fluctuate constantly. We recommend checking with your bank for the best rates when making international transfers."
+                }
+            }
+        ]
+    }
+    </script>
 </body>
 </html>

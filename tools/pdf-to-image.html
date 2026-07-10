@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+    <title>Tooligo – PDF to Image Converter Online Free | JPG PNG</title>
+    <meta name="description" content="Convert PDF pages to high-quality images (JPG or PNG). Free, private, works entirely in your browser with no uploads.">
+    <meta name="keywords" content="pdf to image, pdf to jpg, pdf to png, convert pdf pages, pdf image extractor, online pdf converter">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://tooligo-tools.netlify.app/tools/pdf-to-image.html">
+    <meta property="og:title" content="Tooligo – PDF to Image Converter Online Free">
+    <meta property="og:description" content="Convert PDF pages to high-quality images (JPG or PNG). Free, private, no uploads.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tooligo-tools.netlify.app/tools/pdf-to-image.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – PDF to Image Converter Online Free">
+    <meta name="twitter:url" content="https://tooligo-tools.netlify.app/tools/pdf-to-image.html">
+    <meta name="twitter:description" content="Convert PDF pages to high-quality images (JPG or PNG). Free, private, no uploads.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://tooligo-tools.netlify.app/tools/pdf-to-image.html",
+  "name": "PDF to Image Converter Online Free",
+  "description": "Convert PDF pages to high-quality images (JPG or PNG). Free, private, no uploads."
+}
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTYD9GBDH9');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+.drop-zone { border: 2px dashed var(--border-color); border-radius: 12px; padding: 2.5rem 1.5rem; text-align: center; cursor: pointer; transition: var(--transition); background: var(--bg-secondary); margin-bottom: 1rem; }
+.drop-zone:hover, .drop-zone.dragover { border-color: var(--primary); background: var(--bg-primary); }
+.drop-zone-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.drop-zone-text { font-size: 1rem; color: var(--text-secondary); }
+.drop-zone-text strong { color: var(--primary); }
+.file-info-area { display: none; padding: 0.75rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; margin: 1rem 0; font-weight: 600; }
+.convert-controls { display: none; margin: 1rem 0; }
+.options-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: flex-end; }
+.options-row .form-group { flex: 1; min-width: 140px; }
+.progress-area { display: none; padding: 1rem; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; margin: 1rem 0; text-align: center; color: var(--text-secondary); font-weight: 600; }
+.result-section { display: none; margin-top: 1rem; }
+.preview-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; margin: 1rem 0; }
+.preview-card { background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; text-align: center; }
+.preview-card img { width: 100%; height: auto; display: block; border-bottom: 1px solid var(--border-color); }
+.preview-card .page-label { padding: 0.4rem; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); }
+.btn-group { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0.75rem 0; }
+.privacy-notice { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; background: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 8px; margin: 1rem 0; font-size: 0.9rem; color: #2e7d32; }
+.size-warning { display: none; padding: 0.75rem; background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; margin: 0.75rem 0; font-size: 0.85rem; color: #856404; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main" id="main-content" data-keywords="pdf to image convert jpg png pages render">
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">PDF to Image</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="tool-header">
+            <div class="container">
+                <h1>PDF to Image</h1>
+                <p>Convert every page of a PDF into a JPG or PNG image — free, private, all in your browser</p>
+            </div>
+        </section>
+
+
+
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <div class="tool-input-section">
+                        <h3>Upload Your PDF</h3>
+                        <div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                        <div class="privacy-notice">
+                            <span style="font-size:1.2rem;">&#x1F512;</span>
+                            <span>Your files are processed entirely in your browser and are never uploaded to any server.</span>
+                        </div>
+
+                        <div class="drop-zone" id="drop-zone" onclick="document.getElementById('file-input').click()">
+                            <div class="drop-zone-icon">&#x1F5BC;</div>
+                            <div class="drop-zone-text">Drag &amp; drop a PDF here or <strong>browse</strong></div>
+                        </div>
+
+                        <input type="file" id="file-input" accept="application/pdf" style="display:none" onchange="handleFileSelect(this.files)">
+
+                        <div class="size-warning" id="size-warning">
+                            Large PDFs (over 20MB) may take longer to process. Performance depends on page count and your device.
+                        </div>
+
+                        <div class="file-info-area" id="file-info-area">
+                            <span id="file-info"></span>
+                        </div>
+
+                        <div class="progress-area" id="progress-area"></div>
+
+                        <div class="convert-controls" id="convert-controls">
+                            <div class="options-row">
+                                <div class="form-group">
+                                    <label for="image-format">Image Format</label>
+                                    <select id="image-format">
+                                        <option value="jpeg">JPEG</option>
+                                        <option value="png">PNG</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="image-quality">Quality</label>
+                                    <select id="image-quality">
+                                        <option value="0.7">Standard (70%)</option>
+                                        <option value="0.9" selected>High (90%)</option>
+                                        <option value="1">Maximum (100%)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button class="btn-calculate" id="convert-btn" onclick="convertPdfToImages()" disabled>Convert to Images</button>
+                            <button class="btn-reset" onclick="clearAll()" style="margin-top:0.5rem;">Clear</button>
+                        </div>
+
+                        <div class="result-section" id="result-section">
+                            <h3>Conversion Complete</h3>
+                            <p id="result-message"></p>
+                            <div class="preview-grid" id="preview-grid"></div>
+                            <button class="btn-calculate" id="download-all-btn" onclick="downloadAllAsZip()">Download All as ZIP</button>
+                        </div>
+                    </div>
+
+                    <div class="tool-info-section">
+                        <div class="tool-description">
+                            <h3>How It Works</h3>
+                            <p>This tool uses pdf.js to render each page of your PDF onto a canvas, then exports it as a high-quality image. You can choose between JPEG (smaller files) and PNG (lossless quality). All pages are previewed as thumbnails before you download.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Usage Example</h3>
+                            <p>You have a presentation saved as PDF and need to use each slide as an image for a blog post. Upload the PDF, choose JPEG at 90% quality, convert, preview the thumbnails, and download all slides as a single ZIP file.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        
+<section class="related-tools-section">
+    <div class="container">
+        <h2>Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="merge-pdf.html" class="related-tool-card">
+                <h4>Merge PDF</h4>
+                <p>Combine multiple PDF files into one</p>
+            </a>            <a href="split-pdf.html" class="related-tool-card">
+                <h4>Split PDF</h4>
+                <p>Extract pages from a PDF document</p>
+            </a>            <a href="word-counter.html" class="related-tool-card">
+                <h4>Word Counter</h4>
+                <p>Count words, characters, and paragraphs</p>
+            </a>            <a href="case-converter.html" class="related-tool-card">
+                <h4>Case Converter</h4>
+                <p>Convert text between different cases</p>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Are my PDF files uploaded to a server?</summary>
+                        <p>No. The entire conversion happens in your browser using the pdf.js library. Your file never leaves your device.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Which format should I choose — JPEG or PNG?</summary>
+                        <p>Use JPEG for photos and documents where smaller file size matters. Use PNG for screenshots, graphics, or any content where you need lossless quality.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What quality setting should I use?</summary>
+                        <p>High (90%) is a great balance of quality and file size. Standard (70%) works well for web use. Maximum (100%) produces the best quality but larger files.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What happens if my PDF has many pages?</summary>
+                        <p>All pages are rendered as preview thumbnails. You can scroll through them and then download everything as a single ZIP archive. For very long documents, processing may take a moment.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I convert only specific pages?</summary>
+                        <p>Currently this tool converts all pages. For page selection, use our <a href="split-pdf.html">Split PDF</a> tool first to extract the pages you need, then convert them to images.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="merge-pdf.html">Merge PDF</a></li>
+                        <li><a href="split-pdf.html">Split PDF</a></li>
+                        <li><a href="pdf-to-image.html">PDF to Image</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align:center;padding-bottom:1rem;">
+                <a href="https://www.buymeacoffee.com/YOUR_USERNAME" target="_blank" rel="noopener" class="donate-link">Support Tooligo</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/pdf-to-image.js"></script>
+    <script src="../js/theme.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PDF to Image",
+        "description": "Convert PDF pages to high-quality images (JPG or PNG).",
+        "url": "https://tooligo-tools.netlify.app/tools/pdf-to-image.html",
+        "applicationCategory": "UtilityApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Are my PDF files uploaded to a server?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. The entire conversion happens in your browser using the pdf.js library. Your file never leaves your device."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which format should I choose JPEG or PNG?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use JPEG for photos and documents where smaller file size matters. Use PNG for screenshots, graphics, or any content where you need lossless quality."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What quality setting should I use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "High (90%) is a great balance of quality and file size. Standard (70%) works well for web use. Maximum (100%) produces the best quality but larger files."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens if my PDF has many pages?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "All pages are rendered as preview thumbnails. You can scroll through them and then download everything as a single ZIP archive."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var dropZone = document.getElementById('drop-zone');
+        var fileInput = document.getElementById('file-input');
+
+        dropZone.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', function() {
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', function(e) {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            if (e.dataTransfer.files.length > 0) {
+                fileInput.files = e.dataTransfer.files;
+                handleFileSelect(e.dataTransfer.files);
+            }
+        });
+    });
+    </script>
+</body>
+</html>

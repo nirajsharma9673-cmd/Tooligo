@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+    <title>Tooligo – Income Tax Calculator (Old vs New Regime) FY 2026-27</title>
+    <meta name="description" content="Compare your income tax liability under the old and new tax regimes for FY 2026-27. Free, instant calculator for Indian taxpayers with detailed breakdown.">
+    <meta name="keywords" content="income tax calculator, old regime, new regime, FY 2026-27, tax slabs, indian tax calculator">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="canonical" href="https://tooligo-tools.netlify.app/tools/income-tax-calculator.html">
+    <meta property="og:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta property="og:description" content="Compare your income tax liability under the old and new tax regimes for FY 2026-27. Free, instant calculator for Indian taxpayers with detailed breakdown.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tooligo-tools.netlify.app/tools/income-tax-calculator.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tooligo – Free Online Tools & Calculators">
+    <meta name="twitter:url" content="https://tooligo-tools.netlify.app/tools/income-tax-calculator.html">
+    <meta name="twitter:description" content="Compare your income tax liability under the old and new tax regimes for FY 2026-27. Free, instant calculator for Indian taxpayers with detailed breakdown.">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://tooligo-tools.netlify.app/tools/income-tax-calculator.html",
+  "name": "Income Tax Calculator (Old vs New Regime) FY 2026-27",
+  "description": "Compare your income tax liability under the old and new tax regimes for FY 2026-27. Free, instant calculator for Indian taxpayers with detailed breakdown."
+}
+    </script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tooligo-tools.netlify.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://tooligo-tools.netlify.app/#tools"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Income Tax Calculator",
+            "item": "https://tooligo-tools.netlify.app/tools/income-tax-calculator.html"
+        }
+    ]
+}
+</script>
+    <link rel="stylesheet" href="../css/style.css">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTYD9GBDH9');
+</script>
+<style>
+.tax-breakdown { width:100%; border-collapse:collapse; margin:0.75rem 0; font-size:0.9rem; }
+.tax-breakdown td, .tax-breakdown th { padding:0.5rem 0.75rem; border-bottom:1px solid var(--border-color); text-align:left; }
+.tax-breakdown th { background:var(--bg-primary); font-weight:600; }
+.tax-breakdown .total-row { background:var(--bg-primary); }
+.tax-breakdown .deduction { color:var(--error-color); }
+.deduction { color:var(--error-color); }
+.rebate-note { color:var(--success-color); font-weight:600; margin:0.5rem 0; }
+.final-tax { font-size:1.1rem; padding:0.75rem; background:var(--bg-primary); border-radius:8px; text-align:center; margin-top:0.5rem; }
+.comparison-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1rem 0; }
+@media (max-width:600px) { .comparison-grid { grid-template-columns:1fr; } }
+.comparison-col { background:var(--card-bg); border:1px solid var(--border-color); border-radius:10px; padding:1rem; }
+.save-callout { padding:1rem; background:var(--success-color); color:#fff; border-radius:10px; text-align:center; font-size:1.05rem; margin:1rem 0; }
+.surcharge-warning { padding:0.75rem; background:#fff3cd; color:#856404; border:1px solid #ffc107; border-radius:8px; margin:0.75rem 0; font-size:0.9rem; }
+html.dark-mode .surcharge-warning { background:#3d3200; color:#ffd970; border-color:#9a7d1a; }
+.eighty-c-note { color:var(--text-secondary); font-size:0.85rem; margin:0.25rem 0; }
+.radio-group { display:flex; gap:1.5rem; margin:0.5rem 0; }
+.radio-group label { display:flex; align-items:center; gap:0.4rem; cursor:pointer; }
+.hidden { display:none !important; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="../images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
+                    </div>
+                    <div class="logo-text-group">
+                        <div class="logo-text">Tooligo</div>
+                        <p class="logo-subtitle">Free Online Tools</p>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
+                        <li><a href="../about.html" class="nav-link">About</a></li>
+                        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <line x1="10" y1="2" x2="10" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="10" y1="16" x2="10" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="18" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="4" y1="10" x2="2" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="4.4" x2="14.2" y2="5.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="14.2" x2="4.4" y2="15.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="15.6" y1="15.6" x2="14.2" y2="14.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="5.8" y1="5.8" x2="4.4" y2="4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main" id="main-content" data-keywords="income tax calculator old new regime india">
+        <div class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html#tools" class="breadcrumb-link">Tools</a></li>
+                    <li class="breadcrumb-item">Income Tax Calculator</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="tool-header">
+            <div class="container">
+                <h1>Income Tax Calculator (Old vs New Regime)</h1>
+                <p>Compare your tax liability under both regimes for FY 2026-27 (AY 2027-28)</p>
+            </div>
+        </section>
+
+
+
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-container">
+                    <div class="tool-input-section">
+                        <h3>Income &amp; Deductions</h3>
+                        <div id="error-message" class="error-message" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+                        <div class="form-group">
+                            <label for="annual-income">Annual Gross Income (Rs)</label>
+                            <input type="number" id="annual-income" placeholder="e.g. 1500000" aria-label="Annual gross income" min="0" step="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age-bracket">Age Bracket</label>
+                            <select id="age-bracket" aria-label="Age bracket">
+                                <option value="below-60">Below 60 years</option>
+                                <option value="60-79">60 &ndash; 79 years</option>
+                                <option value="80-plus">80 years &amp; above</option>
+                            </select>
+                            <span class="form-note">Age affects only the Old Regime tax slabs</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Employment Type</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="employment-type" value="salaried" checked> Salaried</label>
+                                <label><input type="radio" name="employment-type" value="other"> Other</label>
+                            </div>
+                            <span class="form-note">Standard deduction (Rs 75,000 in New Regime, Rs 50,000 in Old Regime) applies only to salaried individuals</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="deduction-80c">Section 80C Investments (Rs) &mdash; Old Regime only</label>
+                            <input type="number" id="deduction-80c" placeholder="e.g. 150000" aria-label="Section 80C deduction" min="0" max="150000" step="1">
+                            <span class="form-note">Maximum deduction under Section 80C is Rs 1,50,000. Values above this limit will be capped in calculations.</span>
+                        </div>
+
+                        <div id="eighty-c-note" class="eighty-c-note"></div>
+
+                        <div class="form-group">
+                            <label for="other-deductions">Other Eligible Deductions (80D, HRA, home loan interest, etc.) (Rs) &mdash; Old Regime only</label>
+                            <input type="number" id="other-deductions" placeholder="e.g. 50000" aria-label="Other deductions" min="0" step="1">
+                        </div>
+
+                        <button class="btn-calculate" onclick="calculateTax()" aria-controls="result-section" aria-label="Calculate tax">Calculate Tax</button>
+                        <button class="btn-reset" onclick="resetTax()" aria-label="Clear inputs">Clear</button>
+
+                        <div id="surcharge-warning" class="surcharge-warning hidden">
+                            Your income exceeds Rs 50,00,000 and may be subject to additional surcharge, which this calculator does not compute. Please consult a chartered accountant for an accurate figure.
+                        </div>
+
+                        <div id="result-section" class="result-section" role="status" aria-live="polite" aria-atomic="true">
+                            <h3>Tax Comparison &mdash; FY 2026-27</h3>
+                            <div id="save-callout" class="save-callout"></div>
+                            <div class="comparison-grid">
+                                <div class="comparison-col" id="new-regime-result"></div>
+                                <div class="comparison-col" id="old-regime-result"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-info-section">
+                        <div class="tool-description">
+                            <h3>How It Works</h3>
+                            <p>Income tax in India follows a <strong>progressive slab-based system</strong>: the more you earn, the higher the tax rate on each portion of your income. You do not pay a single rate on your entire income &mdash; instead, each slab of income is taxed at its corresponding rate.</p>
+                            <p><strong>Section 87A Rebate</strong>: If your total taxable income (after deductions) falls within the rebate threshold, you may qualify for a full rebate on your tax liability, making your tax effectively Rs 0. For the New Regime (FY 2026-27), the threshold is Rs 12,00,000 with a maximum rebate of Rs 60,000. For the Old Regime, the threshold is Rs 5,00,000 with a maximum rebate of Rs 12,500.</p>
+                            <p>This calculator shows both regimes side by side so you can compare your tax liability before choosing.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Worked Examples</h3>
+                            <p><strong>New Regime (Salaried, Rs 15,00,000 income):</strong> Gross Income = Rs 15,00,000. Standard Deduction = Rs 75,000. Taxable Income = Rs 14,25,000. Tax: Rs 0 (0&ndash;4L) + Rs 20,000 (4&ndash;8L at 5%) + Rs 40,000 (8&ndash;12L at 10%) + Rs 33,750 (12&ndash;14.25L at 15%) = Rs 93,750. Since taxable income exceeds Rs 12L, no 87A rebate applies. Cess (4%) = Rs 3,750. <strong>Total Tax Payable: Rs 97,500.</strong></p>
+                            <p><strong>Old Regime (Salaried, Below 60, Rs 15,00,000 income, Rs 1,50,000 80C):</strong> Gross Income = Rs 15,00,000. Standard Deduction = Rs 50,000. 80C Deduction = Rs 1,50,000. Taxable Income = Rs 13,00,000. Tax: Rs 0 (0&ndash;2.5L) + Rs 12,500 (2.5&ndash;5L at 5%) + Rs 1,00,000 (5&ndash;10L at 20%) + Rs 90,000 (10&ndash;13L at 30%) = Rs 2,02,500. No 87A rebate (income exceeds Rs 5L). Cess (4%) = Rs 8,100. <strong>Total Tax Payable: Rs 2,10,600.</strong></p>
+                            <p>In this example, the New Regime saves you Rs 1,13,100.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Important Disclaimer</h3>
+                            <p>This calculator provides an estimate based on FY 2026-27 slab rates for individual taxpayers and does not account for surcharge, capital gains, business income, or all possible deductions. Consult a chartered accountant or tax professional for filing purposes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section class="related-tools-section">
+    <div class="container">
+        <h2>Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="fd-rd-calculator.html" class="related-tool-card">
+                <h4>FD/RD Calculator</h4>
+                <p>Calculate maturity for fixed and recurring deposits</p>
+            </a>
+            <a href="sip-calculator.html" class="related-tool-card">
+                <h4>SIP Calculator</h4>
+                <p>Estimate returns on your mutual fund SIP</p>
+            </a>
+            <a href="emi-calculator.html" class="related-tool-card">
+                <h4>EMI Calculator</h4>
+                <p>Plan your loan with accurate monthly payments</p>
+            </a>
+            <a href="loan-eligibility-calculator.html" class="related-tool-card">
+                <h4>Loan Eligibility Calculator</h4>
+                <p>Check your home loan eligibility</p>
+            </a>
+            <a href="percentage-calculator.html" class="related-tool-card">
+                <h4>Percentage Calculator</h4>
+                <p>Quick percentage calculations for everyday use</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>What is the difference between the old and new tax regimes?</summary>
+                        <p>The New Tax Regime (introduced in Budget 2020) offers lower tax rates but eliminates most deductions and exemptions. The Old Tax Regime has higher rates but allows deductions under Section 80C, 80D, HRA exemption, home loan interest, and others. Since FY 2023-24, the New Regime has been the default &mdash; if you want to use the Old Regime, you must specifically opt for it when filing your return.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Which deductions are only available in the old regime?</summary>
+                        <p>Deductions exclusive to the Old Regime include: Section 80C (investments up to Rs 1.5L), 80D (health insurance premiums), 80E (education loan interest), 80G (donations), HRA exemption, LTA (Leave Travel Allowance), standard deduction (Rs 50,000), and home loan interest under Section 24. The New Regime only allows a standard deduction of Rs 75,000 for salaried individuals and a few specific deductions like employer&rsquo;s NPS contribution (80CCD(2)).</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is the new tax regime the default now?</summary>
+                        <p>Yes. Since FY 2023-24, the New Tax Regime is the default for all individual taxpayers. If you wish to be taxed under the Old Regime, you must specifically opt out. Salaried individuals without business income can switch between regimes each year. Business income taxpayers must choose one regime and stick with it, barring certain conditions.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can I switch between old and new regimes every year?</summary>
+                        <p>Yes, if you are a salaried individual or non-business taxpayer, you can choose the regime that benefits you most each financial year. However, if you have business or professional income, you can switch only once, and once you opt for the New Regime, you cannot revert to the Old Regime in a subsequent year (except in specific situations).</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What is Section 87A rebate?</summary>
+                        <p>Section 87A provides a full rebate on your tax liability if your total taxable income (after deductions) does not exceed the specified threshold. For the New Regime (FY 2026-27), the threshold is Rs 12,00,000 with a maximum rebate of Rs 60,000. For the Old Regime, the threshold is Rs 5,00,000 with a maximum rebate of Rs 12,500. If your tax before rebate is less than these limits, the rebate brings your tax to Rs 0.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Does this calculator save or share my data?</summary>
+                        <p>No. All calculations happen entirely in your browser. No data is sent to any server, saved to disk, or shared with third parties. You can refresh the page or close your browser and nothing is retained.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What isn&rsquo;t covered by this calculator?</summary>
+                        <p>This calculator does not account for surcharge (applicable above Rs 50 lakh income), marginal relief, capital gains tax, business or professional income, presumptive taxation, agricultural income, foreign income, double taxation relief, or all possible deductions beyond Section 80C and a general &ldquo;other deductions&rdquo; field. For accurate tax planning covering these areas, please consult a chartered accountant.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <ul>
+                        <li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="gst-calculator.html">GST Calculator</a></li>
+                        <li><a href="attendance-calculator.html">Attendance Calculator</a></li>
+                        <li><a href="income-tax-calculator.html">Income Tax Calculator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align:center;padding-bottom:1rem;">
+                <a href="https://www.buymeacoffee.com/YOUR_USERNAME" target="_blank" rel="noopener" class="donate-link">Support Tooligo</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tooligo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/income-tax-calculator.js"></script>
+    <script src="../js/theme.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Income Tax Calculator (Old vs New Regime)",
+        "description": "Compare your income tax liability under the old and new tax regimes for FY 2026-27.",
+        "url": "https://tooligo-tools.netlify.app/tools/income-tax-calculator.html",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the difference between the old and new tax regimes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The New Tax Regime offers lower tax rates but eliminates most deductions and exemptions. The Old Tax Regime has higher rates but allows deductions under Section 80C, 80D, HRA exemption, and home loan interest."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which deductions are only available in the old regime?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Deductions exclusive to the Old Regime include Section 80C, 80D, 80E, 80G, HRA exemption, LTA, standard deduction of Rs 50,000, and home loan interest under Section 24."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the new tax regime the default now?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Since FY 2023-24, the New Tax Regime is the default for all individual taxpayers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I switch between old and new regimes every year?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, if you are a salaried individual or non-business taxpayer, you can choose the regime that benefits you most each financial year."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is Section 87A rebate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Section 87A provides a full rebate on your tax liability if your total taxable income does not exceed the specified threshold - Rs 12,00,000 for New Regime and Rs 5,00,000 for Old Regime."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this calculator save or share my data?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. All calculations happen entirely in your browser. No data is sent to any server, saved to disk, or shared with third parties."
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+</html>

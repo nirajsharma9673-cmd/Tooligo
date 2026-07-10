@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>Tooligo – About</title>
     <meta name="description" content="Learn about Tooligo, your source for free online calculators and utility tools. Accurate, fast, and completely free for everyone.">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -29,14 +30,24 @@
 }
     </script>
     <link rel="stylesheet" href="css/style.css">
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTYD9GBDH9');
+</script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <div class="logo-icon">
-                        <img src="images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                        <img src="images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
                     </div>
                     <div class="logo-text-group">
                         <div class="logo-text">Tooligo</div>
@@ -46,7 +57,7 @@
                 <nav class="nav">
                     <ul class="nav-list">
                         <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="about.html" class="nav-link active">About</a></li>
+                        <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
                         <li><a href="contact.html" class="nav-link">Contact</a></li>
                     </ul>
                 </nav>
@@ -67,7 +78,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" id="main-content">
         <section class="tool-header">
             <div class="container">
                 <h1>About Tooligo</h1>
@@ -173,6 +184,9 @@
                         <li><a href="tools/unit-converter.html">Unit Converter</a></li>
                     </ul>
                 </div>
+            </div>
+            <div style="text-align:center;padding-bottom:1rem;">
+                <a href="https://www.buymeacoffee.com/YOUR_USERNAME" target="_blank" rel="noopener" class="donate-link">☕ Support Tooligo</a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Tooligo. All rights reserved.</p>

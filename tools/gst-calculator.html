@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-VTYD9GBDH9');
+</script>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
     <title>Tooligo – GST Calculator</title>
     <meta name="description" content="Calculate GST (Goods and Services Tax) with our free calculator. Find tax amount, final price, and reverse GST calculations instantly.">
     <meta name="keywords" content="GST calculator, tax calculator, goods and services tax">
@@ -29,15 +38,43 @@
   "description": "Calculate GST (Goods and Services Tax) with our free calculator. Find tax amount, final price, and reverse GST calculations instantly."
 }
     </script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tooligo-tools.netlify.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://tooligo-tools.netlify.app/#tools"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "GST Calculator",
+            "item": "https://tooligo-tools.netlify.app/tools/gst-calculator.html"
+        }
+    ]
+}
+</script>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <div class="logo-icon">
-                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                        <img src="../images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
                     </div>
                     <div class="logo-text-group">
                         <div class="logo-text">Tooligo</div>
@@ -46,7 +83,7 @@
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
                         <li><a href="../about.html" class="nav-link">About</a></li>
                         <li><a href="../contact.html" class="nav-link">Contact</a></li>
                     </ul>
@@ -68,7 +105,7 @@
         </div>
     </header>
 
-    <main class="main" data-keywords="gst tax vat invoice">
+    <main class="main" id="main-content" data-keywords="gst tax vat invoice">
         <div class="breadcrumb">
             <div class="container">
                 <ul class="breadcrumb-list">
@@ -86,9 +123,7 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
+
 
         <section class="tool-section">
             <div class="container">
@@ -169,11 +204,52 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
 
-        <section class="faq-section">
+
+        
+        <section class="tool-section">
+            <div class="container">
+                    <div class="tool-info-section" style="width:100%;">
+                        <div class="tool-description">
+                            <h3>How It Works</h3>
+                            <p>The GST calculator handles two common scenarios: adding GST to a base price (tax-exclusive) or extracting GST from a price that already includes tax (tax-inclusive).</p>
+                            <p><strong>Add GST (Price exclusive):</strong> GST Amount = Base Price x (GST Rate / 100). Final Price = Base Price + GST Amount.</p>
+                            <p><strong>Remove GST (Price inclusive):</strong> Base Price = Inclusive Price / (1 + GST Rate / 100). GST Amount = Inclusive Price - Base Price.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Worked Example</h3>
+                            <p><strong>Scenario 1 (Price exclusive):</strong> A laptop has a base price of Rs 50,000 and GST is 18%. GST Amount = 50,000 x 0.18 = Rs 9,000. Final Price = 50,000 + 9,000 = <strong>Rs 59,000</strong>.</p>
+                            <p><strong>Scenario 2 (Price inclusive):</strong> You see a TV priced at Rs 59,000 including 18% GST. Base Price = 59,000 / 1.18 = <strong>Rs 50,000</strong>. GST embedded = 59,000 - 50,000 = <strong>Rs 9,000</strong>.</p>
+                            <p>Select the GST rate from the dropdown (5%, 12%, 18%, or 28%) and check &ldquo;Price includes GST&rdquo; if the amount you entered already has tax included.</p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        
+
+<section class="related-tools-section">
+    <div class="container">
+        <h2>Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="percentage-calculator.html" class="related-tool-card">
+                <h4>Percentage Calculator</h4>
+                <p>Quick percentage calculations for everyday use</p>
+            </a>            <a href="discount-calculator.html" class="related-tool-card">
+                <h4>Discount Calculator</h4>
+                <p>Calculate discounts and final prices quickly</p>
+            </a>            <a href="income-tax-calculator.html" class="related-tool-card">
+                <h4>Income Tax Calculator</h4>
+                <p>Estimate your income tax liability</p>
+            </a>            <a href="currency-converter.html" class="related-tool-card">
+                <h4>Currency Converter</h4>
+                <p>Convert currencies with live exchange rates</p>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="faq-section">
             <div class="container">
                 <h2>Frequently Asked Questions</h2>
 
@@ -201,9 +277,7 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
+
     </main>
 
     <footer class="footer">
@@ -240,5 +314,59 @@
     <script src="../js/utils.js"></script>
     <script src="../js/gst-calculator.js"></script>
     <script src="../js/theme.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "GST Calculator",
+        "description": "Calculate GST tax and final prices instantly for Indian tax rates.",
+        "url": "https://tooligo-tools.netlify.app/tools/gst-calculator.html",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is GST?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "GST (Goods and Services Tax) is a comprehensive indirect tax that replaced earlier taxes like VAT and excise duty."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is GST calculated?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "GST is calculated as: GST Amount = (Price × GST Rate) / 100. Final Price = Price + GST Amount."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do all items have the same GST rate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, different items have different GST rates ranging from 0% to 28% based on the nature of goods/services."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this calculator accurate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, it uses the correct GST calculation formula. However, consult official sources for specific items."
+                }
+            }
+        ]
+    }
+    </script>
 </body>
 </html>

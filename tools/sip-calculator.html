@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-VTYD9GBDH9');
+</script>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
     <title>Tooligo – SIP Calculator</title>
     <meta name="description" content="Calculate SIP (Systematic Investment Plan) returns with our free calculator. Get accurate investment projections for mutual funds and investments.">
     <meta name="keywords" content="SIP calculator, investment calculator, mutual fund calculator, systematic investment plan">
@@ -30,15 +39,43 @@
 }
     </script>
 
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tooligo-tools.netlify.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://tooligo-tools.netlify.app/#tools"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "SIP Calculator",
+            "item": "https://tooligo-tools.netlify.app/tools/sip-calculator.html"
+        }
+    ]
+}
+</script>
+
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <div class="logo-icon">
-                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                        <img src="../images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
                     </div>
                     <div class="logo-text-group">
                         <div class="logo-text">Tooligo</div>
@@ -47,7 +84,7 @@
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
                         <li><a href="../about.html" class="nav-link">About</a></li>
                         <li><a href="../contact.html" class="nav-link">Contact</a></li>
                     </ul>
@@ -69,7 +106,7 @@
         </div>
     </header>
 
-    <main class="main" data-keywords="sip investment returns maturity mutual fund">
+    <main class="main" id="main-content" data-keywords="sip investment returns maturity mutual fund">
         <div class="breadcrumb">
             <div class="container">
                 <ul class="breadcrumb-list">
@@ -87,9 +124,7 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
+
 
         <section class="tool-section">
             <div class="container">
@@ -174,11 +209,57 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
 
-        <section class="faq-section">
+
+        
+        <section class="tool-section">
+            <div class="container">
+                    <div class="tool-info-section" style="width:100%;">
+                        <div class="tool-description">
+                            <h3>How It Works</h3>
+                            <p>A Systematic Investment Plan (SIP) lets you invest a fixed amount regularly (usually monthly) in mutual funds. The calculator uses the future value formula for a series of regular investments compounded monthly:</p>
+                            <p><strong>M = P x [((1 + r)^n - 1) / r] x (1 + r)</strong></p>
+                            <p>Where P = Monthly Investment, r = Monthly Return Rate (annual return / 12 / 100), n = Total Number of Months. The final (1 + r) factor accounts for investing at the start of each month rather than the end.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Worked Example</h3>
+                            <p><strong>Scenario:</strong> Invest Rs 5,000 per month for 10 years at 12% expected annual return.</p>
+                            <p><strong>Step 1:</strong> Monthly rate r = 12 / 12 / 100 = 0.01. Total months n = 10 x 12 = 120.</p>
+                            <p><strong>Step 2:</strong> M = 5,000 x [((1.01)^120 - 1) / 0.01] x 1.01 = <strong>Rs 11,61,695</strong> (Final Amount).</p>
+                            <p><strong>Step 3:</strong> Total invested = 5,000 x 120 = Rs 6,00,000. Investment gains = 11,61,695 - 6,00,000 = <strong>Rs 5,61,695</strong>.</p>
+                            <p>You can also enable the step-up option to increase your monthly investment by a fixed percentage each year &mdash; a great way to grow your savings as your income grows.</p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        
+
+<section class="related-tools-section">
+    <div class="container">
+        <h2>Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="emi-calculator.html" class="related-tool-card">
+                <h4>EMI Calculator</h4>
+                <p>Plan your loan with accurate monthly payments</p>
+            </a>            <a href="fd-rd-calculator.html" class="related-tool-card">
+                <h4>FD/RD Calculator</h4>
+                <p>Calculate maturity for fixed and recurring deposits</p>
+            </a>            <a href="income-tax-calculator.html" class="related-tool-card">
+                <h4>Income Tax Calculator</h4>
+                <p>Estimate your income tax liability</p>
+            </a>            <a href="loan-eligibility-calculator.html" class="related-tool-card">
+                <h4>Loan Eligibility Calculator</h4>
+                <p>Check your home loan eligibility</p>
+            </a>            <a href="percentage-calculator.html" class="related-tool-card">
+                <h4>Percentage Calculator</h4>
+                <p>Quick percentage calculations for everyday use</p>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="faq-section">
             <div class="container">
                 <h2>Frequently Asked Questions</h2>
 
@@ -211,9 +292,7 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
+
     </main>
 
     <footer class="footer">
@@ -253,5 +332,67 @@
     <script src="../js/utils.js"></script>
     <script src="../js/sip-calculator.js"></script>
     <script src="../js/theme.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "SIP Calculator",
+        "description": "Calculate your Systematic Investment Plan returns and investment growth over time.",
+        "url": "https://tooligo-tools.netlify.app/tools/sip-calculator.html",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a realistic expected return?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Expected returns vary by asset type. Equity mutual funds historically return 12-15%, balanced funds 8-10%, and debt funds 6-8% annually."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I change my SIP amount?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, most SIP plans allow you to increase or decrease your investment amount. Check with your investment provider."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this calculator accurate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we use the standard SIP formula. Actual results may vary based on market conditions and actual returns."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens if markets fall?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SIP helps in rupee cost averaging. You buy more units when prices are low and fewer when prices are high."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I stop SIP during market downturns?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, continuing SIP during downturns can help you buy more units at lower prices, potentially increasing long-term returns."
+                }
+            }
+        ]
+    }
+    </script>
 </body>
 </html>

@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-VTYD9GBDH9');
+</script>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
     <title>Tooligo – Date Difference Calculator</title>
     <meta name="description" content="Calculate the number of days between two dates instantly. Find day difference, weeks, months, and years between dates with our free calculator.">
     <meta name="keywords" content="date calculator, date difference, days between dates">
@@ -29,15 +38,43 @@
   "description": "Calculate the number of days between two dates instantly. Find day difference, weeks, months, and years between dates with our free calculator."
 }
     </script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tooligo-tools.netlify.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://tooligo-tools.netlify.app/#tools"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Date Difference Calculator",
+            "item": "https://tooligo-tools.netlify.app/tools/date-difference-calculator.html"
+        }
+    ]
+}
+</script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <div class="logo-icon">
-                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                        <img src="../images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
                     </div>
                     <div class="logo-text-group">
                         <div class="logo-text">Tooligo</div>
@@ -46,7 +83,7 @@
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
                         <li><a href="../about.html" class="nav-link">About</a></li>
                         <li><a href="../contact.html" class="nav-link">Contact</a></li>
                     </ul>
@@ -68,7 +105,7 @@
         </div>
     </header>
 
-    <main class="main" data-keywords="date difference days calendar countdown">
+    <main class="main" id="main-content" data-keywords="date difference days calendar countdown">
         <div class="breadcrumb">
             <div class="container">
                 <ul class="breadcrumb-list">
@@ -86,9 +123,7 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
+
 
         <section class="tool-section">
             <div class="container">
@@ -170,11 +205,50 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
 
-        <section class="faq-section">
+
+        
+        <section class="tool-section">
+            <div class="container">
+                    <div class="tool-info-section" style="width:100%;">
+                        <div class="tool-description">
+                            <h3>How It Works</h3>
+                            <p>This calculator finds the exact duration between any two dates. It calculates the difference in days, then breaks it down into years, months, weeks, and remaining days. The calculation accounts for calendar variations including leap years.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Worked Examples</h3>
+                            <p><strong>Example 1:</strong> Days between Jan 1, 2024 and Dec 31, 2024: 365 days (leap year). Days between Jan 1, 2023 and Dec 31, 2023: 364 days.</p>
+                            <p><strong>Example 2:</strong> From March 15, 2023 to July 10, 2026: the calculator shows the total days, months, and years between these dates instantly.</p>
+                            <p><strong>Example 3:</strong> </p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        
+
+<section class="related-tools-section">
+    <div class="container">
+        <h2>Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="age-calculator.html" class="related-tool-card">
+                <h4>Age Calculator</h4>
+                <p>Calculate exact age in years, months and days</p>
+            </a>            <a href="percentage-calculator.html" class="related-tool-card">
+                <h4>Percentage Calculator</h4>
+                <p>Quick percentage calculations for everyday use</p>
+            </a>            <a href="emi-calculator.html" class="related-tool-card">
+                <h4>EMI Calculator</h4>
+                <p>Plan your loan with accurate monthly payments</p>
+            </a>            <a href="sip-calculator.html" class="related-tool-card">
+                <h4>SIP Calculator</h4>
+                <p>Estimate returns on your mutual fund SIP</p>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="faq-section">
             <div class="container">
                 <h2>Frequently Asked Questions</h2>
 
@@ -207,9 +281,7 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
+
     </main>
 
     <footer class="footer">
@@ -246,5 +318,67 @@
     <script src="../js/utils.js"></script>
     <script src="../js/date-difference-calculator.js"></script>
     <script src="../js/theme.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Date Difference Calculator",
+        "description": "Calculate the exact number of days, weeks, months, and years between any two dates.",
+        "url": "https://tooligo-tools.netlify.app/tools/date-difference-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How is the difference calculated?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The calculator finds the exact number of days between two dates and then converts that to weeks, months, and years."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are the months and years exact?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Months and years are approximations (1 month = 30.44 days, 1 year = 365.25 days) for quick reference. Days are exact."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this calculator account for leap years?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the day calculation accurately accounts for leap years in the date range you select."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use this for historical dates?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, you can use this calculator for any dates, including historical dates from the past."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What if start date is after end date?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The calculator can handle both cases. If the end date is before the start date, it will show a negative value or you can swap the dates."
+                }
+            }
+        ]
+    }
+    </script>
 </body>
 </html>

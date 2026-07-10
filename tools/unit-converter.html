@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-VTYD9GBDH9');
+</script>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
     <title>Tooligo – Unit Converter</title>
     <meta name="description" content="Convert between units of length, weight, volume, and temperature instantly. Free online unit converter for all your conversion needs.">
     <meta name="keywords" content="unit converter, length converter, weight converter, temperature converter">
@@ -29,15 +38,43 @@
   "description": "Convert between units of length, weight, volume, and temperature instantly. Free online unit converter for all your conversion needs."
 }
     </script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tooligo-tools.netlify.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://tooligo-tools.netlify.app/#tools"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Unit Converter",
+            "item": "https://tooligo-tools.netlify.app/tools/unit-converter.html"
+        }
+    ]
+}
+</script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <div class="logo-icon">
-                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                        <img src="../images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
                     </div>
                     <div class="logo-text-group">
                         <div class="logo-text">Tooligo</div>
@@ -46,7 +83,7 @@
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
                         <li><a href="../about.html" class="nav-link">About</a></li>
                         <li><a href="../contact.html" class="nav-link">Contact</a></li>
                     </ul>
@@ -68,7 +105,7 @@
         </div>
     </header>
 
-    <main class="main" data-keywords="unit convert measurement length mass temperature volume">
+    <main class="main" id="main-content" data-keywords="unit convert measurement length mass temperature volume">
         <div class="breadcrumb">
             <div class="container">
                 <ul class="breadcrumb-list">
@@ -86,9 +123,7 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
+
 
         <section class="tool-section">
             <div class="container">
@@ -197,11 +232,50 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
 
-        <section class="faq-section">
+
+        
+        <section class="tool-section">
+            <div class="container">
+                    <div class="tool-info-section" style="width:100%;">
+                        <div class="tool-description">
+                            <h3>How It Works</h3>
+                            <p>This converter supports length, weight, volume, and temperature conversions. Each unit is converted to a base unit first (meters for length, grams for weight, liters for volume, Celsius for temperature), then converted to the target unit.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Worked Examples</h3>
+                            <p><strong>Example 1:</strong> Convert 5 feet to cm: 5 ft = 5 x 30.48 = 152.4 cm.</p>
+                            <p><strong>Example 2:</strong> Convert 2 kg to lbs: 2 kg = 2 x 2.2046 = 4.41 lbs.</p>
+                            <p><strong>Example 3:</strong> Convert 100°F to °C: (100 - 32) x 5/9 = 37.78°C.</p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        
+
+<section class="related-tools-section">
+    <div class="container">
+        <h2>Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="currency-converter.html" class="related-tool-card">
+                <h4>Currency Converter</h4>
+                <p>Convert currencies with live exchange rates</p>
+            </a>            <a href="percentage-calculator.html" class="related-tool-card">
+                <h4>Percentage Calculator</h4>
+                <p>Quick percentage calculations for everyday use</p>
+            </a>            <a href="scientific-calculator.html" class="related-tool-card">
+                <h4>Scientific Calculator</h4>
+                <p>Perform advanced mathematical calculations</p>
+            </a>            <a href="age-calculator.html" class="related-tool-card">
+                <h4>Age Calculator</h4>
+                <p>Calculate exact age in years, months and days</p>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="faq-section">
             <div class="container">
                 <h2>Frequently Asked Questions</h2>
 
@@ -229,9 +303,7 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
+
     </main>
 
     <footer class="footer">
@@ -268,5 +340,59 @@
     <script src="../js/utils.js"></script>
     <script src="../js/unit-converter.js"></script>
     <script src="../js/theme.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Unit Converter",
+        "description": "Convert between different units of length, weight, volume, and temperature.",
+        "url": "https://tooligo-tools.netlify.app/tools/unit-converter.html",
+        "applicationCategory": "UtilityApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is this converter accurate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our converter uses standard conversion factors and provides accurate results."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I convert between any units?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "This converter supports common length, weight, volume, and temperature conversions. Both metric and imperial units are supported."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is temperature conversion different?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Temperature conversion requires formulas rather than simple multiplication. Celsius to Fahrenheit: (C × 9/5) + 32."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which units are supported for each conversion type?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Length: meter, cm, mm, km, inch, foot, yard, mile. Weight: g, kg, mg, lb, oz. Volume: L, ml, gallon, cup, oz. Temperature: C, F, K."
+                }
+            }
+        ]
+    }
+    </script>
 </body>
 </html>

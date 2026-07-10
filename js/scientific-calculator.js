@@ -122,7 +122,7 @@ function calculate() {
     if (operation && previousValue !== null) {
         const current = parseFloat(currentInput);
         const result = performCalculation(previousValue, current, operation);
-        currentInput = isNaN(result) ? 'Error' : result.toString();
+        currentInput = (isNaN(result) || !isFinite(result)) ? 'Error' : result.toString();
         previousValue = null;
         operation = null;
         shouldResetDisplay = true;
@@ -167,7 +167,7 @@ function calculateFactorial() {
         const result = factorial(n);
         document.getElementById('factorial-result').textContent = n + '! = ' + formatNumber(result, 0);
     } catch (error) {
-        document.getElementById('factorial-result').textContent = 'Error';
+        document.getElementById('factorial-result').textContent = 'Error: ' + (error.message || 'Unknown error');
     }
 }
 
@@ -195,7 +195,7 @@ function calculateCombPerm(type) {
             alert('P(' + n + ',' + r + ') = ' + formatNumber(result, 0));
         }
     } catch (error) {
-        alert('Error in calculation');
+        alert('Error in calculation: ' + (error.message || 'Unknown error'));
     }
 }
 

@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTYD9GBDH9"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-VTYD9GBDH9');
+</script>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
     <title>Tooligo – Scientific Calculator</title>
     <meta name="description" content="Full-featured scientific calculator with trigonometric, logarithmic, and exponential functions. Perfect for advanced math calculations.">
     <meta name="keywords" content="scientific calculator, math calculator, advanced calculator">
@@ -29,15 +38,43 @@
   "description": "Full-featured scientific calculator with trigonometric, logarithmic, and exponential functions. Perfect for advanced math calculations."
 }
     </script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://tooligo-tools.netlify.app/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://tooligo-tools.netlify.app/#tools"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Scientific Calculator",
+            "item": "https://tooligo-tools.netlify.app/tools/scientific-calculator.html"
+        }
+    ]
+}
+</script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <div class="logo-icon">
-                        <img src="../images/toolbox-logo.png" alt="Tooligo logo" width="32" height="32">
+                        <img src="../images/toolbox-logo.png" loading="lazy" alt="Tooligo logo" width="32" height="32">
                     </div>
                     <div class="logo-text-group">
                         <div class="logo-text">Tooligo</div>
@@ -46,7 +83,7 @@
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="../index.html" class="nav-link active">Home</a></li>
+                        <li><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
                         <li><a href="../about.html" class="nav-link">About</a></li>
                         <li><a href="../contact.html" class="nav-link">Contact</a></li>
                     </ul>
@@ -68,7 +105,7 @@
         </div>
     </header>
 
-    <main class="main" data-keywords="scientific math function calculator trig log exp">
+    <main class="main" id="main-content" data-keywords="scientific math function calculator trig log exp">
         <div class="breadcrumb">
             <div class="container">
                 <ul class="breadcrumb-list">
@@ -86,9 +123,7 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
+
 
         <section class="tool-section">
             <div class="container">
@@ -167,11 +202,63 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
 
-        <section class="faq-section">
+
+        <section class="tool-section">
+            <div class="container">
+                    <div class="tool-info-section" style="width:100%;">
+                        <div class="tool-description">
+                            <h3>How It Works</h3>
+                            <p>This scientific calculator supports basic arithmetic operations along with advanced mathematical functions. You can use it for:</p>
+                            <ul>
+                                <li><strong>Basic Operations:</strong> Addition, subtraction, multiplication, division, and percentage calculations</li>
+                                <li><strong>Trigonometric Functions:</strong> Sine (sin), Cosine (cos), and Tangent (tan) for angle calculations in degrees or radians</li>
+                                <li><strong>Logarithmic Functions:</strong> Base-10 logarithm (log) and natural logarithm (ln) for exponential calculations</li>
+                                <li><strong>Power &amp; Roots:</strong> Exponentiation (x^y), square root (√), and factorial (n!)</li>
+                                <li><strong>Combinatorics:</strong> Combinations (nCr) and Permutations (nPr) for probability calculations</li>
+                            </ul>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Worked Examples</h3>
+                            <p><strong>Example 1 (Trigonometry):</strong> To find sin(30°), ensure the mode is set to DEG, then press: sin 30 = <strong>0.5</strong>.</p>
+                            <p><strong>Example 2 (Logarithm):</strong> To find log(100), press: log 100 = <strong>2</strong> (since 10² = 100).</p>
+                            <p><strong>Example 3 (Combinations):</strong> To find how many ways to choose 3 items from 7 (7C3), enter N=7, R=3, and click nCr. Result: <strong>35</strong>.</p>
+                            <p><strong>Example 4 (Factorial):</strong> To find 5!, enter 5 in the factorial field and click Calculate. Result: 5! = 5 × 4 × 3 × 2 × 1 = <strong>120</strong>.</p>
+                        </div>
+
+                        <div class="tool-description">
+                            <h3>Tips for Use</h3>
+                            <p>This calculator follows the standard order of operations (PEMDAS/BODMAS). Use parentheses by chaining operations sequentially. The display shows your current input and result. Use AC to clear all, ← for backspace, and ± to toggle between positive and negative values.</p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+
+
+        
+<section class="related-tools-section">
+    <div class="container">
+        <h2>Related Tools</h2>
+        <div class="related-tools-grid">
+            <a href="percentage-calculator.html" class="related-tool-card">
+                <h4>Percentage Calculator</h4>
+                <p>Quick percentage calculations for everyday use</p>
+            </a>            <a href="unit-converter.html" class="related-tool-card">
+                <h4>Unit Converter</h4>
+                <p>Convert between different units of measurement</p>
+            </a>            <a href="age-calculator.html" class="related-tool-card">
+                <h4>Age Calculator</h4>
+                <p>Calculate exact age in years, months and days</p>
+            </a>            <a href="date-difference-calculator.html" class="related-tool-card">
+                <h4>Date Difference Calculator</h4>
+                <p>Find the exact duration between two dates</p>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="faq-section">
             <div class="container">
                 <h2>Scientific Calculator Features</h2>
 
@@ -204,9 +291,7 @@
             </div>
         </section>
 
-        <div class="ad-container">
-            <!-- AdSense  -->
-        </div>
+
     </main>
 
     <footer class="footer">
@@ -243,5 +328,67 @@
     <script src="../js/utils.js"></script>
     <script src="../js/scientific-calculator.js"></script>
     <script src="../js/theme.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Scientific Calculator",
+        "description": "Perform advanced mathematical calculations with trigonometric, logarithmic, and exponential functions.",
+        "url": "https://tooligo-tools.netlify.app/tools/scientific-calculator.html",
+        "applicationCategory": "UtilityApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What trigonometric functions are supported?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sine (sin), Cosine (cos), and Tangent (tan) functions are supported. Always use angles in degrees."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I use the square root function?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Click √, then enter the number and press =. For example: √ 16 = 4."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What does x^y do?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It raises x to the power of y. For example: 2 x^y 3 = 8 (2³)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I calculate logarithms?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Use 'log' for base-10 logarithm or 'ln' for natural logarithm (base e)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I calculate factorial?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, use the n! button or the dedicated Factorial calculator below for larger numbers."
+                }
+            }
+        ]
+    }
+    </script>
 </body>
 </html>
